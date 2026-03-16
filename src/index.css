@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body text-secondary bg-grayLight overflow-x-hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display text-secondary font-bold;
+  }
+}
+
+@layer utilities {
+  .text-border {
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+    color: transparent;
+  }
+
+  .white-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Swiper Customization */
+  .visa-swiper-container .swiper-button-next,
+  .visa-swiper-container .swiper-button-prev {
+    @apply bg-white text-primary w-12 h-12 rounded-full shadow-lg border border-gray-100 transition-all hover:bg-primary hover:text-white after:text-lg;
+  }
+
+  .visa-swiper-container .swiper-pagination-bullet-active {
+    @apply bg-primary w-8 rounded-full;
+  }
+
+  .visa-swiper-container .swiper-pagination-bullet {
+    @apply transition-all duration-300;
+  }
+}
