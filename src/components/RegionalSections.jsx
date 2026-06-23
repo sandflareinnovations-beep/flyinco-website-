@@ -6,10 +6,10 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 
 const cities = [
-    { id: 1, name: 'Mumbai', packages: 120, img: 'https://images.unsplash.com/photo-1570160897040-30430ef2015a?auto=format&fit=crop&q=80&w=800' }, // Gateway of India
+    { id: 1, name: 'Mumbai', packages: 120, img: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&q=80&w=800' }, // Gateway of India
     { id: 2, name: 'Dubai', packages: 250, img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800' }, // Burj Al Arab
-    { id: 3, name: 'Hong Kong', packages: 85, img: 'https://images.unsplash.com/photo-1507450491953-ad4771440702?auto=format&fit=crop&q=80&w=800' }, // Skyline
-    { id: 4, name: 'Singapore', packages: 140, img: 'https://images.unsplash.com/photo-1525625239514-75390b13da82?auto=format&fit=crop&q=80&w=800' }, // MBS
+    { id: 3, name: 'Hong Kong', packages: 85, img: 'https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&q=80&w=800' }, // Skyline
+    { id: 4, name: 'Singapore', packages: 140, img: 'https://images.unsplash.com/photo-1702085241418-e87b3b60a497?auto=format&fit=crop&q=80&w=800' }, // MBS
     { id: 5, name: 'Tokyo', packages: 95, img: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80&w=800' }, // Shibuya Crossing
     { id: 6, name: 'Istanbul', packages: 210, img: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&q=80&w=800' }, // Blue Mosque
     { id: 7, name: 'Amsterdam', packages: 70, img: 'https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&q=80&w=800' }, // Canals

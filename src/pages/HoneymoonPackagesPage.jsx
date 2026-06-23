@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, MapPin, ChevronRight, Plus, Minus, Star } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import VisaLinks from '../components/visa/VisaLinks';
 import { Link } from 'react-router-dom';
 
@@ -29,7 +27,6 @@ const HoneymoonPackagesPage = () => {
 
     return (
         <div className="bg-white min-h-screen">
-            <Navbar />
 
             {/* Hero Section */}
             <section className="pt-32 pb-16 bg-[#FFF5F7]">
@@ -136,7 +133,6 @@ const HoneymoonPackagesPage = () => {
             </section>
 
             <VisaLinks />
-            <Footer />
         </div>
     );
 };

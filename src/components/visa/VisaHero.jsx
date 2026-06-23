@@ -22,7 +22,7 @@ const VisaHero = () => {
                         {/* Left Logic: Image */}
                         <div className="w-full md:w-1/3 h-[300px] md:h-auto overflow-hidden">
                             <img
-                                src="https://images.unsplash.com/photo-1507510165971-ce492f9747d1?auto=format&fit=crop&q=80&w=800"
+                                src="https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&q=80&w=800"
                                 alt="Traveler"
                                 className="w-full h-full object-cover"
                                 onError={(e) => {

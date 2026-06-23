@@ -13,7 +13,7 @@ const popularDestinations = [
 
 const ExploreDestinations = () => {
     const handleError = (e) => {
-        e.target.src = 'https://images.unsplash.com/photo-1507608616172-50162bd9395e?auto=format&fit=crop&q=80&w=800';
+        e.target.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=800';
     };
 
     return (
@@ -47,7 +47,7 @@ const ExploreDestinations = () => {
                                 alt={dest.title}
                                 className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[1.5s]"
                                     onError={(e) => {
-                                        e.target.src = 'https://images.unsplash.com/photo-1507608616172-50162bd9395e?auto=format&fit=crop&q=80&w=800';
+                                        e.target.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=800';
                                     }}
                             />
                             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex items-end h-full">

@@ -78,7 +78,7 @@ const VisaTypes = () => {
                                             alt={type.title}
                                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                             onError={(e) => {
-                                                e.target.src = 'https://images.unsplash.com/photo-1454165833767-131435bb4496?auto=format&fit=crop&q=80&w=800';
+                                                e.target.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=800';
                                             }}
                                         />
                                     </div>

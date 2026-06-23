@@ -4,28 +4,28 @@ import { Phone } from 'lucide-react';
 const countries = [
     { name: 'Saudi Umrah Visa', code: 'SA', image: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&q=80&w=600' },
     { name: 'Australia', code: 'AU', image: 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&q=80&w=600' },
-    { name: 'Azerbaijan', code: 'AZ', image: 'https://plus.unsplash.com/premium_photo-1676232732001-34d904cd7544?auto=format&fit=crop&q=80&w=600' },
-    { name: 'Bahrain', code: 'BH', image: 'https://plus.unsplash.com/premium_photo-1694475183306-4efa6a24f59c?auto=format&fit=crop&q=80&w=600' },
+    { name: 'Azerbaijan', code: 'AZ', image: 'https://images.unsplash.com/photo-1565967511849-76a60a516170?auto=format&fit=crop&q=80&w=600' },
+    { name: 'Bahrain', code: 'BH', image: 'https://images.unsplash.com/photo-1572252821143-035a024857ac?auto=format&fit=crop&q=80&w=600' },
     { name: 'Canada', code: 'CA', image: 'https://images.unsplash.com/photo-1668882698355-923d532fa985?auto=format&fit=crop&q=80&w=600' },
     { name: 'China', code: 'CN', image: 'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&q=80&w=600' },
     { name: 'Egypt', code: 'EG', image: 'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=600' },
     { name: 'Georgia', code: 'GE', image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&q=80&w=600' },
-    { name: 'Hong Kong', code: 'HK', image: 'https://plus.unsplash.com/premium_photo-1661908853318-893732a14e42?auto=format&fit=crop&q=80&w=600' },
+    { name: 'Hong Kong', code: 'HK', image: 'https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&q=80&w=600' },
     { name: 'Japan', code: 'JP', image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=600' },
-    { name: 'Kuwait', code: 'KW', image: 'https://plus.unsplash.com/premium_photo-1661919068698-40e7b78f196a?auto=format&fit=crop&q=80&w=600' },
-    { name: 'Malaysia', code: 'MY', image: 'https://plus.unsplash.com/premium_photo-1700955413237-5e781377e055?auto=format&fit=crop&q=80&w=600' },
+    { name: 'Kuwait', code: 'KW', image: 'https://images.unsplash.com/photo-1551918120-9739cb430c6d?auto=format&fit=crop&q=80&w=600' },
+    { name: 'Malaysia', code: 'MY', image: 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80&w=600' },
     { name: 'Philippines', code: 'PH', image: 'https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&q=80&w=600' },
     { name: 'Russia', code: 'RU', image: 'https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&fit=crop&q=80&w=600' },
     { name: 'Saudi Arabia', code: 'SA', image: 'https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?auto=format&fit=crop&q=80&w=600' },
     { name: 'Singapore', code: 'SG', image: 'https://images.unsplash.com/photo-1702085241418-e87b3b60a497?auto=format&fit=crop&q=80&w=600' },
     { name: 'South Korea', code: 'KR', image: 'https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&q=80&w=600' },
-    { name: 'Sri Lanka', code: 'LK', image: 'https://plus.unsplash.com/premium_photo-1666254114402-cd16bc302aea?auto=format&fit=crop&q=80&w=600' },
+    { name: 'Sri Lanka', code: 'LK', image: 'https://images.unsplash.com/photo-1586500036706-41963de24d8b?auto=format&fit=crop&q=80&w=600' },
     { name: 'Thailand', code: 'TH', image: 'https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&q=80&w=600' },
     { name: 'UAE', code: 'AE', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=600' },
     { name: 'United Kingdom', code: 'GB', image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=600' },
     { name: 'United States', code: 'US', image: 'https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&q=80&w=600' },
-    { name: 'Uzbekistan', code: 'UZ', image: 'https://plus.unsplash.com/premium_photo-1697730009726-4ddf244ff653?auto=format&fit=crop&q=80&w=600' },
-    { name: 'Vietnam', code: 'VN', image: 'https://plus.unsplash.com/premium_photo-1719955781545-c60219441bfc?auto=format&fit=crop&q=80&w=600' },
+    { name: 'Uzbekistan', code: 'UZ', image: 'https://images.unsplash.com/photo-1604357209793-fca5dca89f97?auto=format&fit=crop&q=80&w=600' },
+    { name: 'Vietnam', code: 'VN', image: 'https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&q=80&w=600' },
 ];
 
 const CountryGrid = () => {
@@ -46,7 +46,7 @@ const CountryGrid = () => {
                                     alt={country.name}
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                     onError={(e) => {
-                                        e.target.src = 'https://images.unsplash.com/photo-1507608616172-50162bd9395e?auto=format&fit=crop&q=80&w=600';
+                                        e.target.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=600';
                                     }}
                                 />
                                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-1 rounded-lg shadow-md border border-white">

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Search, MapPin, ChevronRight, Plus, Minus } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import VisaLinks from '../components/visa/VisaLinks';
 
 const destinations = [
@@ -34,7 +32,6 @@ const InternationalPackagesPage = () => {
 
     return (
         <div className="bg-white min-h-screen">
-            <Navbar />
 
             {/* Hero Section */}
             <section className="pt-32 pb-16 bg-gray-50">
@@ -79,7 +76,7 @@ const InternationalPackagesPage = () => {
                                         alt={dest.name}
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]"
                                         onError={(e) => {
-                                            e.target.src = 'https://images.unsplash.com/photo-1507608616172-50162bd9395e?auto=format&fit=crop&q=80&w=800';
+                                            e.target.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=800';
                                         }}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
@@ -147,8 +144,6 @@ const InternationalPackagesPage = () => {
 
             {/* Links Section */}
             <VisaLinks />
-
-            <Footer />
         </div>
     );
 };

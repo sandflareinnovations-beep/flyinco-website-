@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, MapPin, ChevronRight, Plus, Minus, Clock, Star } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import VisaLinks from '../components/visa/VisaLinks';
 import { Link } from 'react-router-dom';
 
@@ -29,7 +27,6 @@ const IndiaPackagesPage = () => {
 
     return (
         <div className="bg-white min-h-screen">
-            <Navbar />
 
             {/* Hero Section */}
             <section className="pt-32 pb-16 bg-gray-50">
@@ -148,7 +145,6 @@ const IndiaPackagesPage = () => {
             </section>
 
             <VisaLinks />
-            <Footer />
         </div>
     );
 };

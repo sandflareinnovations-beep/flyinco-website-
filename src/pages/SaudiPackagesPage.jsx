@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, MapPin, ChevronRight, Plus, Minus, Clock, Star, Landmark } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 const SaudiPackagesPage = () => {
@@ -28,7 +26,6 @@ const SaudiPackagesPage = () => {
 
     return (
         <div className="bg-white min-h-screen">
-            <Navbar />
 
             {/* Hero Section */}
             <section className="pt-32 pb-16 bg-secondary text-white relative overflow-hidden">
@@ -41,6 +38,11 @@ const SaudiPackagesPage = () => {
                         <ChevronRight className="w-4 h-4" />
                         <span className="text-primary">Saudi Arabia</span>
                     </nav>
+
+                    <div className="inline-flex items-center gap-3 bg-[#1a7a4c]/20 border border-[#1a7a4c]/40 rounded-full pl-2 pr-5 py-2 mb-6">
+                        <span className="bg-[#1a7a4c] text-white text-xs font-black px-3 py-1 rounded-full tracking-widest uppercase">أهلاً وسهلاً</span>
+                        <span className="text-white/80 text-xs font-bold tracking-widest uppercase">Welcome to the Kingdom</span>
+                    </div>
 
                     <h1 className="text-4xl md:text-6xl font-display font-black mb-4 leading-tight">
                         Discover the Kingdom of Saudi Arabia
@@ -117,11 +119,20 @@ const SaudiPackagesPage = () => {
                                             <span className="text-xs font-bold">{pkg.locations}</span>
                                         </div>
                                         <div className="flex items-center justify-between pt-6 border-t border-gray-50">
-                                            <div>
-                                                <span className="text-[10px] text-gray-400 font-black uppercase tracking-tighter block">From</span>
-                                                <span className="text-2xl font-display font-black text-secondary">{pkg.price}</span>
-                                            </div>
-                                            <Link 
+                                            {pkg.price ? (
+                                                <div>
+                                                    <span className="text-[10px] text-gray-400 font-black uppercase tracking-tighter block">From</span>
+                                                    <span className="text-2xl font-display font-black text-secondary">{pkg.price}</span>
+                                                </div>
+                                            ) : (
+                                                <Link
+                                                    to={`/package/${pkg.slug}`}
+                                                    className="bg-primary/10 text-primary px-5 py-3 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all"
+                                                >
+                                                    Enquire Now
+                                                </Link>
+                                            )}
+                                            <Link
                                                 to={`/package/${pkg.slug}`}
                                                 className="bg-primary text-white p-4 rounded-2xl group-hover:bg-secondary transition-all shadow-lg"
                                             >
@@ -161,7 +172,6 @@ const SaudiPackagesPage = () => {
                 </div>
             </section>
 
-            <Footer />
         </div>
     );
 };
