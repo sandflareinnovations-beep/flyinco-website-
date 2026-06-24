@@ -10,6 +10,7 @@ import Gallery from '../components/Gallery';
 import WhyChooseUs from '../components/WhyChooseUs';
 
 import CorporateTravel from '../components/CorporateTravel';
+import RequestCallback from '../components/RequestCallback';
 
 const HomePage = () => {
     return (
@@ -24,6 +25,7 @@ const HomePage = () => {
             <Gallery />
             <CorporateTravel />
             <WhyChooseUs />
+            <RequestCallback />
         </main>
     );
 };

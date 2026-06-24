@@ -22,7 +22,11 @@ const Navbar = () => {
             name: 'Saudi Arabia', 
             path: '/saudi-packages',
             dropdown: [
-                { name: 'Riyadh Heritage', path: '/package/riyadh-heritage-tour' },
+                { name: 'Riyadh City Tour', path: '/package/riyadh-heritage-tour' },
+                { name: 'Diriyah Evening Trip', path: '/package/diriyah-evening-trip' },
+                { name: 'Hariqah Dam Tour', path: '/package/hariqah-dam-tour' },
+                { name: 'Farasan Islands', path: '/package/farasan-islands-trip' },
+                { name: 'Obhur Diving', path: '/package/obhur-al-shamaliyah-diving' },
                 { name: 'Al-Ula Wonders', path: '/package/al-ula-wonders' },
                 { name: 'Jeddah Red Sea', path: '/package/jeddah-red-sea-escape' },
                 { name: 'Umrah Packages', path: '/package/spiritual-umrah-journey' },

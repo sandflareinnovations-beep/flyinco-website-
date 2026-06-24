@@ -1,3 +1,12 @@
+// --- Riyadh City Tour: real on-location photos ---
+import riyadhAlDiriyahDusk from '../assets/images/Al diriyah/WhatsApp Image 2026-06-23 at 5.30.29 PM.jpeg';
+import riyadhAlDiriyahEvening from '../assets/images/Al diriyah/WhatsApp Image 2026-06-23 at 5.30.29 PM (1).jpeg';
+import riyadhKingdomSkyBridge from '../assets/images/kingdom tower/WhatsApp Image 2026-06-23 at 5.30.30 PM (1).jpeg';
+import riyadhNationalMuseum from '../assets/images/Souq al zal Museum/WhatsApp Image 2026-06-23 at 5.30.28 PM (1).jpeg';
+import riyadhSouqAlZal from '../assets/images/Souq al zal Museum/WhatsApp Image 2026-06-23 at 5.30.28 PM.jpeg';
+import riyadhCamelRide from '../assets/images/camel ride/WhatsApp Image 2026-06-23 at 5.30.29 PM (3).jpeg';
+import riyadhEdgeOfTheWorld from '../assets/images/edge of the world/WhatsApp Image 2026-06-23 at 5.30.30 PM.jpeg';
+
 export const packagesData = [
   // --- SAUDI ARABIA PACKAGES ---
   {
@@ -6,19 +15,19 @@ export const packagesData = [
     category: 'Saudi',
     name: 'Riyadh City Tour',
     title: 'Riyadh City Tour: A Full Day of Heritage & Wonders',
-    img: 'https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?auto=format&fit=crop&q=80&w=800',
+    img: riyadhAlDiriyahDusk,
     desc: 'A complete one-day journey through the highlights of Riyadh and beyond.',
     duration: '1 Day Trip',
     price: '',
     locations: 'Riyadh',
     highlights: ['Al Diriyah UNESCO Site', 'National Museum', 'Kingdom Centre Sky Bridge', 'Souq Al Zal', 'Camel Ride', 'The Edge of the World'],
     itinerary: [
-      { day: 1, stop: 1, title: 'Al Diriyah', detail: 'Begin the day at the birthplace of the Saudi state. Explore the historic mud-brick At-Turaif district and the lively Bujairi Terrace.', image: 'https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&q=80&w=800' },
-      { day: 1, stop: 2, title: 'Kingdom Centre Sky Bridge', detail: 'Ascend the iconic Kingdom Centre Tower and walk across the Sky Bridge for breathtaking panoramic views of the Riyadh skyline.', image: 'https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?auto=format&fit=crop&q=80&w=800' },
-      { day: 1, stop: 3, title: 'National Museum of Saudi Arabia', detail: 'Discover the rich history of the Kingdom through interactive exhibits, ancient artefacts, and immersive galleries.', image: 'https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&q=80&w=800' },
-      { day: 1, stop: 4, title: 'Souq Al Zal', detail: 'Wander through Riyadh\'s oldest traditional market, browsing carpets, antiques, handicrafts, and authentic Saudi souvenirs.', image: 'https://images.unsplash.com/photo-1542315192-1f61a1792f33?auto=format&fit=crop&q=80&w=800' },
-      { day: 1, stop: 5, title: 'Camel Ride', detail: 'Experience an authentic desert tradition with a relaxing camel ride across the golden sands on the outskirts of the city.', image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=800' },
-      { day: 1, stop: 6, title: 'The Edge of the World', detail: 'End the day at the dramatic Jebel Fihrayn cliffs, where the desert plateau drops sharply to reveal endless horizons at sunset.', image: 'https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&q=80&w=800' }
+      { day: 1, stop: 1, title: 'Al Diriyah', detail: 'Begin the day at the birthplace of the Saudi state. Explore the historic mud-brick At-Turaif district and the lively Bujairi Terrace.', image: riyadhAlDiriyahEvening },
+      { day: 1, stop: 2, title: 'Kingdom Centre Sky Bridge', detail: 'Ascend the iconic Kingdom Centre Tower and walk across the Sky Bridge for breathtaking panoramic views of the Riyadh skyline.', image: riyadhKingdomSkyBridge },
+      { day: 1, stop: 3, title: 'National Museum of Saudi Arabia', detail: 'Discover the rich history of the Kingdom through interactive exhibits, ancient artefacts, and immersive galleries.', image: riyadhNationalMuseum },
+      { day: 1, stop: 4, title: 'Souq Al Zal', detail: 'Wander through Riyadh\'s oldest traditional market, browsing carpets, antiques, handicrafts, and authentic Saudi souvenirs.', image: riyadhSouqAlZal },
+      { day: 1, stop: 5, title: 'Camel Ride', detail: 'Experience an authentic desert tradition with a relaxing camel ride across the golden sands on the outskirts of the city.', image: riyadhCamelRide },
+      { day: 1, stop: 6, title: 'The Edge of the World', detail: 'End the day at the dramatic Jebel Fihrayn cliffs, where the desert plateau drops sharply to reveal endless horizons at sunset.', image: riyadhEdgeOfTheWorld }
     ]
   },
   {
@@ -54,7 +63,7 @@ export const packagesData = [
     category: 'Saudi',
     name: 'Diriyah Trip',
     title: 'Diriyah Evening Trip: Heritage, Culture & Dinner',
-    img: 'https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&q=80&w=800',
+    img: riyadhAlDiriyahDusk,
     desc: 'An immersive evening exploring the historic At-Turaif district, a clay workshop, shopping, and dinner.',
     duration: '5.5 Hours',
     price: '',
@@ -63,7 +72,7 @@ export const packagesData = [
     highlights: ['At-Turaif Historical District', 'Traditional Clay Workshop', 'Al-Bujairi Overlook', 'Dinner & Shopping'],
     included: ['Round-trip bus transfer', 'Guided historical storytelling tour', 'Interactive clay workshop', 'Dinner at a designated restaurant'],
     itinerary: [
-      { time: '04:20 - 05:00 PM', title: 'Departure', detail: 'Gathering at the main office (Al-Ulya) and transfer by bus to Diriyah.', image: 'https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&q=80&w=800' },
+      { time: '04:20 - 05:00 PM', title: 'Departure', detail: 'Gathering at the main office (Al-Ulya) and transfer by bus to Diriyah.', image: riyadhAlDiriyahEvening },
       { time: '05:00 - 05:15 PM', title: 'Arrival', detail: 'Welcome and a brief overview of the program itinerary.' },
       { time: '05:15 - 06:15 PM', title: 'Al-Turaif Tour', detail: 'A historical storytelling tour, museum visit, and sunset viewing across the UNESCO district.' },
       { time: '06:15 - 06:45 PM', title: 'Clay Workshop', detail: 'A live, interactive experience in traditional Najdi building and carving techniques.' },
@@ -111,6 +120,52 @@ export const packagesData = [
       { day: 4, title: 'Departure', detail: 'Leisurely breakfast and transfer to King Abdulaziz International Airport.' }
     ]
   },
+  {
+    id: 'saudi-farasan-islands',
+    slug: 'farasan-islands-trip',
+    category: 'Saudi',
+    name: 'Farasan Islands',
+    title: 'Trip to the Farasan Islands: Sunrise, Snorkeling & Heritage',
+    img: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?auto=format&fit=crop&q=80&w=800',
+    desc: 'An early-morning Red Sea escape — sunrise over the mangroves, snorkeling crystal-clear bays, and the heritage of Al-Qassar village.',
+    duration: '6 Hours',
+    price: '',
+    locations: 'Farasan Islands, Jazan',
+    highlights: ['Sunrise Boat Ride', 'Al-Qandal Mangrove Forest', 'Snorkeling at Al-Ghadir Bay', 'Al-Qassar Heritage Village', 'Ottoman Castle', 'Traditional Farasani Breakfast'],
+    itinerary: [
+      { time: '04:00 - 05:00 AM', title: 'Set Sail Under the Stars', detail: 'Head out early on the boat. The perfect time to just chill, enjoy the breeze, and catch the stars while the sea is completely still.' },
+      { time: '05:00 - 06:30 AM', title: 'Al-Qandal Forest & Sunrise', detail: 'Boat ride through Al-Qandal Forest. Catch an amazing sunrise over the mangroves and spot some cool migratory birds out and about.' },
+      { time: '06:30 - 08:00 AM', title: 'Swimming & Snorkeling', detail: 'Swimming and snorkeling at Ras Al-Qarn or Al-Ghadir Bay. The water is super clear early on, making it great for checking out the coral reefs.', image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800' },
+      { time: '08:00 - 09:00 AM', title: 'Al-Qassar Heritage Village', detail: 'Walk around Al-Qassar Heritage Village and the old Ottoman Castle to see the traditional stone architecture.' },
+      { time: '09:00 - 10:00 AM', title: 'Al-Rifai House & Breakfast', detail: 'Drop by the historic Al-Rifai House, then wrap up the morning with a traditional Farasani breakfast (local fresh fish and Maghsh).' }
+    ]
+  },
+  {
+    id: 'saudi-obhur-diving',
+    slug: 'obhur-al-shamaliyah-diving',
+    category: 'Saudi',
+    name: 'Obhur Diving',
+    title: 'Obhur Al Shamaliyah Diving Experience | Elite Abyss',
+    img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800',
+    desc: '5 hours of adventure and deep-sea exploration off North Obhur, Jeddah — guided reef diving with certified instructors, a sunset boat cruise, and refreshments.',
+    duration: '5 Hours',
+    price: '',
+    locations: 'North Obhur, Jeddah',
+    meetingPoint: 'Elite Abyss',
+    highlights: ['Guided Reef Diving', 'Certified Dive Instructor', 'Coral Reef Exploration', 'Sunset Boat Cruise', 'Snacks & Refreshments'],
+    included: ['Diving equipment, air tanks, and safety gear', 'Professional certified diving instructor', 'Snacks, water, and refreshments'],
+    itinerary: [
+      { time: '03:30 PM', title: 'Meeting & Departure', detail: 'Meet at the departure point (Elite Abyss) and head out.' },
+      { time: '04:10 PM', title: 'Arrival at Dive Site', detail: 'Arrive at the diving site in North Obhur after a 40-minute drive.' },
+      { time: '04:10 - 04:30 PM', title: 'Briefing & Gear Fitting', detail: 'Briefing, safety instructions, and gear fitting (20 mins).' },
+      { time: '04:30 - 05:45 PM', title: 'Diving Session', detail: 'Diving session and exploring the coral reefs (1 hour 15 mins).', image: 'https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&q=80&w=800' },
+      { time: '05:45 - 06:15 PM', title: 'Sunset Break', detail: 'Exiting the water, changing, and a short break during sunset (30 mins).' },
+      { time: '06:15 - 07:15 PM', title: 'Boat Cruise & Refreshments', detail: 'Boat cruise or relaxation session with snacks and refreshments (1 hour).' },
+      { time: '07:15 - 07:45 PM', title: 'Beachside Free Tour', detail: 'Free tour and exploring the beachside area (30 mins).' },
+      { time: '07:45 PM', title: 'Heading Back', detail: 'Wrapping up activities and heading back.' },
+      { time: '08:30 PM', title: 'Arrival Back', detail: 'Arrive back at the initial meeting point (Elite Abyss).' }
+    ]
+  },
 
   // --- INDIA PACKAGES ---
   {
@@ -122,7 +177,7 @@ export const packagesData = [
     img: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&q=80&w=800',
     desc: 'Lush greenery, serene backwaters, and misty hill stations.',
     duration: '5 Nights / 6 Days',
-    price: 'SAR 1,899',
+    price: '',
     locations: 'Munnar, Alleppey & Kochi',
     highlights: ['Tea Gardens', 'Houseboat Stay', 'Chinese Fishing Nets', 'Kathakali Show'],
     itinerary: [
@@ -143,7 +198,7 @@ export const packagesData = [
     img: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&q=80&w=800',
     desc: 'Experience the grandeur of India\'s royal history in Jaipur and Udaipur.',
     duration: '6 Nights / 7 Days',
-    price: 'SAR 2,599',
+    price: '',
     locations: 'Jaipur, Jodhpur & Udaipur',
     highlights: ['Amber Fort', 'Mehrangarh Fort', 'City Palace Udaipur', 'Lake Pichola'],
     itinerary: [
@@ -165,7 +220,7 @@ export const packagesData = [
     img: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&q=80&w=800',
     desc: 'Pristine beaches, crystal clear waters, and colonial history.',
     duration: '4 Nights / 5 Days',
-    price: 'SAR 2,299',
+    price: '',
     locations: 'Port Blair & Havelock',
     highlights: ['Cellular Jail', 'Radhanagar Beach', 'Scuba Diving', 'Elephant Beach'],
     itinerary: [
@@ -187,7 +242,7 @@ export const packagesData = [
     img: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&q=80&w=800',
     desc: 'Celebrate your love in the most romantic overwater villas on earth.',
     duration: '4 Nights / 5 Days',
-    price: 'SAR 7,999',
+    price: '',
     locations: 'Private Island Resort',
     highlights: ['Candlelit Beach Dinner', 'Overwater Villa', 'Couples Spa', 'Floating Breakfast'],
     itinerary: [
@@ -207,7 +262,7 @@ export const packagesData = [
     img: 'https://images.unsplash.com/photo-1593181629936-11c609b8db9b?auto=format&fit=crop&q=80&w=800',
     desc: 'A perfect blend of misty mountains and serene backwaters.',
     duration: '5 Nights / 6 Days',
-    price: 'SAR 3,499',
+    price: '',
     locations: 'Munnar & Alleppey',
     highlights: ['Houseboat Stay', 'Private Plantation Tour', 'Elephant Safari', 'Ayurvedic Treatment'],
     itinerary: [
@@ -229,7 +284,7 @@ export const packagesData = [
     img: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=800',
     desc: 'The ultimate adventure: See the world\'s highest peak up close.',
     duration: '4 Nights / 5 Days',
-    price: 'SAR 5,999',
+    price: '',
     locations: 'Kathmandu & Lukla',
     highlights: ['Himalayan Views', 'Helicopter Ride', 'Sherpa Culture', 'Buddhist Monasteries'],
     itinerary: [
@@ -276,7 +331,7 @@ export const packagesData = [
     img: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&q=80&w=800',
     desc: 'The ultimate romantic getaway in an overwater paradise.',
     duration: '3 Nights / 4 Days',
-    price: 'SAR 4,499',
+    price: '',
     locations: 'Private Island Resort',
     highlights: ['Overwater Villa', 'Sunset Cruise', 'Snorkeling', 'Romantic Dinner'],
     itinerary: [
@@ -295,7 +350,7 @@ export const packagesData = [
     img: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800',
     desc: 'Explore the cultural heart of Ubud and the vibrant beaches of Seminyak.',
     duration: '5 Nights / 6 Days',
-    price: 'SAR 3,299',
+    price: '',
     locations: 'Ubud & Kuta/Seminyak',
     highlights: ['Tegalalang Rice Terrace', 'Monkey Forest', 'Uluwatu Temple', 'Mount Batur Sunrise'],
     itinerary: [
@@ -316,7 +371,7 @@ export const packagesData = [
     img: 'https://images.unsplash.com/photo-1601994725833-c65037b22a94?auto=format&fit=crop&q=80&w=800',
     desc: 'The perfect mix of modern architecture and traditional desert adventure.',
     duration: '4 Nights / 5 Days',
-    price: 'SAR 2,999',
+    price: '',
     locations: 'Dubai City & Desert',
     highlights: ['Burj Khalifa', 'Desert Safari', 'Dubai Mall', 'Old Dubai Souks'],
     itinerary: [
@@ -336,7 +391,7 @@ export const packagesData = [
     img: 'https://images.unsplash.com/photo-1689188930114-6a6824a21390?auto=format&fit=crop&q=80&w=800',
     desc: 'Uncover the futuristic skyline of Baku and ancient mountain villages.',
     duration: '4 Nights / 5 Days',
-    price: 'SAR 2,199',
+    price: '',
     locations: 'Baku & Gabala',
     highlights: ['Flame Towers', 'Old City Baku', 'Gabala Cable Car', 'Mud Volcanoes'],
     itinerary: [
@@ -356,7 +411,7 @@ export const packagesData = [
     img: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800',
     desc: 'Experience the metropolitan buzz of Kuala Lumpur and the cool climate of Genting.',
     duration: '5 Nights / 6 Days',
-    price: 'SAR 2,899',
+    price: '',
     locations: 'Kuala Lumpur & Genting',
     highlights: ['Petronas Towers', 'Batu Caves', 'Genting Highlands', 'Bukit Bintang'],
     itinerary: [
@@ -377,7 +432,7 @@ export const packagesData = [
     img: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&q=80&w=800', // Thai Temple
     desc: 'From the bustling streets of Bangkok to the serene beaches of Phuket.',
     duration: '6 Nights / 7 Days',
-    price: 'SAR 3,499',
+    price: '',
     locations: 'Bangkok & Phuket',
     highlights: ['Grand Palace', 'Phi Phi Islands', 'Floating Market', 'Patong Beach'],
     itinerary: [

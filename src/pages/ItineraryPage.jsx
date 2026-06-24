@@ -110,14 +110,7 @@ const ItineraryPage = () => {
                                 </div>
                             </div>
                             <div className="bg-white rounded-[2.5rem] p-8 shadow-2xl min-w-[300px] border border-gray-100 flex flex-col items-center">
-                                {pkg.price ? (
-                                    <>
-                                        <span className="text-gray-400 font-bold text-xs uppercase tracking-widest mb-1 w-full text-center">Starting from</span>
-                                        <div className="text-4xl font-display font-black text-secondary mb-6">{pkg.price}</div>
-                                    </>
-                                ) : (
-                                    <span className="text-secondary font-display font-black text-xl mb-6 w-full text-center">Pricing on Request</span>
-                                )}
+                                <span className="text-secondary font-display font-black text-xl mb-6 w-full text-center">Pricing on Request</span>
                                 <button
                                     onClick={scrollToEnquiry}
                                     className="w-full bg-primary text-white py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all mb-4"

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, ChevronLeft, ChevronRight } from 'lucide-react';
+import kafdRiyadh from '../assets/images/kafd/riyadh-skyline.jpg';
 
 const slides = [
     {
@@ -9,9 +10,9 @@ const slides = [
         subtitle: 'Journey Through Time in Ancient Landscapes'
     },
     {
-        image: 'https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?auto=format&fit=crop&q=80&w=2000',
+        image: kafdRiyadh,
         title: 'Modern Riyadh',
-        subtitle: 'Experience the Fusion of Heritage and Future'
+        subtitle: 'From the Kingdom Tower to the Skyline of Tomorrow'
     },
     {
         image: 'https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?auto=format&fit=crop&q=80&w=2000',

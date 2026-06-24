@@ -88,16 +88,12 @@ const HoneymoonPackagesPage = () => {
                                     </div>
                                     <p className="text-sm text-gray-400 font-bold mb-8 tracking-wide leading-relaxed">{pkg.desc}</p>
                                     
-                                    <div className="mt-auto pt-8 border-t border-gray-50 flex items-center justify-between">
-                                        <div>
-                                            <span className="text-[10px] text-gray-400 font-black uppercase tracking-tighter block mb-1">Packages from</span>
-                                            <span className="text-2xl font-display font-black text-secondary">{pkg.price}</span>
-                                        </div>
-                                        <Link 
+                                    <div className="mt-auto pt-8 border-t border-gray-50 flex items-center justify-end">
+                                        <Link
                                             to={`/package/${pkg.slug}`}
                                             className="bg-secondary text-white px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-black transition-all shadow-lg"
                                         >
-                                            View Details
+                                            Enquire Now
                                         </Link>
                                     </div>
                                 </div>

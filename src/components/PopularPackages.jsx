@@ -97,9 +97,6 @@ const PopularPackages = () => {
                                 </div>
 
                                 <div className="mt-auto pt-4 border-t border-gray-50">
-                                    <div className="text-xs text-gray-300 font-bold line-through mb-1 uppercase tracking-tighter">WAS SAR {parseInt(pkg.price.replace(/\D/g, '')) + 1500}</div>
-                                    <div className="font-display font-black text-2xl text-secondary mb-6">{pkg.price}</div>
-
                                     <div className="grid grid-cols-2 gap-3">
                                         <Link 
                                             to={`/package/${pkg.slug}`}
@@ -107,9 +104,12 @@ const PopularPackages = () => {
                                         >
                                             Details
                                         </Link>
-                                        <button className="bg-primary text-white text-[10px] font-black py-3.5 rounded-2xl shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all uppercase tracking-widest">
+                                        <Link
+                                            to={`/package/${pkg.slug}`}
+                                            className="bg-primary text-white text-[10px] font-black py-3.5 rounded-2xl shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all uppercase tracking-widest text-center"
+                                        >
                                             Enquire
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

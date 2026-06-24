@@ -1,21 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import riyadhSkyline from '../assets/images/kafd/riyadh-skyline.jpg';
+import diriyahEvening from '../assets/images/Al diriyah/WhatsApp Image 2026-06-23 at 5.30.29 PM (1).jpeg';
+import kingdomSkyBridge from '../assets/images/kingdom tower/WhatsApp Image 2026-06-23 at 5.30.30 PM (1).jpeg';
+
 const popularDestinations = [
-    { id: 1, title: 'Al-Ula Heritage', img: 'https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&q=80&w=800' },
-    { id: 2, title: 'Jeddah Red Sea', img: 'https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?auto=format&fit=crop&q=80&w=800' },
-    { id: 3, title: 'Modern Riyadh', img: 'https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?auto=format&fit=crop&q=80&w=800' },
-    { id: 4, title: 'Abha Mountains', img: 'https://images.unsplash.com/photo-1705428193181-0cea0bf8e814?auto=format&fit=crop&q=80&w=800' },
-    { id: 5, title: 'NEOM Future', img: 'https://images.unsplash.com/photo-1621847468516-1ed5d0df56fe?auto=format&fit=crop&q=80&w=800' },
+    { id: 1, title: 'Riyadh City Tour', location: 'Riyadh', img: riyadhSkyline, path: '/package/riyadh-heritage-tour' },
+    { id: 2, title: 'Diriyah Evening', location: 'Diriyah', img: diriyahEvening, path: '/package/diriyah-evening-trip' },
+    { id: 3, title: 'Al-Ula Wonders', location: 'Al-Ula', img: 'https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&q=80&w=800', path: '/package/al-ula-wonders' },
+    { id: 4, title: 'Jeddah Red Sea', location: 'Jeddah', img: 'https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?auto=format&fit=crop&q=80&w=800', path: '/package/jeddah-red-sea-escape' },
+    { id: 5, title: 'Farasan Islands', location: 'Jazan', img: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?auto=format&fit=crop&q=80&w=800', path: '/package/farasan-islands-trip' },
+    { id: 6, title: 'Obhur Diving', location: 'Jeddah', img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800', path: '/package/obhur-al-shamaliyah-diving' },
+    { id: 7, title: 'Hariqah Dam', location: 'Riyadh', img: 'https://images.unsplash.com/photo-1502472584811-0a2f2feb8968?auto=format&fit=crop&q=80&w=800', path: '/package/hariqah-dam-tour' },
+    { id: 8, title: 'Kingdom Sky Bridge', location: 'Riyadh', img: kingdomSkyBridge, path: '/package/riyadh-heritage-tour' },
 ];
 
 const ExploreDestinations = () => {
-    const handleError = (e) => {
-        e.target.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=800';
-    };
-
     return (
         <section className="py-24 bg-white" id="destinations">
             <div className="max-w-[1240px] mx-auto px-4">
@@ -27,34 +30,43 @@ const ExploreDestinations = () => {
                             Explore Popular Destinations
                         </h2>
                     </div>
-                    <Link to="/international-packages" className="bg-primary/5 text-primary px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest flex items-center gap-3 hover:bg-primary hover:text-white transition-all group">
+                    <Link to="/saudi-packages" className="bg-primary/5 text-primary px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest flex items-center gap-3 hover:bg-primary hover:text-white transition-all group shrink-0">
                         View All <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
                     {popularDestinations.map((dest, idx) => (
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1, duration: 0.5 }}
+                            transition={{ delay: (idx % 4) * 0.08, duration: 0.5 }}
                             key={dest.id}
-                            className="relative group h-[340px] rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-50"
                         >
-                            <img
-                                src={dest.img}
-                                alt={dest.title}
-                                className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[1.5s]"
+                            <Link
+                                to={dest.path}
+                                className="relative group h-[260px] md:h-[300px] rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-50 block"
+                            >
+                                <img
+                                    src={dest.img}
+                                    alt={dest.title}
+                                    className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[1.5s]"
                                     onError={(e) => {
                                         e.target.src = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=800';
                                     }}
-                            />
-                            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex items-end h-full">
-                                <h3 className="text-white font-display font-black leading-tight drop-shadow-md text-xl">
-                                    {dest.title}
-                                </h3>
-                            </div>
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                                <div className="absolute inset-x-0 bottom-0 p-5 flex flex-col gap-1">
+                                    <div className="flex items-center gap-1.5 text-white/70">
+                                        <MapPin className="w-3.5 h-3.5 text-primary" />
+                                        <span className="text-[10px] font-black uppercase tracking-widest">{dest.location}</span>
+                                    </div>
+                                    <h3 className="text-white font-display font-black leading-tight drop-shadow-md text-lg group-hover:text-primary transition-colors">
+                                        {dest.title}
+                                    </h3>
+                                </div>
+                            </Link>
                         </motion.div>
                     ))}
                 </div>

@@ -119,19 +119,12 @@ const SaudiPackagesPage = () => {
                                             <span className="text-xs font-bold">{pkg.locations}</span>
                                         </div>
                                         <div className="flex items-center justify-between pt-6 border-t border-gray-50">
-                                            {pkg.price ? (
-                                                <div>
-                                                    <span className="text-[10px] text-gray-400 font-black uppercase tracking-tighter block">From</span>
-                                                    <span className="text-2xl font-display font-black text-secondary">{pkg.price}</span>
-                                                </div>
-                                            ) : (
-                                                <Link
-                                                    to={`/package/${pkg.slug}`}
-                                                    className="bg-primary/10 text-primary px-5 py-3 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all"
-                                                >
-                                                    Enquire Now
-                                                </Link>
-                                            )}
+                                            <Link
+                                                to={`/package/${pkg.slug}`}
+                                                className="bg-primary/10 text-primary px-5 py-3 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all"
+                                            >
+                                                Enquire Now
+                                            </Link>
                                             <Link
                                                 to={`/package/${pkg.slug}`}
                                                 className="bg-primary text-white p-4 rounded-2xl group-hover:bg-secondary transition-all shadow-lg"
