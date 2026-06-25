@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import riyadhSkyline from '../assets/images/kafd/riyadh-skyline.jpg';
 import diriyahEvening from '../assets/images/Al diriyah/WhatsApp Image 2026-06-23 at 5.30.29 PM (1).jpeg';
 import kingdomSkyBridge from '../assets/images/kingdom tower/WhatsApp Image 2026-06-23 at 5.30.30 PM (1).jpeg';
+import hariqahDam from '../assets/images/Hariqah Dam /WhatsApp Image 2026-06-24 at 2.11.18 PM.jpeg';
 
 const popularDestinations = [
     { id: 1, title: 'Riyadh City Tour', location: 'Riyadh', img: riyadhSkyline, path: '/package/riyadh-heritage-tour' },
@@ -14,7 +15,7 @@ const popularDestinations = [
     { id: 4, title: 'Jeddah Red Sea', location: 'Jeddah', img: 'https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?auto=format&fit=crop&q=80&w=800', path: '/package/jeddah-red-sea-escape' },
     { id: 5, title: 'Farasan Islands', location: 'Jazan', img: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?auto=format&fit=crop&q=80&w=800', path: '/package/farasan-islands-trip' },
     { id: 6, title: 'Obhur Diving', location: 'Jeddah', img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800', path: '/package/obhur-al-shamaliyah-diving' },
-    { id: 7, title: 'Hariqah Dam', location: 'Riyadh', img: 'https://images.unsplash.com/photo-1502472584811-0a2f2feb8968?auto=format&fit=crop&q=80&w=800', path: '/package/hariqah-dam-tour' },
+    { id: 7, title: 'Hariqah Dam', location: 'Riyadh', img: hariqahDam, path: '/package/hariqah-dam-tour' },
     { id: 8, title: 'Kingdom Sky Bridge', location: 'Riyadh', img: kingdomSkyBridge, path: '/package/riyadh-heritage-tour' },
 ];
 

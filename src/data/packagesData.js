@@ -6,6 +6,7 @@ import riyadhNationalMuseum from '../assets/images/Souq al zal Museum/WhatsApp I
 import riyadhSouqAlZal from '../assets/images/Souq al zal Museum/WhatsApp Image 2026-06-23 at 5.30.28 PM.jpeg';
 import riyadhCamelRide from '../assets/images/camel ride/WhatsApp Image 2026-06-23 at 5.30.29 PM (3).jpeg';
 import riyadhEdgeOfTheWorld from '../assets/images/edge of the world/WhatsApp Image 2026-06-23 at 5.30.30 PM.jpeg';
+import hariqahDam from '../assets/images/Hariqah Dam /WhatsApp Image 2026-06-24 at 2.11.18 PM.jpeg';
 
 export const packagesData = [
   // --- SAUDI ARABIA PACKAGES ---
@@ -36,7 +37,7 @@ export const packagesData = [
     category: 'Saudi',
     name: 'Hariqah Dam Tour',
     title: 'Hariqah Dam Tour: Cycling, Hiking & Relaxation',
-    img: 'https://images.unsplash.com/photo-1502472584811-0a2f2feb8968?auto=format&fit=crop&q=80&w=800',
+    img: hariqahDam,
     desc: '5 hours of adventure and relaxation with cycling and hiking at the scenic Hariqah Dam.',
     duration: '5 Hours',
     price: '',
@@ -45,7 +46,7 @@ export const packagesData = [
     highlights: ['Cycling Session', 'Hiking Adventure', 'Scenic Dam Views', 'Breakfast & Refreshments'],
     included: ['Cycling equipment & safety helmets', 'Breakfast, water, and refreshments', 'Round-trip transport from meeting point', 'Professional guide & supervision'],
     itinerary: [
-      { time: '04:10 PM', title: 'Meeting & Departure', detail: 'Gather at Flyinco (Al-Ulya Street) and depart towards the destination.', image: 'https://images.unsplash.com/photo-1502472584811-0a2f2feb8968?auto=format&fit=crop&q=80&w=800' },
+      { time: '04:10 PM', title: 'Meeting & Departure', detail: 'Gather at Flyinco (Al-Ulya Street) and depart towards the destination.', image: hariqahDam },
       { time: '04:50 PM', title: 'Arrival at Destination', detail: 'Arrive at Hariqah Dam after a 30-minute scenic drive.' },
       { time: '04:50 - 05:05 PM', title: 'Warm-up & Preparation', detail: '15 minutes of warm-up and gear preparation before the activities begin.' },
       { time: '05:05 - 05:45 PM', title: 'Cycling Session', detail: 'A guided 40-minute cycling session along the dam trails.' },
