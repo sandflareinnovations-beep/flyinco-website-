@@ -60,7 +60,7 @@ const IndiaPackagesPage = () => {
             </section>
 
             {/* Packages Grid */}
-            <section className="py-24">
+            <section className="py-14 md:py-24">
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
                         {filteredPackages.map((pkg) => (
@@ -88,7 +88,7 @@ const IndiaPackagesPage = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="p-10 flex-1 flex flex-col">
+                                <div className="p-7 md:p-10 flex-1 flex flex-col">
                                     <div className="flex items-center gap-2 text-primary mb-4">
                                         <MapPin className="w-4 h-4" />
                                         <span className="text-xs font-black uppercase tracking-widest">{pkg.locations}</span>
@@ -108,7 +108,7 @@ const IndiaPackagesPage = () => {
                         ))}
                     </div>
                     {filteredPackages.length === 0 && (
-                        <div className="text-center py-20">
+                        <div className="text-center py-14 md:py-20">
                             <p className="text-gray-400 font-bold text-xl uppercase tracking-widest">No India packages found matching your search.</p>
                         </div>
                     )}
@@ -116,7 +116,7 @@ const IndiaPackagesPage = () => {
             </section>
 
              {/* FAQs */}
-             <section className="py-24 bg-gray-50">
+             <section className="py-14 md:py-24 bg-gray-50">
                 <div className="max-w-[1000px] mx-auto px-6">
                     <h2 className="text-3xl font-display font-black text-secondary mb-16 text-center">India Tour FAQs</h2>
                     <div className="space-y-4">

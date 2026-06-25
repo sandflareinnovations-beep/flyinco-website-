@@ -25,7 +25,7 @@ const CorporateInquiryForm = () => {
     };
 
     return (
-        <section className="py-24 bg-grayLight" id="inquiry-form">
+        <section className="py-14 md:py-24 bg-grayLight" id="inquiry-form">
             <div className="max-w-[800px] mx-auto px-6 md:px-12">
                 <div className="bg-white rounded-[3rem] p-10 md:p-14 shadow-2xl border border-gray-100">
                     <div className="text-center mb-10">

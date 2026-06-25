@@ -10,8 +10,8 @@ const icons = [
 
 const WhyChooseUs = () => {
     return (
-        <section className="py-24 bg-white overflow-hidden" id="about">
-            <div className="max-w-[1240px] mx-auto px-4 flex flex-col lg:flex-row gap-20 items-center">
+        <section className="py-14 md:py-24 bg-white overflow-hidden" id="about">
+            <div className="max-w-[1240px] mx-auto px-4 flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
 
                 {/* Left Graphics - Collage of 4 Images */}
                 <div className="w-full lg:w-1/2 relative">
@@ -38,8 +38,8 @@ const WhyChooseUs = () => {
                     </div>
 
                     {/* Floating badge */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-[2rem] shadow-2xl border border-gray-100 flex flex-col items-center gap-2 z-20 hover:scale-110 transition-transform">
-                        <span className="text-4xl font-black font-display text-primary">15+</span>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-5 md:p-8 rounded-[1.5rem] md:rounded-[2rem] shadow-2xl border border-gray-100 flex flex-col items-center gap-2 z-20 hover:scale-110 transition-transform">
+                        <span className="text-3xl md:text-4xl font-black font-display text-primary">15+</span>
                         <span className="text-[10px] font-black uppercase tracking-[0.2em] text-secondary text-center leading-tight">Years of <br /> Excellence</span>
                     </div>
                 </div>

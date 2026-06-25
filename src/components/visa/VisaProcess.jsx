@@ -26,7 +26,7 @@ const steps = [
 
 const VisaProcess = () => {
     return (
-        <section className="py-24 bg-white">
+        <section className="py-14 md:py-24 bg-white">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
                 <h2 className="text-3xl md:text-4xl font-display font-black text-secondary mb-16">
                     Simplify Your Visa Application

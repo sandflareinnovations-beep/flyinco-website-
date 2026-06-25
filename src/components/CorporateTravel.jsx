@@ -11,12 +11,12 @@ const CorporateTravel = ({ hideButton = false }) => {
     ];
 
     return (
-        <section className="py-24 bg-white overflow-hidden relative" id="corporate-deals">
+        <section className="py-14 md:py-24 bg-white overflow-hidden relative" id="corporate-deals">
             {/* Background Accents */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
             
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
-                <div className="flex flex-col lg:flex-row items-center gap-20">
+                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                     
                     {/* Left Content */}
                     <div className="w-full lg:w-1/2">
@@ -54,13 +54,13 @@ const CorporateTravel = ({ hideButton = false }) => {
                                 <img 
                                     src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
                                     alt="Modern Office" 
-                                    className="w-full h-[600px] object-cover group-hover:scale-110 transition-transform duration-[2s]"
+                                    className="w-full h-[360px] md:h-[600px] object-cover group-hover:scale-110 transition-transform duration-[2s]"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/50 to-transparent" />
                             </div>
                             
                             {/* Floating Stats */}
-                            <div className="absolute -bottom-10 -left-10 bg-primary p-8 rounded-[2rem] shadow-2xl border-4 border-white flex flex-col items-center gap-1">
+                            <div className="absolute -bottom-6 left-4 md:-bottom-10 md:-left-10 bg-primary p-6 md:p-8 rounded-[2rem] shadow-2xl border-4 border-white flex flex-col items-center gap-1">
                                 <span className="text-3xl font-black font-display text-white">500+</span>
                                 <span className="text-[10px] font-black uppercase tracking-widest text-white/80">Corporate Clients</span>
                             </div>

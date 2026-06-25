@@ -2,7 +2,7 @@ import React from 'react';
 
 const VisaForm = () => {
     return (
-        <section className="py-24 bg-gray-50 flex justify-center items-center px-6">
+        <section className="py-14 md:py-24 bg-gray-50 flex justify-center items-center px-6">
             <div className="max-w-[1240px] w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
                 {/* Left Side Content */}

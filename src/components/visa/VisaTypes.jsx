@@ -42,7 +42,7 @@ const visaTypes = [
 
 const VisaTypes = () => {
     return (
-        <section className="py-24 bg-gray-50 overflow-hidden">
+        <section className="py-14 md:py-24 bg-gray-50 overflow-hidden">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-display font-black text-secondary mb-4">

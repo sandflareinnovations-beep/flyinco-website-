@@ -23,7 +23,7 @@ const regionsData = [
 
 const PackagesGrid = () => {
     return (
-        <section className="py-24 bg-white overflow-hidden" id="regions">
+        <section className="py-14 md:py-24 bg-white overflow-hidden" id="regions">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12">
 
                 <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -72,7 +72,7 @@ const PackagesGrid = () => {
                                             </span>
                                         </div>
                                     </div>
-                                    <div className="p-10 flex-1 flex flex-col items-center">
+                                    <div className="p-7 md:p-10 flex-1 flex flex-col items-center">
                                         <h3 className="font-display font-black text-secondary text-2xl mb-3 group-hover:text-primary transition-colors">{dest.name}</h3>
                                         <p className="text-sm text-gray-400 font-bold mb-8 text-center uppercase tracking-widest leading-loose">Experience the unique charm of {dest.name}</p>
 

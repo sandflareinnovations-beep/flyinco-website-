@@ -10,7 +10,7 @@ const galleryItems = [
 
 const Gallery = () => {
     return (
-        <section className="py-24 bg-white" id="gallery">
+        <section className="py-14 md:py-24 bg-white" id="gallery">
             <div className="max-w-[1240px] mx-auto px-4">
 
                 <div className="mb-12 flex flex-col items-center">

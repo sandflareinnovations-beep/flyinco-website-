@@ -89,7 +89,7 @@ const SaudiPackagesPage = () => {
             </section>
 
             {/* Packages Grid */}
-            <section className="py-24">
+            <section className="py-14 md:py-24">
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         {filteredPackages.map((pkg) => (
@@ -102,7 +102,7 @@ const SaudiPackagesPage = () => {
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                                 </div>
-                                <div className="md:w-1/2 p-10 flex flex-col">
+                                <div className="md:w-1/2 p-7 md:p-10 flex flex-col">
                                     <div className="flex items-center justify-between mb-4">
                                         <span className="text-[10px] font-black text-primary uppercase tracking-[0.2em]">{pkg.duration}</span>
                                         <div className="flex items-center gap-1">
@@ -141,7 +141,7 @@ const SaudiPackagesPage = () => {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-24 bg-secondary text-white">
+            <section className="py-14 md:py-24 bg-secondary text-white">
                 <div className="max-w-[1000px] mx-auto px-6">
                     <h2 className="text-3xl font-display font-black mb-16 text-center">Saudi Travel Tips & FAQs</h2>
                     <div className="space-y-4">

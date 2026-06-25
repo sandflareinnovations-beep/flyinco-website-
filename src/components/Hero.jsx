@@ -135,19 +135,19 @@ const Hero = () => {
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.7 }}
-                        className="group relative w-full md:w-80 lg:w-96 h-40 sm:h-48 rounded-3xl overflow-hidden shadow-2xl block border border-white/20 pointer-events-auto bg-black mx-auto"
+                        className="group relative w-full md:w-80 lg:w-96 h-24 sm:h-48 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-2xl block border border-white/20 pointer-events-auto bg-black mx-auto"
                     >
                         <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800" alt="Flyinco Special Fare Flight" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s] opacity-80 group-hover:opacity-100" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                        <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 flex flex-col justify-end">
-                            <span className="bg-primary text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest px-3 py-1 sm:py-1.5 rounded-full mb-2 sm:mb-3 w-max shadow-lg shadow-primary/30">Exclusive Offer</span>
-                            <div className="flex items-end justify-between">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent sm:via-black/40" />
+                        <div className="absolute inset-x-0 bottom-0 p-3.5 sm:p-6 flex flex-col justify-end">
+                            <span className="hidden sm:inline-block bg-primary text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest px-3 py-1 sm:py-1.5 rounded-full mb-2 sm:mb-3 w-max shadow-lg shadow-primary/30">Exclusive Offer</span>
+                            <div className="flex items-center sm:items-end justify-between gap-3">
                                 <div>
-                                    <h3 className="text-white font-display font-black text-xl sm:text-2xl leading-tight mb-1 group-hover:text-primary transition-colors">Flyinco Special Fare</h3>
+                                    <h3 className="text-white font-display font-black text-sm sm:text-2xl leading-tight mb-0.5 sm:mb-1 group-hover:text-primary transition-colors">Flyinco Special Fare</h3>
                                     <p className="text-gray-300 text-[10px] sm:text-xs font-bold leading-relaxed">Book your next premium flight</p>
                                 </div>
-                                <div className="bg-white/20 backdrop-blur-md w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors border border-white/30 shrink-0">
-                                    <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:translate-x-0.5 transition-transform" />
+                                <div className="bg-white/20 backdrop-blur-md w-8 h-8 sm:w-12 sm:h-12 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors border border-white/30 shrink-0">
+                                    <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 text-white group-hover:translate-x-0.5 transition-transform" />
                                 </div>
                             </div>
                         </div>

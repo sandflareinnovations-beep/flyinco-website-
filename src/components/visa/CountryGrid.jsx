@@ -30,7 +30,7 @@ const countries = [
 
 const CountryGrid = () => {
     return (
-        <section className="py-20 bg-gray-50">
+        <section className="py-14 md:py-20 bg-gray-50">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
                 <h2 className="text-3xl md:text-4xl font-display font-black text-secondary mb-12">
                     Specialist in <span className="text-red-500 italic">VISA</span> for all countries

@@ -65,7 +65,7 @@ const ItineraryPage = () => {
         <div className="bg-white min-h-screen">
 
             {/* Hero Section */}
-            <section className="relative h-[60vh] min-h-[500px] w-full overflow-hidden">
+            <section className="relative min-h-[580px] md:h-[60vh] md:min-h-[500px] w-full overflow-hidden">
                 <img
                     src={pkg.img}
                     alt={pkg.name}
@@ -109,7 +109,7 @@ const ItineraryPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="bg-white rounded-[2.5rem] p-8 shadow-2xl min-w-[300px] border border-gray-100 flex flex-col items-center">
+                            <div className="bg-white rounded-[2.5rem] p-6 md:p-8 shadow-2xl w-full md:min-w-[300px] border border-gray-100 flex flex-col items-center">
                                 <span className="text-secondary font-display font-black text-xl mb-6 w-full text-center">Pricing on Request</span>
                                 <button
                                     onClick={scrollToEnquiry}
@@ -125,8 +125,8 @@ const ItineraryPage = () => {
             </section>
 
             {/* Content Section */}
-            <section className="py-24 max-w-[1240px] mx-auto px-6 md:px-12">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+            <section className="py-14 md:py-24 max-w-[1240px] mx-auto px-6 md:px-12">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
                     
                     {/* Main Content */}
                     <div className="lg:col-span-2">
@@ -197,7 +197,7 @@ const ItineraryPage = () => {
                         </div>
 
                         {/* Inclusions */}
-                        <div className="p-10 bg-secondary rounded-[3rem] text-white">
+                        <div className="p-6 md:p-10 bg-secondary rounded-[2.5rem] md:rounded-[3rem] text-white">
                             <h2 className="text-2xl font-display font-black mb-8 text-center uppercase tracking-widest">Included Services</h2>
                             {pkg.included ? (
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

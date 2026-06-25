@@ -36,7 +36,7 @@ const RequestCallback = () => {
     };
 
     return (
-        <section className="bg-white py-20" id="request-callback">
+        <section className="bg-white py-14 md:py-20" id="request-callback">
             <div className="max-w-[1240px] mx-auto px-6 md:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
 

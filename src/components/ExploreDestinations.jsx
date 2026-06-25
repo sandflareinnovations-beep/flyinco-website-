@@ -21,7 +21,7 @@ const popularDestinations = [
 
 const ExploreDestinations = () => {
     return (
-        <section className="py-24 bg-white" id="destinations">
+        <section className="py-14 md:py-24 bg-white" id="destinations">
             <div className="max-w-[1240px] mx-auto px-4">
 
                 <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-6">

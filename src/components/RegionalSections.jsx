@@ -37,7 +37,7 @@ const AnimatedCounter = ({ value }) => {
 
 const RegionalSections = () => {
     return (
-        <section className="py-24 bg-dark text-white overflow-hidden relative" id="regions">
+        <section className="py-14 md:py-24 bg-dark text-white overflow-hidden relative" id="regions">
             {/* Decorative bg elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-3xl pointer-events-none" />

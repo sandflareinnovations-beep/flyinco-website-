@@ -17,7 +17,7 @@ const linkSections = [
 
 const VisaLinks = () => {
     return (
-        <section className="py-20 bg-white border-t border-gray-50">
+        <section className="py-14 md:py-20 bg-white border-t border-gray-50">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12">
                     {linkSections.map((section) => (

@@ -20,7 +20,7 @@ const testimonials = [
 
 const Testimonials = () => {
     return (
-        <section className="py-24 bg-white" id="testimonials">
+        <section className="py-14 md:py-24 bg-white" id="testimonials">
             <div className="max-w-[1240px] mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-display font-bold text-secondary tracking-tight">Travel experiences</h2>

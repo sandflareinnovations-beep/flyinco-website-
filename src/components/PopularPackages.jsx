@@ -15,7 +15,7 @@ const popularPackages = popularPackageIds.map(id => packagesData.find(pkg => pkg
 
 const PopularPackages = () => {
     return (
-        <div className="py-24 bg-white" id="packages">
+        <div className="py-14 md:py-24 bg-white" id="packages">
             <div className="max-w-[1240px] mx-auto px-4">
 
                 {/* Flyinco's Best Choice */}
@@ -24,9 +24,9 @@ const PopularPackages = () => {
                     <h2 className="text-4xl md:text-5xl font-display font-black text-secondary tracking-tight text-center">Flyinco's Best Choice</h2>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-16 md:mb-24">
                     {bestChoice.map((item) => (
-                        <Link to={`/package/${item.slug}`} key={item.id} className="relative rounded-[2.5rem] overflow-hidden group h-[400px] shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer">
+                        <Link to={`/package/${item.slug}`} key={item.id} className="relative rounded-[1.75rem] sm:rounded-[2.5rem] overflow-hidden group h-[240px] sm:h-[320px] md:h-[400px] shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer">
                             <img
                                 src={item.img}
                                 alt={item.title}

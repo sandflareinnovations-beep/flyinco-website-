@@ -65,7 +65,7 @@ const InternationalPackagesPage = () => {
             </section>
 
             {/* Destination Grid */}
-            <section className="py-24">
+            <section className="py-14 md:py-24">
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {filteredDestinations.map((dest, idx) => (
@@ -95,7 +95,7 @@ const InternationalPackagesPage = () => {
                         ))}
                     </div>
                     {filteredDestinations.length === 0 && (
-                        <div className="text-center py-20">
+                        <div className="text-center py-14 md:py-20">
                             <p className="text-gray-400 font-bold text-xl uppercase tracking-widest">No destinations found matching your search.</p>
                         </div>
                     )}
@@ -103,7 +103,7 @@ const InternationalPackagesPage = () => {
             </section>
 
             {/* Info Section */}
-            <section className="py-24 bg-gray-50 border-y border-gray-100">
+            <section className="py-14 md:py-24 bg-gray-50 border-y border-gray-100">
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12">
                     <h2 className="text-3xl font-display font-black text-secondary mb-12">Travel Around The World</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-500 font-body leading-relaxed">
@@ -118,7 +118,7 @@ const InternationalPackagesPage = () => {
             </section>
 
             {/* FAQs */}
-            <section className="py-24">
+            <section className="py-14 md:py-24">
                 <div className="max-w-[1000px] mx-auto px-6">
                     <h2 className="text-3xl font-display font-black text-secondary mb-16 text-center">International Tour FAQs</h2>
                     <div className="space-y-4">
