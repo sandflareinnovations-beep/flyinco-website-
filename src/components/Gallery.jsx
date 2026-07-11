@@ -14,14 +14,14 @@ const Gallery = () => {
             <div className="max-w-[1240px] mx-auto px-4">
 
                 <div className="mb-12 flex flex-col items-center">
-                    <h4 className="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-3 text-center">Visual Stories</h4>
+                    <p className="font-display text-primary font-bold uppercase tracking-[0.2em] text-xs mb-3 text-center">Visual Stories</p>
                     <h2 className="text-4xl md:text-5xl font-display font-black text-secondary tracking-tight text-center">Journey In Frames</h2>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     {galleryItems.map((item) => (
                         <div key={item.id} className="relative group rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer aspect-[3/4] border border-gray-50">
-                            <img src={item.img} alt={item.location} className="absolute inset-0 w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[1.5s]" />
+                            <img loading="lazy" src={item.img} alt={item.location} className="absolute inset-0 w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[1.5s]" />
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-primary/20 transition-colors duration-500" />
 
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">

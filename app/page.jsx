@@ -48,6 +48,12 @@ const travelAgencyJsonLd = {
 export default function Page() {
   return (
     <>
+      {/* First hero slide (src/components/Hero.jsx) — preloaded as the home LCP image */}
+      <link
+        rel="preload"
+        as="image"
+        href="https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&q=80&w=2000"
+      />
       <JsonLd data={travelAgencyJsonLd} />
       <HomePage />
     </>

@@ -43,7 +43,7 @@ const CountryGrid = () => {
                         <div key={country.name} className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col h-full border border-gray-100">
                             {/* Flag & Image Container */}
                             <div className="relative h-48 overflow-hidden">
-                                <img
+                                <img loading="lazy"
                                     src={country.image}
                                     alt={country.name}
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -52,7 +52,7 @@ const CountryGrid = () => {
                                     }}
                                 />
                                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-1 rounded-lg shadow-md border border-white">
-                                    <img
+                                    <img loading="lazy"
                                         src={`https://flagcdn.com/w40/${country.code.toLowerCase()}.png`}
                                         alt={country.name}
                                         className="h-4 w-auto object-contain"

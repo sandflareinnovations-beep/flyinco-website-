@@ -55,7 +55,7 @@ const InternationalPackagesPage = () => {
 
                     <div className="relative max-w-3xl">
                         <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 w-6 h-6" />
-                        <input
+                        <input aria-label="Search destinations..."
                             type="text"
                             placeholder="Search destinations..."
                             className="w-full bg-white border border-gray-100 rounded-[2rem] py-6 pl-16 pr-8 shadow-xl focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all font-body"
@@ -73,7 +73,7 @@ const InternationalPackagesPage = () => {
                         {filteredDestinations.map((dest, idx) => (
                             <div key={idx} className="bg-white rounded-[2.5rem] overflow-hidden group shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-50">
                                 <div className="h-64 overflow-hidden relative">
-                                    <img
+                                    <img loading="lazy"
                                         src={dest.img}
                                         alt={dest.name}
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]"

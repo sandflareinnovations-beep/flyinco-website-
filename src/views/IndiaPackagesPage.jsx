@@ -46,7 +46,7 @@ const IndiaPackagesPage = () => {
 
                     <div className="relative max-w-3xl">
                         <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 w-6 h-6" />
-                        <input
+                        <input aria-label="Search Indian destinations..."
                             type="text"
                             placeholder="Search Indian destinations..."
                             className="w-full bg-white border border-gray-100 rounded-[2rem] py-6 pl-16 pr-8 shadow-xl focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all font-body"
@@ -64,7 +64,7 @@ const IndiaPackagesPage = () => {
                         {filteredPackages.map((pkg) => (
                             <div key={pkg.id} className="bg-white rounded-[3rem] overflow-hidden group shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-50 flex flex-col">
                                 <div className="h-72 overflow-hidden relative">
-                                    <img
+                                    <img loading="lazy"
                                         src={pkg.img}
                                         alt={pkg.name}
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]"

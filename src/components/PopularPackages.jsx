@@ -22,14 +22,14 @@ const PopularPackages = () => {
 
                 {/* Flyinco's Best Choice */}
                 <div className="mb-12 flex flex-col items-center">
-                    <h4 className="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-3 text-center">Curated for you</h4>
+                    <p className="font-display text-primary font-bold uppercase tracking-[0.2em] text-xs mb-3 text-center">Curated for you</p>
                     <h2 className="text-4xl md:text-5xl font-display font-black text-secondary tracking-tight text-center">Flyinco's Best Choice</h2>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-16 md:mb-24">
                     {bestChoice.map((item) => (
                         <Link href={`/package/${item.slug}`} key={item.id} className="relative rounded-[1.75rem] sm:rounded-[2.5rem] overflow-hidden group h-[240px] sm:h-[320px] md:h-[400px] shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer">
-                            <img
+                            <img loading="lazy"
                                 src={item.img}
                                 alt={item.title}
                                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]"
@@ -47,7 +47,7 @@ const PopularPackages = () => {
 
                 {/* Popular Packages */}
                 <div className="mb-12 flex flex-col items-center">
-                    <h4 className="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-3 text-center">Top rated</h4>
+                    <p className="font-display text-primary font-bold uppercase tracking-[0.2em] text-xs mb-3 text-center">Top rated</p>
                     <h2 className="text-4xl md:text-5xl font-display font-black text-secondary tracking-tight text-center">Popular Packages</h2>
                 </div>
 
@@ -55,7 +55,7 @@ const PopularPackages = () => {
                     {popularPackages.map((pkg) => (
                         <div key={pkg.id} className="bg-white rounded-[2.5rem] overflow-hidden flex flex-col group border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
                             <div className="h-56 overflow-hidden relative">
-                                <img
+                                <img loading="lazy"
                                     src={pkg.img}
                                     alt={pkg.title}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1s]"
@@ -64,7 +64,7 @@ const PopularPackages = () => {
                                     }}
                                 />
                                 <div className="absolute top-4 right-4 z-10">
-                                    <button className="bg-white/90 backdrop-blur-md p-2.5 rounded-2xl shadow-sm text-secondary hover:text-primary hover:scale-110 transition-all">
+                                    <button aria-label={`Save ${pkg.title} to wishlist`} className="bg-white/90 backdrop-blur-md p-2.5 rounded-2xl shadow-sm text-secondary hover:text-primary hover:scale-110 transition-all">
                                         <Heart className="w-5 h-5" fill="currentColor" stroke="none" />
                                     </button>
                                 </div>

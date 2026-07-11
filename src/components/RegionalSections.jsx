@@ -71,7 +71,7 @@ const RegionalSections = () => {
                                 className="group relative rounded-3xl overflow-hidden glass-card h-[400px]"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent z-10" />
-                                <img
+                                <img loading="lazy"
                                     src={city.img}
                                     alt={city.name}
                                     className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-1000"

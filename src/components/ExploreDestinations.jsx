@@ -28,7 +28,7 @@ const ExploreDestinations = () => {
 
                 <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-6">
                     <div>
-                        <h4 className="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-3 text-center md:text-left">Saudi Excellence</h4>
+                        <p className="font-display text-primary font-bold tracking-[0.2em] uppercase text-xs mb-3 text-center md:text-left">Saudi Excellence</p>
                         <h2 className="text-4xl md:text-5xl font-display font-black text-secondary tracking-tight">
                             Explore Popular Destinations
                         </h2>
@@ -51,7 +51,7 @@ const ExploreDestinations = () => {
                                 href={dest.path}
                                 className="relative group h-[260px] md:h-[300px] rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-50 block"
                             >
-                                <img
+                                <img loading="lazy"
                                     src={dest.img}
                                     alt={dest.title}
                                     className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[1.5s]"

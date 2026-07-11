@@ -20,7 +20,7 @@ const Testimonials = () => {
                             <p className="font-body text-gray-500 mb-8 italic leading-relaxed font-medium">"{item.text}"</p>
                             <div className="flex items-center gap-4 border-t border-gray-100 pt-6">
                                 {item.img && (
-                                    <img src={item.img} alt={`${item.name} — Flyinco traveller`} className="w-14 h-14 rounded-full object-cover border-2 border-primary/20" />
+                                    <img loading="lazy" src={item.img} alt={`${item.name} — Flyinco traveller`} className="w-14 h-14 rounded-full object-cover border-2 border-primary/20" />
                                 )}
                                 <div>
                                     <h4 className="font-display font-bold text-secondary text-lg">{item.name}</h4>

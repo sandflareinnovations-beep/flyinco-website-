@@ -11,7 +11,7 @@ const HotDealBanner = () => {
 
                 <div className="relative rounded-[24px] overflow-hidden group shadow-md hover:shadow-xl transition-shadow cursor-pointer h-[280px]">
 
-                    <img
+                    <img loading="lazy"
                         src={dubaiPackage?.img || '/logo.png'}
                         alt="Dubai city and desert safari holiday deal"
                         className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000"

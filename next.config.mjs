@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  outputFileTracingRoot: import.meta.dirname,
   // Image files are imported as plain URL strings (Vite-style) so the
   // existing `<img src={imported}>` usage in packagesData keeps working.
   images: { disableStaticImages: true },

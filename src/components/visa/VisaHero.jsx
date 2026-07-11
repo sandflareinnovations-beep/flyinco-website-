@@ -23,9 +23,9 @@ const VisaHero = () => {
                     <div className="flex flex-col md:flex-row items-center">
                         {/* Left Logic: Image */}
                         <div className="w-full md:w-1/3 h-[300px] md:h-auto overflow-hidden">
-                            <img
+                            <img loading="lazy"
                                 src="https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&q=80&w=800"
-                                alt="Traveler"
+                                alt="Traveller with passport and visa documents"
                                 className="w-full h-full object-cover"
                                 onError={(e) => {
                                     e.target.src = 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800';
@@ -62,7 +62,7 @@ const VisaHero = () => {
                                 {[
                                     'AU', 'BH', 'CA', 'CN', 'EG', 'GE', 'HK', 'JP', 'KW', 'MY', 'PH', 'RU', 'SA', 'SG', 'KR', 'LK', 'TH', 'AE', 'GB', 'US', 'UZ', 'VN'
                                 ].map((code) => (
-                                    <img
+                                    <img loading="lazy"
                                         key={code}
                                         src={`https://flagcdn.com/w40/${code.toLowerCase()}.png`}
                                         alt={code}

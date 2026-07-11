@@ -75,7 +75,7 @@ const VisaTypes = () => {
                             <SwiperSlide key={type.title}>
                                 <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all group flex flex-col border border-gray-100 p-4 h-full">
                                     <div className="rounded-[2rem] overflow-hidden h-64 mb-6">
-                                        <img
+                                        <img loading="lazy"
                                             src={type.image}
                                             alt={type.title}
                                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"

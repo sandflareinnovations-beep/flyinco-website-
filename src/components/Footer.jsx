@@ -11,7 +11,7 @@ const Footer = () => {
                 {/* Col 1 */}
                 <div className="flex flex-col">
                     <Link href="/" className="flex items-center gap-2 mb-6 cursor-pointer opacity-90 hover:opacity-100 transition-opacity max-w-max">
-                        <img src="/logo-white.png" alt="Flyinco Travel & Tourism" className="h-10 object-contain" />
+                        <img loading="lazy" src="/logo-white.png" alt="Flyinco Travel & Tourism" className="h-10 object-contain" />
                     </Link>
                     <p className="font-body text-sm font-medium leading-relaxed mb-6 text-gray-300">
                         Headquartered in Saudi Arabia with operating branches in Bahrain, UAE, and India. We manage high-quality holiday packages globally.

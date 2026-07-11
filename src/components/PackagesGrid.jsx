@@ -30,7 +30,7 @@ const PackagesGrid = () => {
 
                 <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
                     <div className="max-w-2xl">
-                        <h4 className="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-3">Global Gateway</h4>
+                        <p className="font-display text-primary font-bold uppercase tracking-[0.2em] text-xs mb-3">Global Gateway</p>
                         <h2 className="text-4xl md:text-6xl font-display font-black text-secondary tracking-tight">
                             Explore the <span className="text-primary">World</span> One Row at a Time
                         </h2>
@@ -59,7 +59,7 @@ const PackagesGrid = () => {
                             <SwiperSlide key={dest.id}>
                                 <div className="bg-white rounded-[2.5rem] overflow-hidden group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer flex flex-col border border-gray-50 h-full">
                                     <div className="h-64 overflow-hidden relative">
-                                        <img
+                                        <img loading="lazy"
                                             src={dest.img}
                                             alt={dest.name}
                                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]"

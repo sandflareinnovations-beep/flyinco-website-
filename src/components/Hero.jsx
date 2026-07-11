@@ -53,7 +53,8 @@ const Hero = () => {
                         <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10" />
                         <img
                             src={slides[currentSlide].image}
-                            alt="Hero Image"
+                            alt={`title — subtitle`}
+                            fetchPriority="high"
                             className="w-full h-full object-cover"
                             onError={(e) => {
                                 e.target.src = 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=2000';
@@ -64,10 +65,10 @@ const Hero = () => {
 
                 {/* Slider Controls - Hidden on very small screens, visible on md+ */}
                 <div className="hidden md:flex absolute bottom-10 left-10 z-30 gap-4">
-                    <button onClick={prevSlide} className="w-12 h-12 rounded-full border border-white/30 bg-black/10 backdrop-blur-sm text-white flex items-center justify-center hover:bg-primary hover:border-primary transition-all pointer-events-auto">
+                    <button onClick={prevSlide} aria-label="Previous slide" className="w-12 h-12 rounded-full border border-white/30 bg-black/10 backdrop-blur-sm text-white flex items-center justify-center hover:bg-primary hover:border-primary transition-all pointer-events-auto">
                         <ChevronLeft className="w-6 h-6" />
                     </button>
-                    <button onClick={nextSlide} className="w-12 h-12 rounded-full border border-white/30 bg-black/10 backdrop-blur-sm text-white flex items-center justify-center hover:bg-primary hover:border-primary transition-all pointer-events-auto">
+                    <button onClick={nextSlide} aria-label="Next slide" className="w-12 h-12 rounded-full border border-white/30 bg-black/10 backdrop-blur-sm text-white flex items-center justify-center hover:bg-primary hover:border-primary transition-all pointer-events-auto">
                         <ChevronRight className="w-6 h-6" />
                     </button>
                 </div>
@@ -78,6 +79,7 @@ const Hero = () => {
                         <button
                             key={idx}
                             onClick={() => setCurrentSlide(idx)}
+                            aria-label={`Go to slide ${idx + 1}`}
                             className={`h-1.5 transition-all rounded-full pointer-events-auto ${currentSlide === idx ? 'w-8 bg-primary' : 'w-2 bg-white/40'}`}
                         />
                     ))}
@@ -124,7 +126,7 @@ const Hero = () => {
                                 className="bg-transparent outline-none w-full text-secondary font-bold placeholder-gray-400 text-xs sm:text-sm"
                             />
                         </div>
-                        <button className="bg-primary text-white w-12 h-12 sm:w-14 sm:h-14 rounded-2xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/30 flex items-center justify-center group shrink-0">
+                        <button aria-label="Search destinations" className="bg-primary text-white w-12 h-12 sm:w-14 sm:h-14 rounded-2xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/30 flex items-center justify-center group shrink-0">
                             <Search className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
                         </button>
                     </motion.div>
@@ -145,7 +147,7 @@ const Hero = () => {
                             <span className="hidden sm:inline-block bg-primary text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest px-3 py-1 sm:py-1.5 rounded-full mb-2 sm:mb-3 w-max shadow-lg shadow-primary/30">Exclusive Offer</span>
                             <div className="flex items-center sm:items-end justify-between gap-3">
                                 <div>
-                                    <h3 className="text-white font-display font-black text-sm sm:text-2xl leading-tight mb-0.5 sm:mb-1 group-hover:text-primary transition-colors">Flyinco Special Fare</h3>
+                                    <p className="text-white font-display font-black text-sm sm:text-2xl leading-tight mb-0.5 sm:mb-1 group-hover:text-primary transition-colors">Flyinco Special Fare</p>
                                     <p className="text-gray-300 text-[10px] sm:text-xs font-bold leading-relaxed">Book your next premium flight</p>
                                 </div>
                                 <div className="bg-white/20 backdrop-blur-md w-8 h-8 sm:w-12 sm:h-12 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors border border-white/30 shrink-0">

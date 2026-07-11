@@ -15,7 +15,7 @@ const VisaForm = () => {
                     </p>
                     <div className="flex items-center gap-6 p-6 bg-white rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50 max-w-md">
                         <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
-                            <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain opacity-50" />
+                            <img loading="lazy" src="/logo.png" alt="Flyinco logo" className="w-10 h-10 object-contain opacity-50" />
                         </div>
                         <div>
                             <p className="text-xs font-black text-gray-400 uppercase tracking-widest mb-1">Expert Support</p>

@@ -44,7 +44,7 @@ const CorporateInquiryForm = () => {
             <div className="max-w-[800px] mx-auto px-6 md:px-12">
                 <div className="bg-white rounded-[3rem] p-10 md:p-14 shadow-2xl border border-gray-100">
                     <div className="text-center mb-10">
-                        <h4 className="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-3">Get in Touch</h4>
+                        <p className="font-display text-primary font-bold uppercase tracking-[0.2em] text-xs mb-3">Get in Touch</p>
                         <h2 className="text-3xl md:text-5xl font-display font-black text-secondary leading-tight">
                             Corporate Travel <span className="text-primary">Inquiry</span>
                         </h2>

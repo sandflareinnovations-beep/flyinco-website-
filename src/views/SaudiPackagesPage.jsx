@@ -51,7 +51,7 @@ const SaudiPackagesPage = () => {
 
                     <div className="relative max-w-3xl">
                         <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 w-6 h-6" />
-                        <input
+                        <input aria-label="Search Saudi destinations (Riyadh, Al-Ula, Jeddah...)"
                             type="text"
                             placeholder="Search Saudi destinations (Riyadh, Al-Ula, Jeddah...)"
                             className="w-full bg-white text-secondary border border-white/10 rounded-[2rem] py-6 pl-16 pr-8 shadow-2xl focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all font-body"
@@ -93,7 +93,7 @@ const SaudiPackagesPage = () => {
                         {filteredPackages.map((pkg) => (
                             <div key={pkg.id} className="bg-white rounded-[3rem] overflow-hidden group shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-50 flex flex-col md:flex-row h-full">
                                 <div className="md:w-1/2 h-64 md:h-auto overflow-hidden relative">
-                                    <img
+                                    <img loading="lazy"
                                         src={pkg.img}
                                         alt={pkg.name}
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]"

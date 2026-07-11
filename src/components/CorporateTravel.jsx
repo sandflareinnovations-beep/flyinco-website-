@@ -20,7 +20,7 @@ const CorporateTravel = ({ hideButton = false }) => {
                     
                     {/* Left Content */}
                     <div className="w-full lg:w-1/2">
-                        <h4 className="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-4">Corporate Excellence</h4>
+                        <p className="font-display text-primary font-bold uppercase tracking-[0.2em] text-xs mb-4">Corporate Excellence</p>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-secondary mb-8 leading-tight">
                             Streamline Your <span className="text-primary">Business</span> Travel
                         </h2>
@@ -51,9 +51,9 @@ const CorporateTravel = ({ hideButton = false }) => {
                     <div className="w-full lg:w-1/2">
                         <div className="relative">
                             <div className="rounded-[4rem] overflow-hidden border-[12px] border-white shadow-2xl skew-y-3 group hover:skew-y-0 transition-all duration-700">
-                                <img 
+                                <img loading="lazy" 
                                     src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
-                                    alt="Modern Office" 
+                                    alt="Corporate travel management office" 
                                     className="w-full h-[360px] md:h-[600px] object-cover group-hover:scale-110 transition-transform duration-[2s]"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/50 to-transparent" />

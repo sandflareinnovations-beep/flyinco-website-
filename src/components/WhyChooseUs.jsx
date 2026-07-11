@@ -21,18 +21,18 @@ const WhyChooseUs = () => {
                     <div className="grid grid-cols-2 gap-6 relative z-10">
                         <div className="flex flex-col gap-6 mt-12">
                             <div className="rounded-[3rem] overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-700 aspect-[4/5] border-8 border-white">
-                                <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&q=80&w=600" alt="Dubai" className="w-full h-full object-cover" />
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&q=80&w=600" alt="Dubai city skyline holiday destination" className="w-full h-full object-cover" />
                             </div>
                             <div className="rounded-[3rem] overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-700 aspect-square border-8 border-white">
-                                <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&q=80&w=600" alt="Kashmir" className="w-full h-full object-cover" />
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&q=80&w=600" alt="Kashmir valley landscape, India" className="w-full h-full object-cover" />
                             </div>
                         </div>
                         <div className="flex flex-col gap-6">
                             <div className="rounded-[3rem] overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-700 aspect-square border-8 border-white">
-                                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=600" alt="Paris" className="w-full h-full object-cover" />
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=600" alt="Paris Eiffel Tower, France" className="w-full h-full object-cover" />
                             </div>
                             <div className="rounded-[3rem] overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-700 aspect-[4/5] border-8 border-white">
-                                <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&q=80&w=600" alt="Maldives" className="w-full h-full object-cover" />
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&q=80&w=600" alt="Maldives overwater villas" className="w-full h-full object-cover" />
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
 
                 {/* Right Content */}
                 <div className="w-full lg:w-1/2">
-                    <h4 className="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-4">Our Legacy</h4>
+                    <p className="font-display text-primary font-bold uppercase tracking-[0.2em] text-xs mb-4">Our Legacy</p>
                     <h2 className="text-4xl md:text-5xl lg:text-5xl font-display font-black text-secondary mb-8 leading-tight tracking-tight">
                         Expertise That Turns Trips Into Legacies
                     </h2>
@@ -62,7 +62,7 @@ const WhyChooseUs = () => {
                                     {item.icon}
                                 </div>
                                 <div>
-                                    <h5 className="font-black text-xs text-secondary font-display uppercase tracking-widest mb-1.5">{item.title}</h5>
+                                    <p className="font-black text-xs text-secondary font-display uppercase tracking-widest mb-1.5">{item.title}</p>
                                     <p className="text-[11px] text-gray-400 font-bold leading-relaxed">{item.desc}</p>
                                 </div>
                             </div>

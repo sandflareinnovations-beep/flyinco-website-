@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Clock, MapPin, Star, CheckCircle, ChevronRight, Plane, Building, Car, Map as MapIcon, Share2, Heart, Calendar, User, Mail, Phone, Users, Send } from 'lucide-react';
+import { Clock, MapPin, CheckCircle, ChevronRight, Plane, Building, Car, Map as MapIcon, Share2, Heart, Calendar, User, Mail, Phone, Users, Send } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
 import { trackEvent, whatsappLink } from '../lib/analytics';
 
@@ -67,8 +67,9 @@ const ItineraryPage = ({ slug }) => {
             {/* Hero Section */}
             <section className="relative min-h-[580px] md:h-[60vh] md:min-h-[500px] w-full overflow-hidden">
                 <img
+                    fetchPriority="high"
                     src={pkg.img}
-                    alt={pkg.name}
+                    alt={`${pkg.name} — ${pkg.locations}`}
                     className="w-full h-full object-cover scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end pb-16 px-6 md:px-12">
@@ -162,7 +163,7 @@ const ItineraryPage = ({ slug }) => {
                                         <div className="bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all">
                                             {item.image && (
                                                 <div className="h-56 w-full overflow-hidden">
-                                                    <img
+                                                    <img loading="lazy"
                                                         src={item.image}
                                                         alt={item.title}
                                                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
@@ -249,7 +250,7 @@ const ItineraryPage = ({ slug }) => {
                                             required
                                             value={form.name}
                                             onChange={handleChange}
-                                            placeholder="Full Name"
+                                            placeholder="Full Name" aria-label="Full Name"
                                             className="w-full bg-white border border-gray-100 rounded-2xl py-3.5 pl-11 pr-4 text-sm font-bold text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                         />
                                     </div>
@@ -262,7 +263,7 @@ const ItineraryPage = ({ slug }) => {
                                             required
                                             value={form.email}
                                             onChange={handleChange}
-                                            placeholder="Email Address"
+                                            placeholder="Email Address" aria-label="Email Address"
                                             className="w-full bg-white border border-gray-100 rounded-2xl py-3.5 pl-11 pr-4 text-sm font-bold text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                         />
                                     </div>
@@ -270,6 +271,7 @@ const ItineraryPage = ({ slug }) => {
                                     <div className="relative flex gap-2">
                                         <div className="relative shrink-0 w-24">
                                             <select
+                                                aria-label="Country code"
                                                 name="countryCode"
                                                 value={form.countryCode}
                                                 onChange={handleChange}
@@ -294,7 +296,7 @@ const ItineraryPage = ({ slug }) => {
                                                 required
                                                 value={form.phone}
                                                 onChange={handleChange}
-                                                placeholder="Phone Number"
+                                                placeholder="Phone Number" aria-label="Phone Number"
                                                 className="w-full bg-white border border-gray-100 rounded-2xl py-3.5 pl-11 pr-4 text-sm font-bold text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                             />
                                         </div>
@@ -309,7 +311,7 @@ const ItineraryPage = ({ slug }) => {
                                             required
                                             value={form.people}
                                             onChange={handleChange}
-                                            placeholder="Number of People"
+                                            placeholder="Number of People" aria-label="Number of People"
                                             className="w-full bg-white border border-gray-100 rounded-2xl py-3.5 pl-11 pr-4 text-sm font-bold text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                         />
                                     </div>
@@ -319,6 +321,7 @@ const ItineraryPage = ({ slug }) => {
                                         <input
                                             type="date"
                                             name="travelDate"
+                                            aria-label="Travel date"
                                             required
                                             value={form.travelDate}
                                             onChange={handleChange}
@@ -352,7 +355,7 @@ const ItineraryPage = ({ slug }) => {
                             </div>
 
                             <div className="rounded-[2.5rem] overflow-hidden relative h-[400px]">
-                                <img src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&q=80&w=800" alt="Discover Saudi Arabia" className="w-full h-full object-cover" />
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&q=80&w=800" alt="Discover Saudi Arabia" className="w-full h-full object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/50 to-primary/30 flex flex-col justify-center items-center text-center p-8">
                                     <h4 className="text-white font-display font-black text-3xl mb-4 leading-tight uppercase tracking-tighter drop-shadow-lg">Get 15% Off Your First Booking</h4>
                                     <button className="bg-white text-primary px-8 py-3 rounded-full font-black text-[10px] uppercase tracking-widest shadow-xl hover:scale-105 transition-all">Redeem Code: FLYCO15</button>

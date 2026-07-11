@@ -11,7 +11,7 @@ const CorporateTravelPage = () => {
             {/* Page Header */}
             <div className="w-full py-16 bg-secondary relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full">
-                    <img 
+                    <img loading="lazy" 
                         src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000" 
                         alt="Corporate Header" 
                         className="w-full h-full object-cover opacity-20"

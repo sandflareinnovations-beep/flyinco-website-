@@ -63,7 +63,7 @@ const RequestCallback = () => {
                                     <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
                                     <input
                                         type="text" name="name" required value={form.name} onChange={handleChange}
-                                        placeholder="Full Name"
+                                        placeholder="Full Name" aria-label="Full Name"
                                         className="w-full bg-white border border-gray-100 rounded-2xl py-3.5 pl-11 pr-4 text-sm font-bold text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                     />
                                 </div>
@@ -71,13 +71,14 @@ const RequestCallback = () => {
                                     <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
                                     <input
                                         type="email" name="email" required value={form.email} onChange={handleChange}
-                                        placeholder="Email Address"
+                                        placeholder="Email Address" aria-label="Email Address"
                                         className="w-full bg-white border border-gray-100 rounded-2xl py-3.5 pl-11 pr-4 text-sm font-bold text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                     />
                                 </div>
                                 <div className="relative flex gap-2">
                                     <div className="relative shrink-0 w-24">
                                         <select
+                                            aria-label="Country code"
                                             name="countryCode" value={form.countryCode} onChange={handleChange}
                                             className="w-full appearance-none bg-white border border-gray-100 rounded-2xl py-3.5 pl-3 pr-6 text-sm font-bold text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                         >
@@ -96,7 +97,7 @@ const RequestCallback = () => {
                                         <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
                                         <input
                                             type="tel" name="phone" required value={form.phone} onChange={handleChange}
-                                            placeholder="Phone Number"
+                                            placeholder="Phone Number" aria-label="Phone Number"
                                             className="w-full bg-white border border-gray-100 rounded-2xl py-3.5 pl-11 pr-4 text-sm font-bold text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                         />
                                     </div>
@@ -106,14 +107,14 @@ const RequestCallback = () => {
                                         <Users className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
                                         <input
                                             type="number" name="people" min="1" required value={form.people} onChange={handleChange}
-                                            placeholder="People"
+                                            placeholder="People" aria-label="Number of people"
                                             className="w-full bg-white border border-gray-100 rounded-2xl py-3.5 pl-11 pr-4 text-sm font-bold text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                         />
                                     </div>
                                     <div className="relative">
                                         <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
                                         <input
-                                            type="date" name="travelDate" required value={form.travelDate} onChange={handleChange}
+                                            type="date" name="travelDate" aria-label="Travel date" required value={form.travelDate} onChange={handleChange}
                                             className="w-full bg-white border border-gray-100 rounded-2xl py-3.5 pl-11 pr-3 text-sm font-bold text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                         />
                                     </div>
