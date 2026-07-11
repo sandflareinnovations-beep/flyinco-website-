@@ -98,12 +98,6 @@ const ItineraryPage = ({ slug }) => {
                                             <span className="font-bold text-sm">Meet: {pkg.meetingPoint}</span>
                                         </div>
                                     )}
-                                    <div className="flex items-center gap-1">
-                                        {[...Array(5)].map((_, i) => (
-                                            <Star key={i} className="w-4 h-4 fill-[#FFB800] text-[#FFB800]" />
-                                        ))}
-                                        <span className="font-bold text-sm ml-2">5.0 (24 Reviews)</span>
-                                    </div>
                                 </div>
                             </div>
                             <div className="bg-white rounded-[2.5rem] p-6 md:p-8 shadow-2xl w-full md:min-w-[300px] border border-gray-100 flex flex-col items-center">

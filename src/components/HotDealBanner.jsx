@@ -1,4 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
+import { packagesData } from '../data/packagesData';
+
+const dubaiPackage = packagesData.find((p) => p.slug === 'dubai-city-desert');
 
 const HotDealBanner = () => {
     return (
@@ -8,8 +12,8 @@ const HotDealBanner = () => {
                 <div className="relative rounded-[24px] overflow-hidden group shadow-md hover:shadow-xl transition-shadow cursor-pointer h-[280px]">
 
                     <img
-                        src="https://picsum.photos/seed/vfgffr/800/600"
-                        alt="Dubai Deals"
+                        src={dubaiPackage?.img || '/logo.png'}
+                        alt="Dubai city and desert safari holiday deal"
                         className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000"
                     />
 
@@ -21,9 +25,9 @@ const HotDealBanner = () => {
                             <p className="text-sm text-gray-300 font-medium mb-3">
                                 Amazing cashback on Dubai Coast, Luxury Leisure Dubai 4 Nights/5 Days...
                             </p>
-                            <button className="bg-primary text-white text-xs font-bold px-4 py-2 uppercase tracking-wide rounded hover:bg-primary/90 transition-colors">
+                            <Link href="/package/dubai-city-desert" className="inline-block bg-primary text-white text-xs font-bold px-4 py-2 uppercase tracking-wide rounded hover:bg-primary/90 transition-colors">
                                 Enquire Request
-                            </button>
+                            </Link>
                         </div>
                     </div>
 

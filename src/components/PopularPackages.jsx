@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Star, Heart, MapPin, Clock } from 'lucide-react';
+import { Heart, MapPin, Clock } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
 import Link from 'next/link';
 
@@ -88,15 +88,6 @@ const PopularPackages = () => {
                                 <h3 className="font-display font-bold text-secondary text-base mb-4 leading-tight group-hover:text-primary transition-colors line-clamp-2">
                                     {pkg.title}
                                 </h3>
-
-                                <div className="flex items-center gap-1 mb-6">
-                                    <div className="flex">
-                                        {Array.from({ length: 5 }).map((_, i) => (
-                                            <Star key={i} className={`w-3.5 h-3.5 ${i < 4 ? 'fill-[#FFB800] text-[#FFB800]' : 'text-gray-200'}`} />
-                                        ))}
-                                    </div>
-                                    <span className="text-xs text-gray-400 font-bold ml-1">4.5 (12)</span>
-                                </div>
 
                                 <div className="mt-auto pt-4 border-t border-gray-50">
                                     <div className="grid grid-cols-2 gap-3">

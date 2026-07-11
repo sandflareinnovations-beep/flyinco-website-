@@ -5,6 +5,7 @@ import ExploreDestinations from '../components/ExploreDestinations';
 import BrowseCategories from '../components/BrowseCategories';
 import PackagesGrid from '../components/PackagesGrid';
 import Testimonials from '../components/Testimonials';
+import GoogleReviews from '../components/GoogleReviews';
 import HotDealBanner from '../components/HotDealBanner';
 import Gallery from '../components/Gallery';
 import WhyChooseUs from '../components/WhyChooseUs';
@@ -21,6 +22,7 @@ const HomePage = () => {
             <BrowseCategories />
             <PackagesGrid />
             <Testimonials />
+            <GoogleReviews />
             <HotDealBanner />
             <Gallery />
             <CorporateTravel />
