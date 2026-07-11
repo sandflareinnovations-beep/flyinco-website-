@@ -102,6 +102,11 @@ const Navbar = () => {
                                     >
                                         {link.name}
                                     </a>
+                                ) : link.path === '#' ? (
+                                    <span className="hover:text-primary transition-colors flex items-center gap-1 cursor-default">
+                                        {link.name}
+                                        {link.dropdown && <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.name ? 'rotate-180' : ''}`} />}
+                                    </span>
                                 ) : (
                                     <Link
                                         href={link.path}
@@ -140,9 +145,9 @@ const Navbar = () => {
 
                     {/* Action */}
                     <div className="hidden lg:flex items-center">
-                        <button className="bg-primary text-white border-2 border-primary px-8 py-2.5 rounded-full font-bold hover:bg-white hover:text-primary transition-all transform hover:-translate-y-0.5 text-sm uppercase tracking-wider shadow-md">
+                        <a href="#contact" className="bg-primary text-white border-2 border-primary px-8 py-2.5 rounded-full font-bold hover:bg-white hover:text-primary transition-all transform hover:-translate-y-0.5 text-sm uppercase tracking-wider shadow-md">
                             Contact Us
-                        </button>
+                        </a>
                     </div>
 
                     {/* Mobile Menu Toggle */}

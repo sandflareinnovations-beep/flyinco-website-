@@ -1,6 +1,6 @@
 import React from 'react';
-import { Instagram, Facebook, Linkedin, Youtube, Phone, Mail, MapPin } from 'lucide-react';
-import { SiX } from 'react-icons/si';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -35,7 +35,7 @@ const Footer = () => {
                     <ul className="flex flex-col gap-3 font-medium text-sm text-gray-400">
                         <li><a href="/#about" className="hover:text-primary transition-colors">About Us</a></li>
                         <li><Link href="/visa" className="hover:text-primary transition-colors">Visa Services</Link></li>
-                        <li><Link href="/visa" className="hover:text-primary transition-colors">Travel Insurance</Link></li>
+                        <li><Link href="/corporate-travel" className="hover:text-primary transition-colors">Corporate Travel</Link></li>
                         <li><a href="https://www.flyincochauffeur.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Chauffeur Service</a></li>
                         <li><a href="#contact" className="hover:text-primary transition-colors">Contact Support</a></li>
                     </ul>
@@ -71,10 +71,9 @@ const Footer = () => {
                 <p>&copy; 2024 Flyinco Travel & Tourism. All rights reserved. KSA | BAHRAIN | UAE | INDIA</p>
 
                 <div className="flex items-center gap-4">
-                    <a href="#" className="bg-white/10 p-2 rounded-lg hover:bg-primary hover:text-white text-white transition-colors"><Facebook className="w-4 h-4" /></a>
-                    <a href="#" className="bg-white/10 p-2 rounded-lg hover:bg-primary hover:text-white text-white transition-colors"><Instagram className="w-4 h-4" /></a>
-                    <a href="#" className="bg-white/10 p-2 rounded-lg hover:bg-primary hover:text-white text-white transition-colors"><SiX className="w-4 h-4" /></a>
-                    <a href="#" className="bg-white/10 p-2 rounded-lg hover:bg-primary hover:text-white text-white transition-colors"><Linkedin className="w-4 h-4" /></a>
+                    <a href="https://wa.me/966556182021" target="_blank" rel="noopener noreferrer" aria-label="Chat with Flyinco on WhatsApp" className="bg-white/10 p-2 rounded-lg hover:bg-primary hover:text-white text-white transition-colors"><FaWhatsapp className="w-4 h-4" /></a>
+                    <a href="mailto:info@flyinco.com" aria-label="Email Flyinco" className="bg-white/10 p-2 rounded-lg hover:bg-primary hover:text-white text-white transition-colors"><Mail className="w-4 h-4" /></a>
+                    <a href="tel:+966556182021" aria-label="Call Flyinco" className="bg-white/10 p-2 rounded-lg hover:bg-primary hover:text-white text-white transition-colors"><Phone className="w-4 h-4" /></a>
                 </div>
             </div>
 

@@ -3,15 +3,31 @@ import React from 'react';
 const linkSections = [
     {
         title: 'Popular India Destinations',
-        links: ['Andaman Packages', 'Kerala Packages', 'Goa Packages', 'Kashmir Packages', 'Himachal Packages', 'Rajasthan Packages', 'Uttarakhand Packages', 'North East Packages', 'Gujarat Packages']
+        links: [
+            { name: 'Andaman Packages', href: '/package/andaman-island-escape' },
+            { name: 'Kerala Packages', href: '/package/kerala-backwaters-paradise' },
+            { name: 'Rajasthan Packages', href: '/package/royal-rajasthan-heritage' },
+            { name: 'All India Packages', href: '/india-packages' },
+        ]
     },
     {
         title: 'Popular International Destinations',
-        links: ['Dubai Packages', 'Thailand Packages', 'Bali Packages', 'Singapore Packages', 'Europe Packages', 'Maldives Packages', 'Mauritius Packages', 'Vietnam Packages', 'Sri Lanka Packages']
+        links: [
+            { name: 'Dubai Packages', href: '/package/dubai-city-desert' },
+            { name: 'Bali Packages', href: '/package/bali-ubud-beach-retreat' },
+            { name: 'Maldives Packages', href: '/package/maldives-overwater-luxury' },
+            { name: 'All International Packages', href: '/international-packages' },
+        ]
     },
     {
         title: 'Saudi Arabia Destinations',
-        links: ['Riyadh Tour', 'Jeddah Coastal', 'Al-Ula Adventure', 'Madinah Spiritual', 'Makkah Umrah', 'Dammam Gateway']
+        links: [
+            { name: 'Riyadh Tour', href: '/package/riyadh-heritage-tour' },
+            { name: 'Jeddah Coastal', href: '/package/jeddah-red-sea-escape' },
+            { name: 'Al-Ula Adventure', href: '/package/al-ula-wonders' },
+            { name: 'Makkah Umrah', href: '/package/spiritual-umrah-journey' },
+            { name: 'All Saudi Packages', href: '/saudi-packages' },
+        ]
     }
 ];
 
@@ -28,11 +44,11 @@ const VisaLinks = () => {
                             <div className="flex flex-wrap gap-x-6 gap-y-3">
                                 {section.links.map((link) => (
                                     <a
-                                        key={link}
-                                        href="#"
+                                        key={link.name}
+                                        href={link.href}
                                         className="text-[11px] font-bold text-gray-400 hover:text-primary transition-all underline decoration-gray-100 underline-offset-4 hover:decoration-primary/30"
                                     >
-                                        {link}
+                                        {link.name}
                                     </a>
                                 ))}
                             </div>
