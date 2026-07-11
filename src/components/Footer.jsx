@@ -1,7 +1,7 @@
 import React from 'react';
 import { Instagram, Facebook, Linkedin, Youtube, Phone, Mail, MapPin } from 'lucide-react';
 import { SiX } from 'react-icons/si';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -10,7 +10,7 @@ const Footer = () => {
 
                 {/* Col 1 */}
                 <div className="flex flex-col">
-                    <Link to="/" className="flex items-center gap-2 mb-6 cursor-pointer opacity-90 hover:opacity-100 transition-opacity max-w-max">
+                    <Link href="/" className="flex items-center gap-2 mb-6 cursor-pointer opacity-90 hover:opacity-100 transition-opacity max-w-max">
                         <img src="/logo-white.png" alt="Flyinco Travel & Tourism" className="h-10 object-contain" />
                     </Link>
                     <p className="font-body text-sm font-medium leading-relaxed mb-6 text-gray-300">
@@ -22,10 +22,10 @@ const Footer = () => {
                 <div>
                     <h4 className="font-display font-bold text-white text-sm uppercase tracking-wide mb-6 border-l-2 border-primary pl-3">Holiday Packages</h4>
                     <ul className="flex flex-col gap-3 font-medium text-sm text-gray-400">
-                        <li><Link to="/saudi-packages" className="hover:text-primary transition-colors">Saudi Arabia Tours</Link></li>
-                        <li><Link to="/india-packages" className="hover:text-primary transition-colors">India Destinations</Link></li>
-                        <li><Link to="/international-packages" className="hover:text-primary transition-colors">International Packages</Link></li>
-                        <li><Link to="/visa" className="hover:text-primary transition-colors">Visa Services</Link></li>
+                        <li><Link href="/saudi-packages" className="hover:text-primary transition-colors">Saudi Arabia Tours</Link></li>
+                        <li><Link href="/india-packages" className="hover:text-primary transition-colors">India Destinations</Link></li>
+                        <li><Link href="/international-packages" className="hover:text-primary transition-colors">International Packages</Link></li>
+                        <li><Link href="/visa" className="hover:text-primary transition-colors">Visa Services</Link></li>
                     </ul>
                 </div>
 
@@ -34,8 +34,8 @@ const Footer = () => {
                     <h4 className="font-display font-bold text-white text-sm uppercase tracking-wide mb-6 border-l-2 border-primary pl-3">Quick Links</h4>
                     <ul className="flex flex-col gap-3 font-medium text-sm text-gray-400">
                         <li><a href="/#about" className="hover:text-primary transition-colors">About Us</a></li>
-                        <li><Link to="/visa" className="hover:text-primary transition-colors">Visa Services</Link></li>
-                        <li><Link to="/visa" className="hover:text-primary transition-colors">Travel Insurance</Link></li>
+                        <li><Link href="/visa" className="hover:text-primary transition-colors">Visa Services</Link></li>
+                        <li><Link href="/visa" className="hover:text-primary transition-colors">Travel Insurance</Link></li>
                         <li><a href="https://www.flyincochauffeur.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Chauffeur Service</a></li>
                         <li><a href="#contact" className="hover:text-primary transition-colors">Contact Support</a></li>
                     </ul>

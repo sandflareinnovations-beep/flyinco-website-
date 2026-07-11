@@ -1,6 +1,6 @@
 import React from 'react';
 import { Building2, Globe, ShieldCheck, BadgePercent, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const CorporateTravel = ({ hideButton = false }) => {
     const benefits = [
@@ -41,7 +41,7 @@ const CorporateTravel = ({ hideButton = false }) => {
                         </div>
 
                         {!hideButton && (
-                            <Link to="/corporate-travel#inquiry-form" className="w-max inline-flex bg-primary text-white px-10 py-5 rounded-full font-black text-xs uppercase tracking-[0.2em] items-center gap-3 hover:bg-secondary hover:text-white transition-all shadow-xl shadow-primary/20">
+                            <Link href="/corporate-travel#inquiry-form" className="w-max inline-flex bg-primary text-white px-10 py-5 rounded-full font-black text-xs uppercase tracking-[0.2em] items-center gap-3 hover:bg-secondary hover:text-white transition-all shadow-xl shadow-primary/20">
                                 Get a Corporate Quote <ChevronRight className="w-5 h-5" />
                             </Link>
                         )}

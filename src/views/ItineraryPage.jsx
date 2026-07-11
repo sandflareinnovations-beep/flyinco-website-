@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+'use client';
+
+import React, { useState } from 'react';
+import Link from 'next/link';
 import { Clock, MapPin, Star, CheckCircle, ChevronRight, Plane, Building, Car, Map as MapIcon, Share2, Heart, Calendar, User, Mail, Phone, Users, Send } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
 
-const ItineraryPage = () => {
-    const { slug } = useParams();
+const ItineraryPage = ({ slug }) => {
     const pkg = packagesData.find(p => p.slug === slug);
 
     const [form, setForm] = useState({
@@ -46,15 +47,11 @@ const ItineraryPage = () => {
         document.getElementById('enquiry-form')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     };
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     if (!pkg) {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
                 <h1 className="text-4xl font-display font-black text-secondary mb-4">Package Not Found</h1>
-                <Link to="/" className="text-primary font-bold hover:underline flex items-center gap-2">
+                <Link href="/" className="text-primary font-bold hover:underline flex items-center gap-2">
                     Back to Home <ChevronRight className="w-4 h-4" />
                 </Link>
             </div>
@@ -74,7 +71,7 @@ const ItineraryPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end pb-16 px-6 md:px-12">
                     <div className="max-w-[1240px] mx-auto w-full">
                         <nav className="flex items-center gap-2 text-sm font-bold text-white/70 mb-6 uppercase tracking-widest">
-                            <Link to="/" className="hover:text-white transition-colors">Home</Link>
+                            <Link href="/" className="hover:text-white transition-colors">Home</Link>
                             <ChevronRight className="w-4 h-4 text-white/40" />
                             <span>{pkg.category} Packages</span>
                             <ChevronRight className="w-4 h-4 text-white/40" />

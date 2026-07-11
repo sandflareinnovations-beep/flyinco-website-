@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
 import { Star, Heart, MapPin, Clock } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const bestChoice = [
     { id: 1, title: 'Maldives Paradise', img: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&q=80&w=800', places: '4 Places', slug: 'maldives-overwater-luxury' },
@@ -26,7 +28,7 @@ const PopularPackages = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-16 md:mb-24">
                     {bestChoice.map((item) => (
-                        <Link to={`/package/${item.slug}`} key={item.id} className="relative rounded-[1.75rem] sm:rounded-[2.5rem] overflow-hidden group h-[240px] sm:h-[320px] md:h-[400px] shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer">
+                        <Link href={`/package/${item.slug}`} key={item.id} className="relative rounded-[1.75rem] sm:rounded-[2.5rem] overflow-hidden group h-[240px] sm:h-[320px] md:h-[400px] shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer">
                             <img
                                 src={item.img}
                                 alt={item.title}
@@ -99,13 +101,13 @@ const PopularPackages = () => {
                                 <div className="mt-auto pt-4 border-t border-gray-50">
                                     <div className="grid grid-cols-2 gap-3">
                                         <Link 
-                                            to={`/package/${pkg.slug}`}
+                                            href={`/package/${pkg.slug}`}
                                             className="bg-secondary text-white text-[10px] font-black py-3.5 rounded-2xl shadow-sm hover:bg-black transition-all uppercase tracking-widest text-center"
                                         >
                                             Details
                                         </Link>
                                         <Link
-                                            to={`/package/${pkg.slug}`}
+                                            href={`/package/${pkg.slug}`}
                                             className="bg-primary text-white text-[10px] font-black py-3.5 rounded-2xl shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all uppercase tracking-widest text-center"
                                         >
                                             Enquire

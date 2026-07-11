@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const BrowseCategories = () => {
     return (
@@ -21,7 +21,7 @@ const BrowseCategories = () => {
                         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent p-8 md:p-12 flex flex-col justify-center">
                             <h3 className="text-3xl md:text-5xl font-display font-black text-white mb-4 leading-tight">Honeymoon <br /> Packages</h3>
                             <p className="text-white/80 text-sm md:text-base font-bold max-w-full md:max-w-[70%] mb-8 md:mb-10 leading-relaxed border-l-4 border-primary pl-4 md:pl-6">Take romantic walks around our beautiful honeymoon locations specially designed for couples.</p>
-                            <Link to="/honeymoon-packages" className="bg-white text-secondary font-black text-xs uppercase tracking-widest px-8 md:px-10 py-4 md:py-5 rounded-full w-max hover:bg-primary hover:text-white transition-all shadow-xl flex items-center gap-3">
+                            <Link href="/honeymoon-packages" className="bg-white text-secondary font-black text-xs uppercase tracking-widest px-8 md:px-10 py-4 md:py-5 rounded-full w-max hover:bg-primary hover:text-white transition-all shadow-xl flex items-center gap-3">
                                 Explore <ArrowUpRight className="w-5 h-5" />
                             </Link>
                         </div>
@@ -32,7 +32,7 @@ const BrowseCategories = () => {
                         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent p-8 md:p-12 flex flex-col justify-center">
                             <h3 className="text-3xl md:text-5xl font-display font-black text-white mb-4 leading-tight">Adventure <br /> Packages</h3>
                             <p className="text-white/80 text-sm md:text-base font-bold max-w-full md:max-w-[70%] mb-8 md:mb-10 leading-relaxed border-l-4 border-primary pl-4 md:pl-6">Enjoy adrenaline-filled activities designed to unleash your adventurous side effectively.</p>
-                            <Link to="/adventure-tours" className="bg-white text-secondary font-black text-xs uppercase tracking-widest px-10 py-5 rounded-full w-max hover:bg-primary hover:text-white transition-all shadow-xl flex items-center gap-3">
+                            <Link href="/adventure-tours" className="bg-white text-secondary font-black text-xs uppercase tracking-widest px-10 py-5 rounded-full w-max hover:bg-primary hover:text-white transition-all shadow-xl flex items-center gap-3">
                                 Explore <ArrowUpRight className="w-5 h-5" />
                             </Link>
                         </div>

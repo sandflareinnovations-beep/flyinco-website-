@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 import riyadhSkyline from '../assets/images/kafd/riyadh-skyline.jpg';
 import diriyahEvening from '../assets/images/Al diriyah/WhatsApp Image 2026-06-23 at 5.30.29 PM (1).jpeg';
@@ -31,7 +33,7 @@ const ExploreDestinations = () => {
                             Explore Popular Destinations
                         </h2>
                     </div>
-                    <Link to="/saudi-packages" className="bg-primary/5 text-primary px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest flex items-center gap-3 hover:bg-primary hover:text-white transition-all group shrink-0">
+                    <Link href="/saudi-packages" className="bg-primary/5 text-primary px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest flex items-center gap-3 hover:bg-primary hover:text-white transition-all group shrink-0">
                         View All <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
@@ -46,7 +48,7 @@ const ExploreDestinations = () => {
                             key={dest.id}
                         >
                             <Link
-                                to={dest.path}
+                                href={dest.path}
                                 className="relative group h-[260px] md:h-[300px] rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-50 block"
                             >
                                 <img

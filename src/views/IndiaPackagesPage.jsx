@@ -1,57 +1,55 @@
-import React, { useState, useEffect } from 'react';
-import { Search, MapPin, ChevronRight, Plus, Minus, Star } from 'lucide-react';
+'use client';
+
+import React, { useState } from 'react';
+import { Search, MapPin, ChevronRight, Plus, Minus, Clock, Star } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
 import VisaLinks from '../components/visa/VisaLinks';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
-const AdventurePackagesPage = () => {
+const IndiaPackagesPage = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [openFaq, setOpenFaq] = useState(null);
 
-    const adventurePackages = packagesData.filter(p => p.category === 'Adventure');
+    const indiaPackages = packagesData.filter(p => p.category === 'India');
     
-    const filteredPackages = adventurePackages.filter(p =>
+    const filteredPackages = indiaPackages.filter(p =>
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.locations.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     const faqs = [
-        { q: 'What is the physical requirement for adventure tours?', a: 'Most of our adventure tours require moderate physical fitness. Specific requirements like trekking experience are mentioned in the itinerary details.' },
-        { q: 'Do you provide equipment for adventure activities?', a: 'Yes, we provide standard safety gear and specialized equipment for activities like trekking or diving, though you can bring your own if preferred.' },
-        { q: 'Is there medical support available during these tours?', a: 'Our adventure guides are trained in first aid, and for high-altitude treks, we carry emergency oxygen and medical kits.' }
+        { q: 'What are the best Indian destinations for a family trip?', a: 'Kerala, Andaman, and Rajasthan are top choices for families, offering a mix of culture, nature, and comfort.' },
+        { q: 'Is travel insurance included in our India packages?', a: 'Basic travel insurance can be added to any package. We highly recommend it for all travelers.' },
+        { q: 'Can I customize my India tour itinerary?', a: 'Absolutely! All our India packages can be tailored to your specific preferences, duration, and budget.' }
     ];
 
     return (
         <div className="bg-white min-h-screen">
 
             {/* Hero Section */}
-            <section className="pt-32 pb-16 bg-[#F0F7F4]">
-                <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
-                    <nav className="flex items-center justify-center gap-2 text-sm font-bold text-gray-400 mb-8 uppercase tracking-widest">
-                        <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+            <section className="pt-32 pb-16 bg-gray-50">
+                <div className="max-w-[1440px] mx-auto px-6 md:px-12">
+                    <nav className="flex items-center gap-2 text-sm font-bold text-gray-400 mb-8 uppercase tracking-widest">
+                        <Link href="/" className="hover:text-primary transition-colors">Home</Link>
                         <ChevronRight className="w-4 h-4" />
-                        <span className="text-secondary">Speciality</span>
+                        <span className="text-secondary">Packages</span>
                         <ChevronRight className="w-4 h-4" />
-                        <span className="text-primary">Adventure</span>
+                        <span className="text-primary">India</span>
                     </nav>
 
                     <h1 className="text-4xl md:text-6xl font-display font-black text-secondary mb-4 leading-tight">
-                        Thrill & Adventure Await
+                        Explore Popular India Destinations
                     </h1>
-                    <p className="text-gray-500 font-body text-lg max-w-2xl mx-auto mb-12">
-                        Get out of your comfort zone and explore the world's most exciting landscapes with our expert adventure guides.
+                    <p className="text-gray-500 font-body text-lg max-w-2xl mb-12">
+                        Discover the diverse beauty of India with our expertly curated holiday packages.
                     </p>
 
-                    <div className="relative max-w-3xl mx-auto">
+                    <div className="relative max-w-3xl">
                         <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 w-6 h-6" />
                         <input
                             type="text"
-                            placeholder="Find your next adrenaline rush..."
-                            className="w-full bg-white border border-green-100 rounded-[2rem] py-6 pl-16 pr-8 shadow-xl focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all font-body text-center"
+                            placeholder="Search Indian destinations..."
+                            className="w-full bg-white border border-gray-100 rounded-[2rem] py-6 pl-16 pr-8 shadow-xl focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all font-body"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                         />
@@ -72,13 +70,20 @@ const AdventurePackagesPage = () => {
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]"
                                     />
                                     <div className="absolute top-6 left-6 z-10">
-                                        <span className="bg-white/90 backdrop-blur-md text-[#10B981] text-[10px] font-black px-4 py-2 rounded-full shadow-lg uppercase tracking-widest border border-white/20">
+                                        <span className="bg-white/90 backdrop-blur-md text-secondary text-[10px] font-black px-4 py-2 rounded-full shadow-lg uppercase tracking-widest border border-white/20">
                                             {pkg.duration}
                                         </span>
                                     </div>
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                                    <div className="absolute bottom-6 left-8 right-8">
-                                        <h3 className="text-white font-display font-black text-2xl group-hover:text-primary transition-colors">{pkg.name}</h3>
+                                    <div className="absolute bottom-6 left-8 right-8 flex justify-between items-end">
+                                        <div>
+                                            <div className="flex items-center gap-1 mb-1">
+                                                {[...Array(5)].map((_, i) => (
+                                                    <Star key={i} className="w-3 h-3 fill-[#FFB800] text-[#FFB800]" />
+                                                ))}
+                                            </div>
+                                            <h3 className="text-white font-display font-black text-2xl group-hover:text-primary transition-colors">{pkg.name}</h3>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="p-7 md:p-10 flex-1 flex flex-col">
@@ -90,7 +95,7 @@ const AdventurePackagesPage = () => {
                                     
                                     <div className="mt-auto pt-8 border-t border-gray-50 flex items-center justify-end">
                                         <Link
-                                            to={`/package/${pkg.slug}`}
+                                            href={`/package/${pkg.slug}`}
                                             className="bg-secondary text-white px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-black transition-all shadow-lg"
                                         >
                                             Enquire Now
@@ -100,13 +105,18 @@ const AdventurePackagesPage = () => {
                             </div>
                         ))}
                     </div>
+                    {filteredPackages.length === 0 && (
+                        <div className="text-center py-14 md:py-20">
+                            <p className="text-gray-400 font-bold text-xl uppercase tracking-widest">No India packages found matching your search.</p>
+                        </div>
+                    )}
                 </div>
             </section>
 
              {/* FAQs */}
              <section className="py-14 md:py-24 bg-gray-50">
                 <div className="max-w-[1000px] mx-auto px-6">
-                    <h2 className="text-3xl font-display font-black text-secondary mb-16 text-center">Adventure Tour FAQs</h2>
+                    <h2 className="text-3xl font-display font-black text-secondary mb-16 text-center">India Tour FAQs</h2>
                     <div className="space-y-4">
                         {faqs.map((faq, idx) => (
                             <div key={idx} className="border border-gray-100 rounded-[2rem] overflow-hidden bg-white shadow-sm">
@@ -133,4 +143,4 @@ const AdventurePackagesPage = () => {
     );
 };
 
-export default AdventurePackagesPage;
+export default IndiaPackagesPage;

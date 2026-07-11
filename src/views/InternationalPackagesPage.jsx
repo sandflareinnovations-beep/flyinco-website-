@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 import { Search, MapPin, ChevronRight, Plus, Minus } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import VisaLinks from '../components/visa/VisaLinks';
 
 const destinations = [
@@ -85,7 +87,7 @@ const InternationalPackagesPage = () => {
                                     <h3 className="font-display font-black text-secondary text-2xl mb-2 group-hover:text-primary transition-colors">{dest.name}</h3>
                                     <p className="text-sm text-gray-400 font-bold mb-6 tracking-wide line-clamp-2">{dest.desc}</p>
                                     <Link 
-                                        to={dest.path || '#'} 
+                                        href={dest.path || '#'} 
                                         className="inline-block w-full bg-primary/5 text-primary py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-all text-center"
                                     >
                                         Explore Country

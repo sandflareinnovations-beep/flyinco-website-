@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import CorporateTravel from '../components/CorporateTravel';
 import CorporateInquiryForm from '../components/CorporateInquiryForm';

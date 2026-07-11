@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 import { Plane, Building, Car, Map as MapIcon, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 
@@ -33,7 +35,7 @@ const PackagesGrid = () => {
                             Explore the <span className="text-primary">World</span> One Row at a Time
                         </h2>
                     </div>
-                    <Link to="/international-packages" className="bg-secondary text-white px-10 py-5 rounded-full font-black text-xs uppercase tracking-[0.2em] flex items-center gap-3 hover:bg-black hover:scale-105 transition-all shadow-xl shadow-secondary/20 w-max shrink-0">
+                    <Link href="/international-packages" className="bg-secondary text-white px-10 py-5 rounded-full font-black text-xs uppercase tracking-[0.2em] flex items-center gap-3 hover:bg-black hover:scale-105 transition-all shadow-xl shadow-secondary/20 w-max shrink-0">
                         Explore All Countries <ChevronRight className="w-5 h-5" />
                     </Link>
                 </div>

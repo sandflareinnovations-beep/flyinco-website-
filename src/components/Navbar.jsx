@@ -1,12 +1,15 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const location = useLocation();
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -77,7 +80,7 @@ const Navbar = () => {
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-between items-center">
 
                     {/* Logo */}
-                    <Link to="/" className="flex items-center cursor-pointer">
+                    <Link href="/" className="flex items-center cursor-pointer">
                         <img src="/logo.png" alt="Flyinco Travel & Tourism" className="h-10 md:h-12 object-contain" />
                     </Link>
 
@@ -101,8 +104,8 @@ const Navbar = () => {
                                     </a>
                                 ) : (
                                     <Link
-                                        to={link.path}
-                                        className={`hover:text-primary transition-colors flex items-center gap-1 ${location.pathname === link.path ? 'text-primary' : ''}`}
+                                        href={link.path}
+                                        className={`hover:text-primary transition-colors flex items-center gap-1 ${pathname === link.path ? 'text-primary' : ''}`}
                                     >
                                         {link.name}
                                         {link.dropdown && <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.name ? 'rotate-180' : ''}`} />}
@@ -121,7 +124,7 @@ const Navbar = () => {
                                                 {link.dropdown.map((subItem) => (
                                                     <Link
                                                         key={subItem.name}
-                                                        to={subItem.path}
+                                                        href={subItem.path}
                                                         className="px-4 py-2 hover:bg-primary/5 hover:text-primary rounded-xl transition-all text-xs font-bold"
                                                     >
                                                         {subItem.name}
@@ -160,7 +163,7 @@ const Navbar = () => {
                         className="fixed inset-0 bg-white z-[120] lg:hidden flex flex-col p-8 overflow-y-auto"
                     >
                         <div className="flex items-center justify-between mb-12">
-                            <Link to="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2">
+                            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2">
                                 <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
                                     <span className="text-white font-black text-xl">F</span>
                                 </div>
@@ -194,7 +197,7 @@ const Navbar = () => {
                                                         {link.dropdown.map((subItem) => (
                                                             <Link
                                                                 key={subItem.name}
-                                                                to={subItem.path}
+                                                                href={subItem.path}
                                                                 onClick={() => setMobileMenuOpen(false)}
                                                                 className="py-2 text-sm font-bold text-gray-500 hover:text-primary transition-colors"
                                                             >
@@ -216,7 +219,7 @@ const Navbar = () => {
                                         </a>
                                     ) : (
                                         <Link
-                                            to={link.path}
+                                            href={link.path}
                                             onClick={() => setMobileMenuOpen(false)}
                                             className="py-4 text-xl font-black text-secondary uppercase tracking-tight"
                                         >
@@ -229,7 +232,7 @@ const Navbar = () => {
 
                         <div className="mt-12 pt-12 border-t border-gray-100">
                             <Link
-                                to="/visa"
+                                href="/visa"
                                 onClick={() => setMobileMenuOpen(false)}
                                 className="w-full bg-primary text-white py-6 rounded-3xl font-black text-sm uppercase tracking-[0.2em] flex items-center justify-center shadow-2xl shadow-primary/30"
                             >

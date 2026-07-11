@@ -1,57 +1,55 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { Search, MapPin, ChevronRight, Plus, Minus, Star } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
 import VisaLinks from '../components/visa/VisaLinks';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
-const HoneymoonPackagesPage = () => {
+const AdventurePackagesPage = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [openFaq, setOpenFaq] = useState(null);
 
-    const honeymoonPackages = packagesData.filter(p => p.category === 'Honeymoon');
+    const adventurePackages = packagesData.filter(p => p.category === 'Adventure');
     
-    const filteredPackages = honeymoonPackages.filter(p =>
+    const filteredPackages = adventurePackages.filter(p =>
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.locations.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     const faqs = [
-        { q: 'What makes your honeymoon packages special?', a: 'We focus on privacy, luxury, and romantic inclusions like candlelit dinners, room decor, and private transfers.' },
-        { q: 'Can we add a professional photoshoot to our honeymoon?', a: 'Yes, most of our exclusive honeymoon packages include or offer optional photography services to capture your moments.' },
-        { q: 'Is it possible to combine two destinations for a honeymoon?', a: 'Certainly! Many couples choose a mountain-and-beach combo, like Munnar and Alleppey or Dubai and Maldives.' }
+        { q: 'What is the physical requirement for adventure tours?', a: 'Most of our adventure tours require moderate physical fitness. Specific requirements like trekking experience are mentioned in the itinerary details.' },
+        { q: 'Do you provide equipment for adventure activities?', a: 'Yes, we provide standard safety gear and specialized equipment for activities like trekking or diving, though you can bring your own if preferred.' },
+        { q: 'Is there medical support available during these tours?', a: 'Our adventure guides are trained in first aid, and for high-altitude treks, we carry emergency oxygen and medical kits.' }
     ];
 
     return (
         <div className="bg-white min-h-screen">
 
             {/* Hero Section */}
-            <section className="pt-32 pb-16 bg-[#FFF5F7]">
+            <section className="pt-32 pb-16 bg-[#F0F7F4]">
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
                     <nav className="flex items-center justify-center gap-2 text-sm font-bold text-gray-400 mb-8 uppercase tracking-widest">
-                        <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+                        <Link href="/" className="hover:text-primary transition-colors">Home</Link>
                         <ChevronRight className="w-4 h-4" />
                         <span className="text-secondary">Speciality</span>
                         <ChevronRight className="w-4 h-4" />
-                        <span className="text-primary">Honeymoon</span>
+                        <span className="text-primary">Adventure</span>
                     </nav>
 
                     <h1 className="text-4xl md:text-6xl font-display font-black text-secondary mb-4 leading-tight">
-                        Romantic Honeymoon Getaways
+                        Thrill & Adventure Await
                     </h1>
                     <p className="text-gray-500 font-body text-lg max-w-2xl mx-auto mb-12">
-                        Celebrate your new beginning with our most romantic and luxurious handpicked destinations.
+                        Get out of your comfort zone and explore the world's most exciting landscapes with our expert adventure guides.
                     </p>
 
                     <div className="relative max-w-3xl mx-auto">
                         <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 w-6 h-6" />
                         <input
                             type="text"
-                            placeholder="Find your perfect romantic spot..."
-                            className="w-full bg-white border border-pink-100 rounded-[2rem] py-6 pl-16 pr-8 shadow-xl focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all font-body text-center"
+                            placeholder="Find your next adrenaline rush..."
+                            className="w-full bg-white border border-green-100 rounded-[2rem] py-6 pl-16 pr-8 shadow-xl focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all font-body text-center"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                         />
@@ -72,7 +70,7 @@ const HoneymoonPackagesPage = () => {
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]"
                                     />
                                     <div className="absolute top-6 left-6 z-10">
-                                        <span className="bg-white/90 backdrop-blur-md text-[#FF4D8D] text-[10px] font-black px-4 py-2 rounded-full shadow-lg uppercase tracking-widest border border-white/20">
+                                        <span className="bg-white/90 backdrop-blur-md text-[#10B981] text-[10px] font-black px-4 py-2 rounded-full shadow-lg uppercase tracking-widest border border-white/20">
                                             {pkg.duration}
                                         </span>
                                     </div>
@@ -90,7 +88,7 @@ const HoneymoonPackagesPage = () => {
                                     
                                     <div className="mt-auto pt-8 border-t border-gray-50 flex items-center justify-end">
                                         <Link
-                                            to={`/package/${pkg.slug}`}
+                                            href={`/package/${pkg.slug}`}
                                             className="bg-secondary text-white px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-black transition-all shadow-lg"
                                         >
                                             Enquire Now
@@ -106,7 +104,7 @@ const HoneymoonPackagesPage = () => {
              {/* FAQs */}
              <section className="py-14 md:py-24 bg-gray-50">
                 <div className="max-w-[1000px] mx-auto px-6">
-                    <h2 className="text-3xl font-display font-black text-secondary mb-16 text-center">Honeymoon Travel FAQs</h2>
+                    <h2 className="text-3xl font-display font-black text-secondary mb-16 text-center">Adventure Tour FAQs</h2>
                     <div className="space-y-4">
                         {faqs.map((faq, idx) => (
                             <div key={idx} className="border border-gray-100 rounded-[2rem] overflow-hidden bg-white shadow-sm">
@@ -133,4 +131,4 @@ const HoneymoonPackagesPage = () => {
     );
 };
 
-export default HoneymoonPackagesPage;
+export default AdventurePackagesPage;

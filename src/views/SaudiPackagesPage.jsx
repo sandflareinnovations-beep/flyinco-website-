@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { Search, MapPin, ChevronRight, Plus, Minus, Clock, Star, Landmark } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const SaudiPackagesPage = () => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -13,10 +15,6 @@ const SaudiPackagesPage = () => {
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.locations.toLowerCase().includes(searchQuery.toLowerCase())
     );
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
 
     const faqs = [
         { q: 'What is the best time to visit Saudi Arabia?', a: 'The best time is from November to March when the weather is cool and pleasant for sightseeing.' },
@@ -32,7 +30,7 @@ const SaudiPackagesPage = () => {
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/10 skew-x-12 transform translate-x-20"></div>
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
                     <nav className="flex items-center gap-2 text-sm font-bold text-white/50 mb-8 uppercase tracking-widest">
-                        <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+                        <Link href="/" className="hover:text-primary transition-colors">Home</Link>
                         <ChevronRight className="w-4 h-4" />
                         <span className="text-white/70">Packages</span>
                         <ChevronRight className="w-4 h-4" />
@@ -120,13 +118,13 @@ const SaudiPackagesPage = () => {
                                         </div>
                                         <div className="flex items-center justify-between pt-6 border-t border-gray-50">
                                             <Link
-                                                to={`/package/${pkg.slug}`}
+                                                href={`/package/${pkg.slug}`}
                                                 className="bg-primary/10 text-primary px-5 py-3 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all"
                                             >
                                                 Enquire Now
                                             </Link>
                                             <Link
-                                                to={`/package/${pkg.slug}`}
+                                                href={`/package/${pkg.slug}`}
                                                 className="bg-primary text-white p-4 rounded-2xl group-hover:bg-secondary transition-all shadow-lg"
                                             >
                                                 <ChevronRight className="w-6 h-6" />
