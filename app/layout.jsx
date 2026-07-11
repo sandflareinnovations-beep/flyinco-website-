@@ -6,9 +6,16 @@ import Footer from '../src/components/Footer';
 import WhatsAppButton from '../src/components/WhatsAppButton';
 
 export const metadata = {
+  metadataBase: new URL('https://www.flyinco.com'),
   title: 'Flyinco | Travel & Tourism',
   description: 'Flyinco Travel & Tourism - KSA, BAHRAIN, UAE, INDIA',
   icons: { icon: '/favicon.png' },
+  openGraph: {
+    siteName: 'Flyinco Travel & Tourism',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: { card: 'summary_large_image' },
 };
 
 export default function RootLayout({ children }) {
