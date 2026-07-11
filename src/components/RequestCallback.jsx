@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { User, Mail, Phone, Users, Calendar, Send, CheckCircle } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 
 const RequestCallback = () => {
     const [form, setForm] = useState({
@@ -32,6 +33,7 @@ const RequestCallback = () => {
         ].join('\n');
 
         const mailto = `mailto:visa@flyinco.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        trackEvent('callback_form_submit', { page: 'home' });
         window.location.href = mailto;
 
         setSubmitted(true);

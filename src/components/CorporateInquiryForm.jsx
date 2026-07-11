@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 
 const CorporateInquiryForm = () => {
     const [formData, setFormData] = useState({
@@ -20,7 +21,19 @@ const CorporateInquiryForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you would normally send the data to an API
+
+        // Enquiries go to visa@flyinco.com via the visitor's mail client.
+        const subject = `Corporate Travel Enquiry: ${formData.company || formData.name}`;
+        const body = [
+            `Name: ${formData.name}`,
+            `Company: ${formData.company}`,
+            `Email: ${formData.email}`,
+            `Phone: ${formData.phone}`,
+            `Requirements: ${formData.requirements}`,
+        ].join('\n');
+        trackEvent('corporate_quote_request', { page: 'corporate-travel' });
+        window.location.href = `mailto:visa@flyinco.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
         setIsSubmitted(true);
         setTimeout(() => setIsSubmitted(false), 5000);
         setFormData({ name: '', email: '', company: '', phone: '', requirements: '' });

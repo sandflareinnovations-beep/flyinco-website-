@@ -4,6 +4,7 @@ import '../src/index.css';
 import Navbar from '../src/components/Navbar';
 import Footer from '../src/components/Footer';
 import WhatsAppButton from '../src/components/WhatsAppButton';
+import Analytics from '../src/components/Analytics';
 
 export const metadata = {
   metadataBase: new URL('https://www.flyinco.com'),
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <Analytics />
         <div className="bg-[#FAFAFA] w-screen overflow-x-hidden min-h-screen relative font-body text-secondary">
           <Navbar />
           {children}

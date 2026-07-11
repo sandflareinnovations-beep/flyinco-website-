@@ -71,7 +71,7 @@ const Footer = () => {
                 <p>&copy; 2024 Flyinco Travel & Tourism. All rights reserved. KSA | BAHRAIN | UAE | INDIA</p>
 
                 <div className="flex items-center gap-4">
-                    <a href="https://wa.me/966556182021" target="_blank" rel="noopener noreferrer" aria-label="Chat with Flyinco on WhatsApp" className="bg-white/10 p-2 rounded-lg hover:bg-primary hover:text-white text-white transition-colors"><FaWhatsapp className="w-4 h-4" /></a>
+                    <a href={`https://wa.me/966556182021?text=${encodeURIComponent("Hi Flyinco! I'm visiting flyinco.com and would like to know more.")}`} target="_blank" rel="noopener noreferrer" aria-label="Chat with Flyinco on WhatsApp" className="bg-white/10 p-2 rounded-lg hover:bg-primary hover:text-white text-white transition-colors"><FaWhatsapp className="w-4 h-4" /></a>
                     <a href="mailto:info@flyinco.com" aria-label="Email Flyinco" className="bg-white/10 p-2 rounded-lg hover:bg-primary hover:text-white text-white transition-colors"><Mail className="w-4 h-4" /></a>
                     <a href="tel:+966556182021" aria-label="Call Flyinco" className="bg-white/10 p-2 rounded-lg hover:bg-primary hover:text-white text-white transition-colors"><Phone className="w-4 h-4" /></a>
                 </div>

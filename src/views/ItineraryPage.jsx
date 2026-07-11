@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Clock, MapPin, Star, CheckCircle, ChevronRight, Plane, Building, Car, Map as MapIcon, Share2, Heart, Calendar, User, Mail, Phone, Users, Send } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
+import { trackEvent, whatsappLink } from '../lib/analytics';
 
 const ItineraryPage = ({ slug }) => {
     const pkg = packagesData.find(p => p.slug === slug);
@@ -38,12 +39,14 @@ const ItineraryPage = ({ slug }) => {
         ].join('\n');
 
         const mailto = `mailto:visa@flyinco.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        trackEvent('callback_form_submit', { package: pkg?.name || slug });
         window.location.href = mailto;
 
         setSubmitted(true);
     };
 
     const scrollToEnquiry = () => {
+        trackEvent('enquire_click', { package: pkg?.name || slug });
         document.getElementById('enquiry-form')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     };
 
@@ -336,7 +339,12 @@ const ItineraryPage = ({ slug }) => {
                                         <Share2 className="w-4 h-4 text-primary" />
                                         <span className="text-[10px] font-black uppercase tracking-tighter text-secondary">Call Us</span>
                                     </a>
-                                    <a href="https://wa.me/966556182021" className="flex items-center justify-center gap-2 p-3 bg-white rounded-2xl border border-gray-100 hover:border-primary transition-all">
+                                    <a
+                                        href={whatsappLink(pkg.title)}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => trackEvent('whatsapp_click', { package: pkg.name })}
+                                        className="flex items-center justify-center gap-2 p-3 bg-white rounded-2xl border border-gray-100 hover:border-primary transition-all">
                                         <Heart className="w-4 h-4 text-green-500" />
                                         <span className="text-[10px] font-black uppercase tracking-tighter text-secondary">WhatsApp</span>
                                     </a>
