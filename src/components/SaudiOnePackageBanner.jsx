@@ -13,11 +13,11 @@ const SaudiOnePackageBanner = () => {
                     href="/saudi-packages"
                     className="relative block rounded-[2rem] overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow"
                 >
-                    <div className="w-full overflow-hidden">
+                    <div className="h-[260px] sm:h-[320px] md:h-[400px] w-full overflow-hidden">
                         <img
                             src={alulaBanner}
                             alt="Traveller walking towards Elephant Rock in Al-Ula, Saudi Arabia"
-                            className="w-full h-auto group-hover:scale-105 transition-transform duration-[1.5s]"
+                            className="w-full h-full object-cover object-bottom group-hover:scale-[1.03] transition-transform duration-[1.5s]"
                         />
                     </div>
 
