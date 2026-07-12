@@ -35,6 +35,15 @@ const SaudiOnePackageBanner = () => {
                         </div>
                     </div>
 
+                    {/* Sadu-weave inspired colour strip, as in the campaign reference */}
+                    <div
+                        aria-hidden="true"
+                        className="absolute bottom-0 left-0 right-0 h-3"
+                        style={{
+                            background:
+                                'repeating-linear-gradient(90deg, #6A2B86 0 26px, #E4572E 26px 52px, #17A398 52px 78px, #FFB800 78px 104px, #1A0933 104px 130px, #C1292E 130px 156px, #2E86AB 156px 182px)',
+                        }}
+                    />
                 </Link>
             </div>
         </section>
