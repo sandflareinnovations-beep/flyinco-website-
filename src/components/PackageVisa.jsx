@@ -89,7 +89,7 @@ const PackageVisa = () => {
                         {/* Copy */}
                         <div className="lg:col-span-3">
                             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
-                                <FileText className="w-3.5 h-3.5 text-[#FFB800]" />
+                                <FileText className="w-3.5 h-3.5 text-white/90" />
                                 <span className="text-[10px] font-black uppercase tracking-[0.25em] text-white/90">Saudi All-in-One Package</span>
                             </div>
                             <h2 className="text-3xl md:text-5xl font-display font-black text-white tracking-tight mb-5 leading-tight">
@@ -104,7 +104,7 @@ const PackageVisa = () => {
                             <div className="flex flex-wrap items-center gap-4">
                                 <button
                                     onClick={openModal}
-                                    className="inline-flex items-center gap-2 bg-white text-secondary px-7 py-3.5 rounded-full font-black text-xs uppercase tracking-[0.15em] hover:bg-[#FFB800] hover:text-secondary transition-all shadow-lg"
+                                    className="inline-flex items-center gap-2 bg-white text-secondary px-7 py-3.5 rounded-full font-black text-xs uppercase tracking-[0.15em] hover:bg-white/90 transition-all shadow-lg"
                                 >
                                     Check Eligibility <ArrowRight className="w-4 h-4" />
                                 </button>
@@ -112,7 +112,7 @@ const PackageVisa = () => {
                                     href="https://wa.me/966556182021?text=Hi%20Flyinco!%20I%20want%20to%20learn%20more%20about%20the%20Saudi%20All-in-One%20Package%20Visa."
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-white font-black text-xs uppercase tracking-[0.15em] border-b-2 border-white/40 pb-1 hover:border-[#FFB800] hover:text-[#FFB800] transition-colors"
+                                    className="inline-flex items-center gap-2 text-white font-black text-xs uppercase tracking-[0.15em] border-b-2 border-white/40 pb-1 hover:border-[#FFB800] hover:text-white/90 transition-colors"
                                 >
                                     Learn More
                                 </a>
@@ -129,7 +129,7 @@ const PackageVisa = () => {
                                     {INCLUSIONS.map(({ icon: Icon, label }) => (
                                         <li key={label} className="flex items-center gap-4">
                                             <span className="w-9 h-9 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center shrink-0">
-                                                <Icon className="w-4 h-4 text-[#FFB800]" />
+                                                <Icon className="w-4 h-4 text-white/90" />
                                             </span>
                                             <span className="text-xs font-black uppercase tracking-widest text-white">{label}</span>
                                             <CheckCircle className="w-4 h-4 text-green-400 ml-auto" />
