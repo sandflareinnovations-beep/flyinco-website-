@@ -175,7 +175,7 @@ const PackageVisa = () => {
                                 <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-6 text-center">
                                     <CheckCircle className="w-10 h-10 text-green-500 mx-auto mb-3" />
                                     <h4 className="font-display font-black text-secondary mb-2">
-                                        Great news — you&apos;re eligible!
+                                        Great news, you&apos;re eligible!
                                     </h4>
                                     <p className="text-xs text-gray-500 font-bold leading-relaxed mb-5">
                                         As a {nationality} national residing in {residence}, you qualify for the
