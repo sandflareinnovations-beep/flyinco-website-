@@ -52,15 +52,26 @@ const RESIDENCE_COUNTRIES = [
     'South Africa',
 ];
 
+const QUALIFICATIONS = [
+    'Valid visa from the US/UK/Schengen countries (Entered at least once)',
+    'Valid residence in the GCC countries (No less than three months)',
+    'Permanent residence in the US/UK/EU',
+    'None',
+];
+
 const PackageVisa = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [nationality, setNationality] = useState('');
     const [residence, setResidence] = useState('');
+    const [qualification, setQualification] = useState('');
     const [checked, setChecked] = useState(false);
+
+    const isEligible = qualification !== 'None';
 
     const openModal = () => {
         trackEvent('package_visa_check_open', {});
         setChecked(false);
+        setQualification('');
         setModalOpen(true);
     };
 
@@ -68,12 +79,12 @@ const PackageVisa = () => {
 
     const handleCheck = (e) => {
         e.preventDefault();
-        trackEvent('package_visa_eligibility_check', { nationality, residence });
+        trackEvent('package_visa_eligibility_check', { nationality, residence, qualification });
         setChecked(true);
     };
 
     const whatsappHref = `https://wa.me/966556182021?text=${encodeURIComponent(
-        `Hi Flyinco! I'm interested in the Saudi All-in-One Package (flights, hotels, visa, transfers & sightseeing). I'm a ${nationality} national residing in ${residence}.`
+        `Hi Flyinco! I'm interested in the Saudi All-in-One Package (flights, hotels, visa, transfers & sightseeing). I'm a ${nationality} national residing in ${residence}. Qualification: ${qualification}.`
     )}`;
 
     return (
@@ -177,16 +188,19 @@ const PackageVisa = () => {
                             {checked ? (
                                 <div>
                                     <div className="flex items-center gap-3 mb-2">
-                                        <span className="w-9 h-9 rounded-full bg-green-50 flex items-center justify-center shrink-0">
-                                            <CheckCircle className="w-5 h-5 text-green-500" />
+                                        <span className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 ${isEligible ? 'bg-green-50' : 'bg-primary/10'}`}>
+                                            {isEligible
+                                                ? <CheckCircle className="w-5 h-5 text-green-500" />
+                                                : <Users className="w-5 h-5 text-primary" />}
                                         </span>
                                         <h4 className="font-display font-black text-secondary text-lg">
-                                            You&apos;re eligible
+                                            {isEligible ? "You're eligible" : 'Let us check for you'}
                                         </h4>
                                     </div>
                                     <p className="text-sm text-gray-500 font-medium leading-relaxed mb-7 pl-12">
-                                        As a {nationality} national residing in {residence}, you qualify for the
-                                        Saudi All-in-One Package with your visit visa included.
+                                        {isEligible
+                                            ? `As a ${nationality} national residing in ${residence}, you qualify for the Saudi All-in-One Package with your visit visa included.`
+                                            : `Based on your answers you may still have visa options. Our consultants will review your case as a ${nationality} national residing in ${residence} and guide you to the right route.`}
                                     </p>
 
                                     <div className="grid grid-cols-5 gap-2 mb-8">
@@ -213,7 +227,7 @@ const PackageVisa = () => {
                                                 <FaWhatsapp className="w-4 h-4" /> WhatsApp Us
                                             </a>
                                             <a
-                                                href={`mailto:visa@flyinco.com?subject=${encodeURIComponent('Saudi All-in-One Package Visa Enquiry')}&body=${encodeURIComponent(`Nationality: ${nationality}\nCountry of residence: ${residence}\n\nI'm interested in the Saudi All-in-One Package (flights, hotels, visa, transfers & sightseeing).`)}`}
+                                                href={`mailto:visa@flyinco.com?subject=${encodeURIComponent('Saudi All-in-One Package Visa Enquiry')}&body=${encodeURIComponent(`Nationality: ${nationality}\nCountry of residence: ${residence}\nQualification: ${qualification}\n\nI'm interested in the Saudi All-in-One Package (flights, hotels, visa, transfers & sightseeing).`)}`}
                                                 onClick={() => trackEvent('package_visa_email_click', { nationality, residence })}
                                                 className="inline-flex items-center justify-center gap-2 bg-white text-secondary border border-gray-200 px-6 py-4 rounded-2xl font-black text-xs uppercase tracking-[0.1em] hover:border-primary hover:text-primary transition-colors"
                                             >
@@ -256,6 +270,24 @@ const PackageVisa = () => {
                                             <option value="" disabled>Select your country of residence</option>
                                             {RESIDENCE_COUNTRIES.map((c) => (
                                                 <option key={c} value={c}>{c}</option>
+                                            ))}
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="pv-qualification" className="block text-sm font-black text-secondary mb-2">
+                                            Which of the following applies? <span className="text-red-500">*</span>
+                                        </label>
+                                        <select
+                                            id="pv-qualification"
+                                            required
+                                            value={qualification}
+                                            onChange={(e) => setQualification(e.target.value)}
+                                            className="w-full appearance-none bg-white border border-gray-200 rounded-2xl py-4 px-5 text-sm font-bold text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                        >
+                                            <option value="" disabled>Select an option</option>
+                                            {QUALIFICATIONS.map((q) => (
+                                                <option key={q} value={q}>{q}</option>
                                             ))}
                                         </select>
                                     </div>
