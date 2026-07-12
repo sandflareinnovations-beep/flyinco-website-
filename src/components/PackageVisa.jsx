@@ -112,7 +112,7 @@ const PackageVisa = () => {
                                     href="https://wa.me/966556182021?text=Hi%20Flyinco!%20I%20want%20to%20learn%20more%20about%20the%20Saudi%20All-in-One%20Package%20Visa."
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-white font-black text-xs uppercase tracking-[0.15em] border-b-2 border-white/40 pb-1 hover:border-[#FFB800] hover:text-white/90 transition-colors"
+                                    className="inline-flex items-center gap-2 text-white font-black text-xs uppercase tracking-[0.15em] border-b-2 border-white/40 pb-1 hover:border-white hover:text-white/90 transition-colors"
                                 >
                                     Learn More
                                 </a>
