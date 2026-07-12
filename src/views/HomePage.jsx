@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import SaudiOnePackageBanner from '../components/SaudiOnePackageBanner';
 import PopularPackages from '../components/PopularPackages';
 import ExploreDestinations from '../components/ExploreDestinations';
 import BrowseCategories from '../components/BrowseCategories';
@@ -17,6 +18,7 @@ const HomePage = () => {
     return (
         <main>
             <Hero />
+            <SaudiOnePackageBanner />
             <PopularPackages />
             <ExploreDestinations />
             <BrowseCategories />
