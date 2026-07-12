@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import kafdRiyadh from '../assets/images/kafd/kafd-riyadh.jpg';
 
 // Wide promo banner under the home hero, inspired by Visit Saudi campaign art:
 // Al-Ula backdrop, bold headline, and a Sadu-weave style colour strip.
@@ -14,8 +15,8 @@ const SaudiOnePackageBanner = () => {
                 >
                     <div className="h-[300px] md:h-[380px] w-full overflow-hidden">
                         <img
-                            src="https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&q=80&w=1800"
-                            alt="Elephant Rock in Al-Ula, Saudi Arabia at dusk"
+                            src={kafdRiyadh}
+                            alt="KAFD skyline in Riyadh, Saudi Arabia"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]"
                         />
                     </div>
