@@ -169,48 +169,57 @@ const PackageVisa = () => {
                             <h3 className="text-xl md:text-2xl font-display font-black text-secondary mb-1">
                                 Find your visa to travel to Saudi Arabia
                             </h3>
-                            <p className="text-sm text-gray-400 font-bold mb-8">What brings you to Saudi Arabia?</p>
+                            {!checked && (
+                                <p className="text-sm text-gray-400 font-bold mb-8">What brings you to Saudi Arabia?</p>
+                            )}
+                            {checked && <div className="mb-6" />}
 
                             {checked ? (
-                                <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-6 text-center">
-                                    <CheckCircle className="w-10 h-10 text-green-500 mx-auto mb-3" />
-                                    <h4 className="font-display font-black text-secondary mb-2">
-                                        Great news, you&apos;re eligible!
-                                    </h4>
-                                    <p className="text-xs text-gray-500 font-bold leading-relaxed mb-5">
+                                <div>
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <span className="w-9 h-9 rounded-full bg-green-50 flex items-center justify-center shrink-0">
+                                            <CheckCircle className="w-5 h-5 text-green-500" />
+                                        </span>
+                                        <h4 className="font-display font-black text-secondary text-lg">
+                                            You&apos;re eligible
+                                        </h4>
+                                    </div>
+                                    <p className="text-sm text-gray-500 font-medium leading-relaxed mb-7 pl-12">
                                         As a {nationality} national residing in {residence}, you qualify for the
                                         Saudi All-in-One Package with your visit visa included.
                                     </p>
 
-                                    <div className="flex flex-wrap justify-center gap-2 mb-6">
+                                    <div className="grid grid-cols-5 gap-2 mb-8">
                                         {INCLUSIONS.map(({ icon: Icon, label }) => (
-                                            <div key={label} className="flex items-center gap-1.5 bg-white border border-gray-100 rounded-xl px-3 py-1.5">
-                                                <Icon className="w-3.5 h-3.5 text-primary" />
-                                                <span className="text-[9px] font-black uppercase tracking-widest text-secondary">{label}</span>
+                                            <div key={label} className="flex flex-col items-center gap-2 py-3 rounded-2xl bg-gray-50">
+                                                <Icon className="w-4 h-4 text-primary" />
+                                                <span className="text-[8px] md:text-[9px] font-black uppercase tracking-wider text-gray-500">{label}</span>
                                             </div>
                                         ))}
                                     </div>
 
-                                    <p className="text-[11px] font-black uppercase tracking-widest text-secondary mb-3">
-                                        Contact our Visa Consultant
-                                    </p>
-                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-                                        <a
-                                            href={whatsappHref}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            onClick={() => trackEvent('package_visa_apply_click', { nationality, residence })}
-                                            className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3.5 rounded-2xl font-black text-[10px] md:text-xs uppercase tracking-[0.15em] hover:bg-[#128C7E] transition-all shadow-lg"
-                                        >
-                                            <FaWhatsapp className="w-4 h-4" /> WhatsApp Us
-                                        </a>
-                                        <a
-                                            href={`mailto:visa@flyinco.com?subject=${encodeURIComponent('Saudi All-in-One Package Visa Enquiry')}&body=${encodeURIComponent(`Nationality: ${nationality}\nCountry of residence: ${residence}\n\nI'm interested in the Saudi All-in-One Package (flights, hotels, visa, transfers & sightseeing).`)}`}
-                                            onClick={() => trackEvent('package_visa_email_click', { nationality, residence })}
-                                            className="inline-flex items-center gap-2 bg-white text-secondary border border-gray-200 px-6 py-3.5 rounded-2xl font-black text-[10px] md:text-xs uppercase tracking-[0.15em] hover:border-primary hover:text-primary transition-all"
-                                        >
-                                            <Mail className="w-4 h-4" /> visa@flyinco.com
-                                        </a>
+                                    <div className="border-t border-gray-100 pt-6">
+                                        <p className="text-[10px] font-black uppercase tracking-[0.25em] text-gray-400 mb-4">
+                                            Contact our Visa Consultant
+                                        </p>
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                            <a
+                                                href={whatsappHref}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                onClick={() => trackEvent('package_visa_apply_click', { nationality, residence })}
+                                                className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-4 rounded-2xl font-black text-xs uppercase tracking-[0.1em] hover:bg-[#128C7E] transition-colors"
+                                            >
+                                                <FaWhatsapp className="w-4 h-4" /> WhatsApp Us
+                                            </a>
+                                            <a
+                                                href={`mailto:visa@flyinco.com?subject=${encodeURIComponent('Saudi All-in-One Package Visa Enquiry')}&body=${encodeURIComponent(`Nationality: ${nationality}\nCountry of residence: ${residence}\n\nI'm interested in the Saudi All-in-One Package (flights, hotels, visa, transfers & sightseeing).`)}`}
+                                                onClick={() => trackEvent('package_visa_email_click', { nationality, residence })}
+                                                className="inline-flex items-center justify-center gap-2 bg-white text-secondary border border-gray-200 px-6 py-4 rounded-2xl font-black text-xs uppercase tracking-[0.1em] hover:border-primary hover:text-primary transition-colors"
+                                            >
+                                                <Mail className="w-4 h-4" /> visa@flyinco.com
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             ) : (
