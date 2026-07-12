@@ -7,11 +7,13 @@ import VisaTypes from '../components/visa/VisaTypes';
 import VisaFAQ from '../components/visa/VisaFAQ';
 import VisaForm from '../components/visa/VisaForm';
 import VisaLinks from '../components/visa/VisaLinks';
+import PackageVisa from '../components/PackageVisa';
 
 const VisaPage = () => {
     return (
         <main className="bg-white">
             <VisaHero />
+            <PackageVisa />
             <CountryGrid />
             <VisaStats />
             <VisaProcess />

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Search, MapPin, ChevronRight, Plus, Minus, Clock, Star, Landmark } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
 import Link from 'next/link';
+import PackageVisa from '../components/PackageVisa';
 
 const SaudiPackagesPage = () => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -137,6 +138,8 @@ const SaudiPackagesPage = () => {
                     </div>
                 </div>
             </section>
+
+            <PackageVisa />
 
             {/* FAQ Section */}
             <section className="py-14 md:py-24 bg-secondary text-white">

@@ -1,0 +1,214 @@
+'use client';
+
+import React, { useState } from 'react';
+import { X, Users, ArrowRight, CheckCircle, FileText } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
+
+// Nationalities currently eligible for the Saudi Package Visa programme.
+const ELIGIBLE_NATIONALITIES = [
+    'India',
+    'Pakistan',
+    'Jordan',
+    'Egypt',
+    'Mexico',
+    'Indonesia',
+    'Bangladesh',
+];
+
+const RESIDENCE_COUNTRIES = [
+    'India',
+    'Pakistan',
+    'Jordan',
+    'Egypt',
+    'Mexico',
+    'Indonesia',
+    'Bangladesh',
+    'Saudi Arabia',
+    'United Arab Emirates',
+    'Bahrain',
+    'Qatar',
+    'Kuwait',
+    'Oman',
+    'United Kingdom',
+    'United States',
+    'Canada',
+    'Germany',
+    'France',
+    'Italy',
+    'Spain',
+    'Turkey',
+    'Malaysia',
+    'Singapore',
+    'Australia',
+    'South Africa',
+];
+
+const PackageVisa = () => {
+    const [modalOpen, setModalOpen] = useState(false);
+    const [nationality, setNationality] = useState('');
+    const [residence, setResidence] = useState('');
+    const [checked, setChecked] = useState(false);
+
+    const openModal = () => {
+        trackEvent('package_visa_check_open', {});
+        setChecked(false);
+        setModalOpen(true);
+    };
+
+    const closeModal = () => setModalOpen(false);
+
+    const handleCheck = (e) => {
+        e.preventDefault();
+        trackEvent('package_visa_eligibility_check', { nationality, residence });
+        setChecked(true);
+    };
+
+    const whatsappHref = `https://wa.me/966556182021?text=${encodeURIComponent(
+        `Hi Flyinco! I'm a ${nationality} national residing in ${residence}, and I'd like to apply for the Saudi Package Visa with a tourism package.`
+    )}`;
+
+    return (
+        <section className="py-14 md:py-20 bg-white">
+            <div className="max-w-[1240px] mx-auto px-4">
+
+                {/* Banner */}
+                <div className="relative bg-secondary rounded-[24px] overflow-hidden p-8 md:p-14">
+                    <div className="absolute -right-20 -top-20 w-80 h-80 bg-primary/30 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+                    <div className="relative max-w-3xl">
+                        <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-6 border border-white/10">
+                            <FileText className="w-6 h-6 text-primary" />
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-display font-black text-white uppercase tracking-tight mb-5">
+                            Package Visa
+                        </h2>
+                        <p className="text-white/80 font-body font-medium leading-relaxed mb-8 text-sm md:text-base">
+                            Enjoy a smoother and more convenient journey with a visit visa for tourism
+                            included in your travel package. Get your visa as part of a complete travel
+                            experience — from planning your trip to arriving in Saudi Arabia and exploring
+                            its diverse destinations, rich culture, and exceptional experiences.
+                        </p>
+                        <div className="flex flex-wrap items-center gap-4">
+                            <button
+                                onClick={openModal}
+                                className="inline-flex items-center gap-2 bg-white text-secondary px-7 py-3.5 rounded-2xl font-black text-xs uppercase tracking-[0.15em] hover:bg-primary hover:text-white transition-all shadow-lg"
+                            >
+                                Check Eligibility <ArrowRight className="w-4 h-4" />
+                            </button>
+                            <a
+                                href="https://wa.me/966556182021?text=Hi%20Flyinco!%20I%20want%20to%20learn%20more%20about%20the%20Saudi%20Package%20Visa."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 bg-white/10 text-white border border-white/20 px-7 py-3.5 rounded-2xl font-black text-xs uppercase tracking-[0.15em] hover:bg-white/20 transition-all"
+                            >
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Eligibility modal */}
+                {modalOpen && (
+                    <div
+                        className="fixed inset-0 z-[130] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+                        onClick={closeModal}
+                    >
+                        <div
+                            role="dialog"
+                            aria-modal="true"
+                            aria-label="Check Package Visa eligibility"
+                            className="bg-white rounded-[2rem] w-full max-w-xl p-8 md:p-10 shadow-2xl relative max-h-[90vh] overflow-y-auto"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <button
+                                onClick={closeModal}
+                                aria-label="Close"
+                                className="absolute top-6 right-6 p-2 rounded-xl bg-gray-50 text-secondary hover:bg-gray-100 transition-colors"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+
+                            <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                                <Users className="w-6 h-6 text-primary" />
+                            </div>
+
+                            <h3 className="text-xl md:text-2xl font-display font-black text-secondary mb-1">
+                                Find your visa to travel to Saudi Arabia
+                            </h3>
+                            <p className="text-sm text-gray-400 font-bold mb-8">What brings you to Saudi Arabia?</p>
+
+                            {checked ? (
+                                <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-6 text-center">
+                                    <CheckCircle className="w-10 h-10 text-green-500 mx-auto mb-3" />
+                                    <h4 className="font-display font-black text-secondary mb-2">
+                                        Great news — you&apos;re eligible!
+                                    </h4>
+                                    <p className="text-xs text-gray-500 font-bold leading-relaxed mb-6">
+                                        As a {nationality} national residing in {residence}, you can get a Saudi
+                                        visit visa for tourism included with a Flyinco travel package — flights,
+                                        hotels, transfers, and visa handled in one booking.
+                                    </p>
+                                    <a
+                                        href={whatsappHref}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => trackEvent('package_visa_apply_click', { nationality, residence })}
+                                        className="inline-flex items-center gap-2 bg-primary text-white px-7 py-3.5 rounded-2xl font-black text-xs uppercase tracking-[0.15em] hover:bg-primary/90 transition-all shadow-lg shadow-primary/30"
+                                    >
+                                        Apply via WhatsApp <ArrowRight className="w-4 h-4" />
+                                    </a>
+                                </div>
+                            ) : (
+                                <form onSubmit={handleCheck} className="space-y-6">
+                                    <div>
+                                        <label htmlFor="pv-nationality" className="block text-sm font-black text-secondary mb-2">
+                                            Nationality <span className="text-red-500">*</span>
+                                        </label>
+                                        <select
+                                            id="pv-nationality"
+                                            required
+                                            value={nationality}
+                                            onChange={(e) => setNationality(e.target.value)}
+                                            className="w-full appearance-none bg-white border border-gray-200 rounded-2xl py-4 px-5 text-sm font-bold text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                        >
+                                            <option value="" disabled>Select your nationality</option>
+                                            {ELIGIBLE_NATIONALITIES.map((c) => (
+                                                <option key={c} value={c}>{c}</option>
+                                            ))}
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="pv-residence" className="block text-sm font-black text-secondary mb-2">
+                                            What&apos;s your country of residence? <span className="text-red-500">*</span>
+                                        </label>
+                                        <select
+                                            id="pv-residence"
+                                            required
+                                            value={residence}
+                                            onChange={(e) => setResidence(e.target.value)}
+                                            className="w-full appearance-none bg-white border border-gray-200 rounded-2xl py-4 px-5 text-sm font-bold text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                        >
+                                            <option value="" disabled>Select your country of residence</option>
+                                            {RESIDENCE_COUNTRIES.map((c) => (
+                                                <option key={c} value={c}>{c}</option>
+                                            ))}
+                                        </select>
+                                    </div>
+
+                                    <button
+                                        type="submit"
+                                        className="bg-primary text-white px-7 py-4 rounded-2xl font-black text-xs uppercase tracking-[0.15em] hover:bg-primary/90 transition-all shadow-lg shadow-primary/30"
+                                    >
+                                        Show Eligible Visas
+                                    </button>
+                                </form>
+                            )}
+                        </div>
+                    </div>
+                )}
+            </div>
+        </section>
+    );
+};
+
+export default PackageVisa;
