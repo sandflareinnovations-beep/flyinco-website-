@@ -13,11 +13,16 @@ const SaudiOnePackageBanner = () => {
                     href="/saudi-packages"
                     className="relative block rounded-[2rem] overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow"
                 >
-                    <div className="h-[300px] md:h-[380px] w-full overflow-hidden">
+                    <div className="h-[300px] md:h-[380px] w-full overflow-hidden flex">
+                        <img
+                            src="https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&q=80&w=1200"
+                            alt="Elephant Rock in Al-Ula, Saudi Arabia at dusk"
+                            className="w-3/5 h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]"
+                        />
                         <img
                             src={kafdRiyadh}
                             alt="KAFD skyline in Riyadh, Saudi Arabia"
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]"
+                            className="w-2/5 h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]"
                         />
                     </div>
 
