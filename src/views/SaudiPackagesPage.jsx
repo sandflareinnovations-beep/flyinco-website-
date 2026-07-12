@@ -63,6 +63,8 @@ const SaudiPackagesPage = () => {
                 </div>
             </section>
 
+            <PackageVisa />
+
             {/* Features Section */}
             <section className="py-12 bg-primary/5 border-b border-primary/10">
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12">
@@ -138,8 +140,6 @@ const SaudiPackagesPage = () => {
                     </div>
                 </div>
             </section>
-
-            <PackageVisa />
 
             {/* FAQ Section */}
             <section className="py-14 md:py-24 bg-secondary text-white">

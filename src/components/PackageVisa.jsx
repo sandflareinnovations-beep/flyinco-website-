@@ -1,8 +1,17 @@
 'use client';
 
 import React, { useState } from 'react';
-import { X, Users, ArrowRight, CheckCircle, FileText } from 'lucide-react';
+import { X, Users, ArrowRight, CheckCircle, FileText, Plane, Building, Car, Camera, Mail } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { trackEvent } from '../lib/analytics';
+
+const INCLUSIONS = [
+    { icon: Plane, label: 'Flights' },
+    { icon: Building, label: 'Hotels' },
+    { icon: FileText, label: 'Visa' },
+    { icon: Car, label: 'Transfers' },
+    { icon: Camera, label: 'Sightseeing' },
+];
 
 // Nationalities currently eligible for the Saudi Package Visa programme.
 const ELIGIBLE_NATIONALITIES = [
@@ -64,7 +73,7 @@ const PackageVisa = () => {
     };
 
     const whatsappHref = `https://wa.me/966556182021?text=${encodeURIComponent(
-        `Hi Flyinco! I'm a ${nationality} national residing in ${residence}, and I'd like to apply for the Saudi Package Visa with a tourism package.`
+        `Hi Flyinco! I'm interested in the Saudi All-in-One Package (flights, hotels, visa, transfers & sightseeing). I'm a ${nationality} national residing in ${residence}.`
     )}`;
 
     return (
@@ -87,6 +96,17 @@ const PackageVisa = () => {
                             experience — from planning your trip to arriving in Saudi Arabia and exploring
                             its diverse destinations, rich culture, and exceptional experiences.
                         </p>
+
+                        {/* All-in-one inclusions */}
+                        <div className="flex flex-wrap gap-3 mb-8">
+                            {INCLUSIONS.map(({ icon: Icon, label }) => (
+                                <div key={label} className="flex items-center gap-2 bg-white/10 border border-white/10 rounded-2xl px-4 py-2.5">
+                                    <Icon className="w-4 h-4 text-primary" />
+                                    <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-white/90">{label}</span>
+                                </div>
+                            ))}
+                        </div>
+
                         <div className="flex flex-wrap items-center gap-4">
                             <button
                                 onClick={openModal}
@@ -142,20 +162,41 @@ const PackageVisa = () => {
                                     <h4 className="font-display font-black text-secondary mb-2">
                                         Great news — you&apos;re eligible!
                                     </h4>
-                                    <p className="text-xs text-gray-500 font-bold leading-relaxed mb-6">
-                                        As a {nationality} national residing in {residence}, you can get a Saudi
-                                        visit visa for tourism included with a Flyinco travel package — flights,
-                                        hotels, transfers, and visa handled in one booking.
+                                    <p className="text-xs text-gray-500 font-bold leading-relaxed mb-5">
+                                        As a {nationality} national residing in {residence}, you qualify for the
+                                        Saudi All-in-One Package with your visit visa included.
                                     </p>
-                                    <a
-                                        href={whatsappHref}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        onClick={() => trackEvent('package_visa_apply_click', { nationality, residence })}
-                                        className="inline-flex items-center gap-2 bg-primary text-white px-7 py-3.5 rounded-2xl font-black text-xs uppercase tracking-[0.15em] hover:bg-primary/90 transition-all shadow-lg shadow-primary/30"
-                                    >
-                                        Apply via WhatsApp <ArrowRight className="w-4 h-4" />
-                                    </a>
+
+                                    <div className="flex flex-wrap justify-center gap-2 mb-6">
+                                        {INCLUSIONS.map(({ icon: Icon, label }) => (
+                                            <div key={label} className="flex items-center gap-1.5 bg-white border border-gray-100 rounded-xl px-3 py-1.5">
+                                                <Icon className="w-3.5 h-3.5 text-primary" />
+                                                <span className="text-[9px] font-black uppercase tracking-widest text-secondary">{label}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <p className="text-[11px] font-black uppercase tracking-widest text-secondary mb-3">
+                                        Contact our Visa Consultant
+                                    </p>
+                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                                        <a
+                                            href={whatsappHref}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={() => trackEvent('package_visa_apply_click', { nationality, residence })}
+                                            className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3.5 rounded-2xl font-black text-[10px] md:text-xs uppercase tracking-[0.15em] hover:bg-[#128C7E] transition-all shadow-lg"
+                                        >
+                                            <FaWhatsapp className="w-4 h-4" /> WhatsApp Us
+                                        </a>
+                                        <a
+                                            href={`mailto:visa@flyinco.com?subject=${encodeURIComponent('Saudi All-in-One Package Visa Enquiry')}&body=${encodeURIComponent(`Nationality: ${nationality}\nCountry of residence: ${residence}\n\nI'm interested in the Saudi All-in-One Package (flights, hotels, visa, transfers & sightseeing).`)}`}
+                                            onClick={() => trackEvent('package_visa_email_click', { nationality, residence })}
+                                            className="inline-flex items-center gap-2 bg-white text-secondary border border-gray-200 px-6 py-3.5 rounded-2xl font-black text-[10px] md:text-xs uppercase tracking-[0.15em] hover:border-primary hover:text-primary transition-all"
+                                        >
+                                            <Mail className="w-4 h-4" /> visa@flyinco.com
+                                        </a>
+                                    </div>
                                 </div>
                             ) : (
                                 <form onSubmit={handleCheck} className="space-y-6">
