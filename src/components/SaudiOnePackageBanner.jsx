@@ -8,10 +8,10 @@ import alulaBanner from '../assets/images/alula/alula-discover-banner.jpg';
 const SaudiOnePackageBanner = () => {
     return (
         <section className="bg-white pt-10 pb-2">
-            <div className="max-w-[1240px] mx-auto px-4">
+            <div className="w-full">
                 <Link
                     href="/saudi-packages"
-                    className="relative block rounded-[2rem] overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow"
+                    className="relative block overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow"
                 >
                     <div className="h-[260px] sm:h-[320px] md:h-[400px] w-full overflow-hidden">
                         <img
@@ -22,7 +22,7 @@ const SaudiOnePackageBanner = () => {
                     </div>
 
                     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent flex items-end">
-                        <div className="p-8 md:p-12 pb-10 md:pb-14 w-full">
+                        <div className="max-w-[1240px] mx-auto px-6 md:px-12 pb-10 md:pb-14 w-full">
                             <p className="font-display text-white/80 font-bold uppercase tracking-[0.3em] text-[10px] md:text-xs mb-3">
                                 Riyadh · Diriyah · Al-Ula · Jeddah
                             </p>
