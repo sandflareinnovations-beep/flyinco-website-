@@ -1,10 +1,8 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import Hero from '../components/Hero';
 import SaudiOnePackageBanner from '../components/SaudiOnePackageBanner';
-import PopularPackages from '../components/PopularPackages';
-import ExploreDestinations from '../components/ExploreDestinations';
 import BrowseCategories from '../components/BrowseCategories';
-import PackagesGrid from '../components/PackagesGrid';
 import Testimonials from '../components/Testimonials';
 import GoogleReviews from '../components/GoogleReviews';
 import HotDealBanner from '../components/HotDealBanner';
@@ -12,7 +10,15 @@ import Gallery from '../components/Gallery';
 import WhyChooseUs from '../components/WhyChooseUs';
 
 import CorporateTravel from '../components/CorporateTravel';
-import RequestCallback from '../components/RequestCallback';
+import RiyadhAgencySection from '../components/RiyadhAgencySection';
+
+// Below-the-fold client components (carousels, forms) are code-split so their
+// JS loads after hydration instead of on the critical path. They are still
+// server-rendered, so their content stays in the HTML for SEO.
+const PopularPackages = dynamic(() => import('../components/PopularPackages'));
+const ExploreDestinations = dynamic(() => import('../components/ExploreDestinations'));
+const PackagesGrid = dynamic(() => import('../components/PackagesGrid'));
+const RequestCallback = dynamic(() => import('../components/RequestCallback'));
 
 const HomePage = () => {
     return (
@@ -29,6 +35,7 @@ const HomePage = () => {
             <Gallery />
             <CorporateTravel />
             <WhyChooseUs />
+            <RiyadhAgencySection />
             <RequestCallback />
         </main>
     );

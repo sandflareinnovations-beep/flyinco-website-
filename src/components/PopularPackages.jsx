@@ -74,7 +74,7 @@ const PopularPackages = () => {
                             </div>
 
                             <div className="p-6 flex-1 flex flex-col">
-                                <div className="flex items-center gap-4 text-[11px] text-gray-400 font-bold mb-3 uppercase tracking-widest">
+                                <div className="flex items-center gap-4 text-[11px] text-gray-500 font-bold mb-3 uppercase tracking-widest">
                                     <div className="flex items-center gap-1.5">
                                         <Clock className="w-3.5 h-3.5 text-primary" />
                                         <span>{pkg.duration}</span>

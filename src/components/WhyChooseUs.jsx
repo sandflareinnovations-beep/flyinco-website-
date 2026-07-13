@@ -52,7 +52,7 @@ const WhyChooseUs = () => {
                     </h2>
 
                     <p className="text-gray-500 mb-6 font-body leading-relaxed text-base font-medium">
-                        Flyinco isn't just a travel agency; we are your curators of global experiences. With a history of managing thousands of successful journeys, we bring a level of precision and insight that ensures every itinerary is optimized for both adventure and comfort.
+                        Flyinco isn't just another travel agency in Riyadh; we are your curators of global experiences. With a history of managing thousands of successful journeys, we bring a level of precision and insight that ensures every itinerary is optimized for both adventure and comfort.
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
@@ -63,7 +63,7 @@ const WhyChooseUs = () => {
                                 </div>
                                 <div>
                                     <p className="font-black text-xs text-secondary font-display uppercase tracking-widest mb-1.5">{item.title}</p>
-                                    <p className="text-[11px] text-gray-400 font-bold leading-relaxed">{item.desc}</p>
+                                    <p className="text-[11px] text-gray-500 font-bold leading-relaxed">{item.desc}</p>
                                 </div>
                             </div>
                         ))}

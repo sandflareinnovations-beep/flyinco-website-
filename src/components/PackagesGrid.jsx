@@ -76,24 +76,24 @@ const PackagesGrid = () => {
                                     </div>
                                     <div className="p-7 md:p-10 flex-1 flex flex-col items-center">
                                         <h3 className="font-display font-black text-secondary text-2xl mb-3 group-hover:text-primary transition-colors">{dest.name}</h3>
-                                        <p className="text-sm text-gray-400 font-bold mb-8 text-center uppercase tracking-widest leading-loose">Experience the unique charm of {dest.name}</p>
+                                        <p className="text-sm text-gray-500 font-bold mb-8 text-center uppercase tracking-widest leading-loose">Experience the unique charm of {dest.name}</p>
 
                                         <div className="flex justify-center gap-4 mt-auto border-t border-gray-50 pt-8 w-full">
                                             <div className="flex flex-col items-center gap-2 group/icon">
                                                 <div className="bg-primary/5 text-primary p-3 rounded-2xl group-hover/icon:bg-primary group-hover/icon:text-white transition-colors"><Plane className="w-5 h-5" /></div>
-                                                <span className="text-[9px] text-gray-300 font-black uppercase tracking-tighter">Flights</span>
+                                                <span className="text-[9px] text-gray-500 font-black uppercase tracking-tighter">Flights</span>
                                             </div>
                                             <div className="flex flex-col items-center gap-2 group/icon">
                                                 <div className="bg-primary/5 text-primary p-3 rounded-2xl group-hover/icon:bg-primary group-hover/icon:text-white transition-colors"><Building className="w-5 h-5" /></div>
-                                                <span className="text-[9px] text-gray-300 font-black uppercase tracking-tighter">Hotels</span>
+                                                <span className="text-[9px] text-gray-500 font-black uppercase tracking-tighter">Hotels</span>
                                             </div>
                                             <div className="flex flex-col items-center gap-2 group/icon">
                                                 <div className="bg-primary/5 text-primary p-3 rounded-2xl group-hover/icon:bg-primary group-hover/icon:text-white transition-colors"><Car className="w-5 h-5" /></div>
-                                                <span className="text-[8px] text-gray-300 font-black uppercase tracking-tighter text-center leading-none">Chauffeur<br/>Service</span>
+                                                <span className="text-[8px] text-gray-500 font-black uppercase tracking-tighter text-center leading-none">Chauffeur<br/>Service</span>
                                             </div>
                                             <div className="flex flex-col items-center gap-2 group/icon">
                                                 <div className="bg-primary/5 text-primary p-3 rounded-2xl group-hover/icon:bg-primary group-hover/icon:text-white transition-colors"><MapIcon className="w-5 h-5" /></div>
-                                                <span className="text-[9px] text-gray-300 font-black uppercase tracking-tighter">Trips</span>
+                                                <span className="text-[9px] text-gray-500 font-black uppercase tracking-tighter">Trips</span>
                                             </div>
                                         </div>
                                     </div>

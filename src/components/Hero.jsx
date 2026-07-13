@@ -1,13 +1,19 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, ChevronLeft, ChevronRight } from 'lucide-react';
-import kafdRiyadh from '../assets/images/kafd/riyadh-skyline.jpg';
+import kafdRiyadh from '../assets/images/kafd/riyadh-skyline.webp';
+import { alulaHero } from '../lib/heroImages';
+
+// Serve Unsplash images at the viewport's real width instead of a fixed 2000px.
+const unsplashSrcSet = (base) =>
+    [640, 1080, 1600, 2000].map((w) => `${base}?auto=format&fit=crop&q=70&w=${w} ${w}w`).join(', ');
 
 const slides = [
     {
-        image: 'https://images.unsplash.com/photo-1629667051607-e412f1c493c0?auto=format&fit=crop&q=80&w=2000',
+        image: alulaHero.src,
+        srcSet: alulaHero.srcSet,
         title: 'Al-Ula Heritage',
         subtitle: 'Journey Through Time in Ancient Landscapes'
     },
@@ -17,7 +23,8 @@ const slides = [
         subtitle: 'From the Kingdom Tower to the Skyline of Tomorrow'
     },
     {
-        image: 'https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?auto=format&fit=crop&q=80&w=2000',
+        image: 'https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?auto=format&fit=crop&q=70&w=2000',
+        srcSet: unsplashSrcSet('https://images.unsplash.com/photo-1586715065342-98d1f6016fd1'),
         title: 'Jeddah Red Sea',
         subtitle: 'Unforgettable Journeys in the Bride of the Red Sea'
     }
@@ -25,6 +32,12 @@ const slides = [
 
 const Hero = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
+    // The first slide must be visible in the server-rendered HTML (it's the
+    // page's LCP element), so entrance animations only apply to later slides.
+    const hasMounted = useRef(false);
+    useEffect(() => {
+        hasMounted.current = true;
+    }, []);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -41,10 +54,10 @@ const Hero = () => {
 
             {/* Background Slider Section */}
             <div className="absolute top-24 md:top-20 left-4 right-4 bottom-4 md:bottom-12 rounded-[2.5rem] overflow-hidden shadow-2xl">
-                <AnimatePresence mode='wait'>
+                <AnimatePresence mode='wait' initial={false}>
                     <motion.div
                         key={currentSlide}
-                        initial={{ opacity: 0, scale: 1.1 }}
+                        initial={hasMounted.current ? { opacity: 0, scale: 1.1 } : false}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1.5 }}
@@ -53,7 +66,9 @@ const Hero = () => {
                         <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10" />
                         <img
                             src={slides[currentSlide].image}
-                            alt={`title — subtitle`}
+                            srcSet={slides[currentSlide].srcSet}
+                            sizes="100vw"
+                            alt={`${slides[currentSlide].title} — ${slides[currentSlide].subtitle}`}
                             fetchPriority="high"
                             className="w-full h-full object-cover"
                             onError={(e) => {
@@ -80,8 +95,10 @@ const Hero = () => {
                             key={idx}
                             onClick={() => setCurrentSlide(idx)}
                             aria-label={`Go to slide ${idx + 1}`}
-                            className={`h-1.5 transition-all rounded-full pointer-events-auto ${currentSlide === idx ? 'w-8 bg-primary' : 'w-2 bg-white/40'}`}
-                        />
+                            className="py-2.5 px-2 pointer-events-auto flex items-center"
+                        >
+                            <span className={`h-1.5 block transition-all rounded-full ${currentSlide === idx ? 'w-8 bg-primary' : 'w-2 bg-white/40'}`} />
+                        </button>
                     ))}
                 </div>
             </div>
@@ -91,10 +108,10 @@ const Hero = () => {
 
                 {/* Main Text block */}
                 <div className="max-w-xl w-full flex flex-col justify-center text-center md:text-left py-6">
-                    <AnimatePresence mode='wait'>
+                    <AnimatePresence mode='wait' initial={false}>
                         <motion.div
                             key={currentSlide}
-                            initial={{ y: 30, opacity: 0 }}
+                            initial={hasMounted.current ? { y: 30, opacity: 0 } : false}
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: -30, opacity: 0 }}
                             transition={{ duration: 0.8 }}

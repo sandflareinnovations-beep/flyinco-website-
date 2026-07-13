@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import alulaBanner from '../assets/images/alula/alula-discover-banner.jpg';
+import alulaBanner from '../assets/images/alula/alula-discover-banner.webp';
 
 // Contained promo banner under the home hero — Al-Ula campaign artwork with a
 // minimal headline and CTA, matching the card style used across the site.
@@ -14,6 +14,7 @@ const SaudiOnePackageBanner = () => {
                     className="relative block rounded-[24px] overflow-hidden group shadow-md hover:shadow-xl transition-shadow h-[240px] sm:h-[300px] md:h-[340px]"
                 >
                     <img
+                        loading="lazy"
                         src={alulaBanner}
                         alt="Traveller walking towards Elephant Rock in Al-Ula, Saudi Arabia"
                         className="absolute inset-0 w-full h-full object-cover object-bottom group-hover:scale-[1.03] transition-transform duration-1000"

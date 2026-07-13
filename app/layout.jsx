@@ -1,15 +1,31 @@
 import React from 'react';
-import Script from 'next/script';
+import { Inter, Poppins } from 'next/font/google';
 import '../src/index.css';
 import Navbar from '../src/components/Navbar';
 import Footer from '../src/components/Footer';
 import WhatsAppButton from '../src/components/WhatsAppButton';
 import Analytics from '../src/components/Analytics';
+import ClarityLoader from '../src/components/ClarityLoader';
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-poppins',
+  display: 'swap',
+});
 
 export const metadata = {
   metadataBase: new URL('https://www.flyinco.com'),
-  title: 'Flyinco | Travel & Tourism',
-  description: 'Flyinco Travel & Tourism - KSA, BAHRAIN, UAE, INDIA',
+  title: 'Flyinco — Travel Agency in Riyadh | Travel & Tourism',
+  description:
+    'Flyinco Travel & Tourism — travel agency in Riyadh, Saudi Arabia. Holiday packages, tours, visa services and corporate travel across KSA, Bahrain, UAE and India.',
   icons: { icon: '/favicon.png' },
   openGraph: {
     siteName: 'Flyinco Travel & Tourism',
@@ -21,15 +37,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <body>
         <Analytics />
         <div className="bg-[#FAFAFA] w-screen overflow-x-hidden min-h-screen relative font-body text-secondary">
@@ -38,13 +46,7 @@ export default function RootLayout({ children }) {
           <Footer />
           <WhatsAppButton />
         </div>
-        <Script id="microsoft-clarity" strategy="afterInteractive">
-          {`(function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xemgf8jqdz");`}
-        </Script>
+        <ClarityLoader />
       </body>
     </html>
   );

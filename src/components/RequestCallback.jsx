@@ -47,7 +47,7 @@ const RequestCallback = () => {
                     {/* Call Back Form */}
                     <div className="bg-gray-50 rounded-[2.5rem] p-8 md:p-10 border border-gray-100">
                         <h2 className="text-3xl font-display font-black text-secondary mb-2">Need Assistance?</h2>
-                        <p className="text-sm text-gray-400 font-bold mb-8 leading-relaxed">
+                        <p className="text-sm text-gray-600 font-bold mb-8 leading-relaxed">
                             Request a call back and our travel experts will reach out to plan your perfect trip.
                         </p>
 
@@ -132,6 +132,7 @@ const RequestCallback = () => {
                     {/* Discount Card */}
                     <div className="rounded-[2.5rem] overflow-hidden relative min-h-[400px]">
                         <img
+                            loading="lazy"
                             src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&q=80&w=800"
                             alt="Discover Saudi Arabia"
                             className="w-full h-full object-cover absolute inset-0"

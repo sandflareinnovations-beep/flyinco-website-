@@ -14,8 +14,8 @@ export default {
                 grayLight: "#F8F9FA",
             },
             fontFamily: {
-                display: ['"Poppins"', "sans-serif"],
-                body: ['"Inter"', "sans-serif"],
+                display: ["var(--font-poppins)", '"Poppins"', "sans-serif"],
+                body: ["var(--font-inter)", '"Inter"', "sans-serif"],
             },
         },
     },
