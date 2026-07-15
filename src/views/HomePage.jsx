@@ -1,6 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Hero from '../components/Hero';
+import HotelDeals from '../components/HotelDeals';
 import SaudiOnePackageBanner from '../components/SaudiOnePackageBanner';
 import BrowseCategories from '../components/BrowseCategories';
 import Testimonials from '../components/Testimonials';
@@ -24,6 +25,7 @@ const HomePage = () => {
     return (
         <main>
             <Hero />
+            <HotelDeals />
             <SaudiOnePackageBanner />
             <PopularPackages />
             <ExploreDestinations />
