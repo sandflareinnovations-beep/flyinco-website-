@@ -2,6 +2,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import Hero from '../components/Hero';
 import HotelDeals from '../components/HotelDeals';
+import VisaBanner from '../components/VisaBanner';
 import SaudiOnePackageBanner from '../components/SaudiOnePackageBanner';
 import BrowseCategories from '../components/BrowseCategories';
 import Testimonials from '../components/Testimonials';
@@ -25,7 +26,21 @@ const HomePage = () => {
     return (
         <main>
             <Hero />
-            <HotelDeals />
+            {/* Visa Banner + Hotel Deals side by side */}
+            <section className="bg-secondary py-10 md:py-14">
+                <div className="max-w-[1240px] mx-auto px-4">
+                    <div className="flex flex-col lg:flex-row gap-4 items-stretch">
+                        {/* Visa Banner - left side */}
+                        <div className="lg:w-[380px] shrink-0">
+                            <VisaBanner />
+                        </div>
+                        {/* Hotel Deals - right side */}
+                        <div className="flex-1 min-w-0">
+                            <HotelDeals />
+                        </div>
+                    </div>
+                </div>
+            </section>
             <SaudiOnePackageBanner />
             <PopularPackages />
             <ExploreDestinations />
