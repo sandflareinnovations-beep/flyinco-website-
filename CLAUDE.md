@@ -13,7 +13,15 @@ Flyinco is a marketing/booking website for a travel agency (packages + visa serv
 - `npm run start` — serve the production build
 - `npm run lint` — ESLint over the repo
 
-There are no tests.
+There are no tests. Note `next.config.mjs` sets `eslint.ignoreDuringBuilds`, so a passing build does not imply a clean lint — run `npm run lint` separately.
+
+## Environment
+
+Optional env vars (see `.env.example`); each feature is silently disabled when its var is unset:
+
+- `NEXT_PUBLIC_GTM_ID` — Google Tag Manager
+- `NEXT_PUBLIC_META_PIXEL_ID` — Meta Pixel
+- `NEXT_PUBLIC_GOOGLE_PLACE_ID` — home-page Google reviews section
 
 ## Stack
 
@@ -27,7 +35,10 @@ There are no tests.
 - `src/views/` — one component per route (HomePage, VisaPage, package category pages, ItineraryPage, CorporateTravelPage). Interactive views/components are marked `"use client"`; keep new sections as server components unless they need hooks, framer-motion/swiper, or event handlers.
 - Do NOT create a `pages/` or `src/pages/` directory — Next.js would treat it as a Pages Router root.
 - `src/components/` — shared/section components; `src/components/visa/` holds visa-page sections.
-- `src/data/packagesData.js` — single source of truth for all travel packages, exported as `packagesData` array.
+- `src/data/packagesData.js` — single source of truth for all travel packages, exported as `packagesData` array. `src/data/testimonials.json` feeds the testimonials section.
+- `src/lib/` — shared helpers: `seo.js` (`SITE_URL`, `pageMetadata()` for per-route canonical/OG/Twitter metadata, JSON-LD builders rendered via `src/components/JsonLd.jsx`), `analytics.js` (`trackEvent()` pushes to GTM dataLayer + Meta Pixel; `whatsappLink(source)` builds prefilled wa.me links — use it instead of hardcoding the number), `heroImages.js`.
+- SEO: `app/sitemap.js` generates the sitemap from static routes + `packagesData` slugs; `app/robots.js` generates robots.txt. New routes should be added to `sitemap.js` and export metadata via `pageMetadata()`.
+- Local images are imported as plain URL strings (`images.disableStaticImages` + a webpack asset rule in `next.config.mjs`), so `<img src={imported}>` works; `next/image` static imports do not.
 
 ### Package data model (important)
 
@@ -44,4 +55,5 @@ To add a package: add an object to `packagesData.js` with a unique `id` and `slu
 
 - Styling is Tailwind utility classes inline in JSX. Brand colors are defined in `tailwind.config.js`: `primary` (#6A2B86), `secondary`/`dark` (#1A0933). Fonts: `font-display` (Poppins), `font-body` (Inter). Prefer these tokens over hardcoded hex when they apply.
 - Images are mostly remote Unsplash URLs embedded in `packagesData.js`. `update-images.cjs` is a one-off helper script for bulk-replacing image URLs; not part of the build.
-- Contact actions are mailto/WhatsApp links — keep the email (`visa@flyinco.com`) and WhatsApp number consistent when adding new forms.
+- Contact actions are mailto/WhatsApp links — keep the email (`visa@flyinco.com`) and WhatsApp number consistent when adding new forms; prefer `whatsappLink()` from `src/lib/analytics.js`.
+- `README.md` is the stale Vite starter template left over from before the Next.js migration — ignore it.
