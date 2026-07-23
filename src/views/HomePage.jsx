@@ -26,11 +26,12 @@ const HomePage = () => {
     return (
         <main>
             <Hero />
-            {/* Discover Saudi banner (with Package Visa eligibility card) under the hero */}
+            {/* Umrah visa promo — leads right under the hero */}
+            <UmrahVisaBanner />
+            {/* Discover Saudi banner (with Package Visa eligibility card) */}
             <SaudiOnePackageBanner />
             {/* Exclusive Hotel Deals — standalone full-width section */}
             <HotelDeals />
-            <UmrahVisaBanner />
             <PopularPackages />
             <ExploreDestinations />
             <BrowseCategories />
