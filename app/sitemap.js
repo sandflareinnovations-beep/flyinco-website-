@@ -4,6 +4,7 @@ import { SITE_URL } from '../src/lib/seo';
 export default function sitemap() {
   const staticRoutes = [
     '',
+    '/about',
     '/visa',
     '/saudi-packages',
     '/india-packages',
