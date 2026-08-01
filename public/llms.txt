@@ -1,0 +1,29 @@
+# Flyinco Travel & Tourism
+
+> Flyinco Travel & Tourism is a travel agency founded in Riyadh, Saudi Arabia in 2015. It arranges holiday packages, guided tours across Saudi Arabia, Umrah travel, visit and tourist visa processing, and corporate travel management, with desks in Bahrain, the United Arab Emirates and India.
+
+Saudi tours are operated in-house from the Riyadh office rather than resold. Enquiries are handled by phone, WhatsApp and email — there is no online checkout.
+
+- Founded: 2015, Riyadh, Saudi Arabia
+- Head office: Riyadh, Saudi Arabia — +966 55 618 2021
+- Bahrain desk: Manama — +973 3337 2021
+- UAE desk: Dubai — info@flyinco.com
+- India desk: Mumbai — visa@flyinco.com
+- General email: info@flyinco.com | Visa email: visa@flyinco.com
+- WhatsApp: https://wa.me/966556182021
+
+## Core pages
+
+- [About Flyinco](https://www.flyinco.com/about): Company history since 2015, the four-country office network, services and frequently asked questions.
+- [Saudi Arabia packages](https://www.flyinco.com/saudi-packages): Riyadh city and heritage tours, Diriyah evenings, Al-Ula and Hegra, Jeddah and Al-Balad, Red Sea diving at Obhur.
+- [Visa services](https://www.flyinco.com/visa): Saudi visit, tourist and business visa processing, and Umrah travel arrangements.
+- [Corporate travel](https://www.flyinco.com/corporate-travel): Managed business travel for companies in Saudi Arabia and Bahrain — corporate hotel rates, flights, staff mobilisation, visas.
+- [India packages](https://www.flyinco.com/india-packages): Kerala backwaters, Kashmir, Goa, Rajasthan and Andaman itineraries, plus group departures.
+- [International packages](https://www.flyinco.com/international-packages): Maldives, Bali, Thailand, Malaysia, Dubai, Azerbaijan and Europe.
+- [Honeymoon packages](https://www.flyinco.com/honeymoon-packages): Private honeymoon itineraries.
+- [Adventure tours](https://www.flyinco.com/adventure-tours): Desert, mountain and diving trips.
+
+## Optional
+
+- [Sitemap](https://www.flyinco.com/sitemap.xml): Every indexable page, including each individual tour itinerary at /package/<slug>.
+- [Chauffeur service](https://www.flyincochauffeur.com/): Separate Flyinco chauffeur and ground-transport site.

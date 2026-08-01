@@ -63,7 +63,7 @@ const Navbar = () => {
         },
         { name: 'Chauffeur Service', path: 'https://www.flyincochauffeur.com/', external: true },
         { name: 'Visa', path: '/visa' },
-        { name: 'About', path: '/#about' },
+        { name: 'About', path: '/about' },
         { name: 'Corporate Travel', path: '/corporate-travel' },
     ];
 
