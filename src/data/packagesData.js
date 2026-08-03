@@ -168,6 +168,97 @@ export const packagesData = [
     ]
   },
 
+  // --- JEDDAH EXPERIENCES ---
+  {
+    id: 'saudi-jeddah-al-balad',
+    slug: 'jeddah-al-balad-heritage-walk',
+    category: 'Saudi',
+    name: 'Al-Balad Heritage Walk',
+    title: 'Historic Jeddah (Al-Balad) Walking Tour — UNESCO Old Town',
+    img: 'https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?auto=format&fit=crop&q=80&w=800',
+    desc: 'A guided walking tour of Historic Jeddah, the UNESCO World Heritage old town — coral-stone houses, carved rawasheen balconies, Souq Al-Alawi and the Naseef House, ending with Hijazi coffee.',
+    duration: '4 Hours',
+    price: '',
+    locations: 'Al-Balad, Historic Jeddah',
+    meetingPoint: 'Bab Makkah gate, Al-Balad',
+    highlights: ['UNESCO World Heritage Site', 'Naseef House', 'Souq Al-Alawi', 'Rawasheen Balconies', 'Al-Shafi Mosque', 'Hijazi Coffee Tasting'],
+    included: ['English and Arabic speaking heritage guide', 'Entry to Naseef House', 'Hijazi coffee and dates', 'Bottled water'],
+    itinerary: [
+      { time: '04:00 PM', title: 'Meet at Bab Makkah', detail: 'Meet your guide at the old Bab Makkah gate for an introduction to the walled city and 1,400 years of Jeddah as the gateway to Makkah.' },
+      { time: '04:30 PM', title: 'Souq Al-Alawi', detail: 'Walk the spice and textile lanes of Souq Al-Alawi, the oldest market in Jeddah, still trading incense, dates and Hijazi fabrics.' },
+      { time: '05:15 PM', title: 'Naseef House', detail: 'Tour Bayt Naseef, the coral-stone merchant house where King Abdulaziz stayed in 1925, and climb its famous ramp staircase.', image: 'https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?auto=format&fit=crop&q=80&w=800' },
+      { time: '06:15 PM', title: 'Rawasheen at Golden Hour', detail: 'Photograph the carved teak rawasheen balconies of Al-Balad as the light drops — the best hour of the day for the old town.' },
+      { time: '07:00 PM', title: 'Hijazi Coffee & Wrap-up', detail: 'Finish in a restored courtyard café with Hijazi coffee, dates and time to browse the surrounding shops.' }
+    ]
+  },
+  {
+    id: 'saudi-jeddah-corniche',
+    slug: 'jeddah-corniche-fountain-evening',
+    category: 'Saudi',
+    name: 'Jeddah Corniche Evening',
+    title: 'Jeddah Corniche & King Fahd Fountain Evening Tour',
+    img: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?auto=format&fit=crop&q=80&w=800',
+    desc: 'An evening along the Red Sea waterfront — the Jeddah Corniche promenade, open-air sculpture museum, the Floating Mosque at sunset, and the King Fahd Fountain lit against the water.',
+    duration: '4 Hours',
+    price: '',
+    locations: 'Jeddah Corniche, Jeddah',
+    meetingPoint: 'Jeddah Waterfront, North Corniche',
+    highlights: ['King Fahd Fountain', 'Al-Rahmah Floating Mosque', 'Jeddah Waterfront', 'Open-Air Sculpture Museum', 'Red Sea Sunset', 'Seafood Dinner Stop'],
+    included: ['Private air-conditioned vehicle and driver', 'English speaking guide', 'Bottled water'],
+    itinerary: [
+      { time: '05:00 PM', title: 'Jeddah Waterfront', detail: 'Start on the renewed North Corniche promenade — beaches, play areas and the Red Sea on one side, the city skyline on the other.' },
+      { time: '05:45 PM', title: 'Open-Air Sculpture Museum', detail: 'Drive the Corniche sculpture route past works by Henry Moore, Joan Miró and Victor Vasarely, installed along the seafront in the 1970s.' },
+      { time: '06:30 PM', title: 'Al-Rahmah Floating Mosque', detail: 'Sunset at the white Al-Rahmah Mosque, built on stilts over the Red Sea. Time for photographs from the shoreline.', image: 'https://images.unsplash.com/photo-1586715065342-98d1f6016fd1?auto=format&fit=crop&q=80&w=800' },
+      { time: '07:30 PM', title: 'King Fahd Fountain', detail: 'View the tallest fountain in the world, throwing seawater over 300 metres and floodlit after dark.' },
+      { time: '08:15 PM', title: 'Seafood Stop', detail: 'Optional dinner stop at a Corniche seafood restaurant before the transfer back to your hotel.' }
+    ]
+  },
+  {
+    id: 'saudi-jeddah-city-tour',
+    slug: 'jeddah-city-tour-full-day',
+    category: 'Saudi',
+    name: 'Jeddah City Tour',
+    title: 'Jeddah Full-Day City Tour — Old Town, Corniche & Souqs',
+    img: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=800',
+    desc: 'A full day covering Jeddah end to end — Historic Al-Balad, the fish market, the Corniche, King Fahd Fountain and the modern malls, with a private guide and vehicle throughout.',
+    duration: '8 Hours',
+    price: '',
+    locations: 'Jeddah',
+    meetingPoint: 'Your Jeddah hotel',
+    highlights: ['Al-Balad Old Town', 'Jeddah Fish Market', 'King Fahd Fountain', 'Floating Mosque', 'Corniche Drive', 'Hotel Pickup & Drop-off'],
+    included: ['Private air-conditioned vehicle with driver', 'English speaking guide for the full day', 'Hotel pickup and drop-off in Jeddah', 'Bottled water'],
+    itinerary: [
+      { time: '09:00 AM', title: 'Hotel Pickup', detail: 'Collection from your Jeddah hotel and a briefing on the day ahead.' },
+      { time: '09:45 AM', title: 'Historic Al-Balad', detail: 'Guided walk through the UNESCO-listed old town — Naseef House, Souq Al-Alawi and the coral-stone merchant quarter.' },
+      { time: '12:00 PM', title: 'Jeddah Fish Market', detail: 'Visit the central fish market to see the Red Sea catch come in, with lunch at an adjoining grill if you would like it.' },
+      { time: '02:00 PM', title: 'Corniche & Floating Mosque', detail: 'Drive the length of the Corniche, stopping at Al-Rahmah Floating Mosque and the sculpture route.', image: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?auto=format&fit=crop&q=80&w=800' },
+      { time: '04:00 PM', title: 'Modern Jeddah', detail: 'A stop in the modern city — Tahlia Street or Red Sea Mall — for shopping and coffee.' },
+      { time: '05:00 PM', title: 'Return Transfer', detail: 'Drop-off back at your hotel, or continue to the Corniche for the fountain at night on request.' }
+    ]
+  },
+  {
+    id: 'saudi-jeddah-yacht-snorkel',
+    slug: 'jeddah-red-sea-yacht-snorkelling',
+    category: 'Saudi',
+    name: 'Red Sea Yacht Day',
+    title: 'Jeddah Red Sea Yacht Cruise & Snorkelling Day',
+    img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800',
+    desc: 'A private yacht day out of Obhur — swimming and snorkelling over Red Sea coral reefs, lunch on board, and the run back along the Jeddah coastline at sunset.',
+    duration: '6 Hours',
+    price: '',
+    locations: 'Obhur Marina, Jeddah',
+    meetingPoint: 'Obhur Marina, North Jeddah',
+    highlights: ['Private Yacht Charter', 'Coral Reef Snorkelling', 'Lunch On Board', 'Swimming Platform', 'Sunset Return', 'Family Friendly'],
+    included: ['Private yacht with captain and crew', 'Snorkelling masks, fins and life jackets', 'Lunch, soft drinks and water on board', 'Towels'],
+    itinerary: [
+      { time: '10:00 AM', title: 'Board at Obhur Marina', detail: 'Meet the crew at Obhur Marina, safety briefing and cast off into the Red Sea.' },
+      { time: '11:00 AM', title: 'First Reef Stop', detail: 'Anchor over a shallow coral reef for snorkelling and swimming from the yacht platform.', image: 'https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&q=80&w=800' },
+      { time: '01:00 PM', title: 'Lunch On Board', detail: 'Lunch served on deck while anchored in a sheltered bay, with time to swim again afterwards.' },
+      { time: '03:00 PM', title: 'Second Reef & Free Time', detail: 'Move to a second reef for snorkelling, or stay on board for sunbathing and fishing.' },
+      { time: '04:00 PM', title: 'Coastal Cruise Back', detail: 'Cruise back along the Jeddah coastline as the light drops, arriving at Obhur Marina around sunset.' }
+    ]
+  },
+
   // --- INDIA PACKAGES ---
   {
     id: 'india-kerala-paradise',
@@ -296,6 +387,25 @@ export const packagesData = [
       { day: 5, title: 'Return', detail: 'Transfer to Kathmandu for homebound flight.' }
     ]
   },
+  {
+    id: 'adventure-south-africa-masai-mara',
+    slug: 'south-africa-masai-mara-safari',
+    category: 'Adventure',
+    name: 'South Africa & Masai Mara',
+    title: 'South Africa & Masai Mara: Big Five Safari Adventure',
+    img: 'https://images.unsplash.com/photo-1547970810-dc1eac37d174?auto=format&fit=crop&q=80&w=800',
+    desc: 'Game drives in search of the Big Five, paired with vibrant cities, heritage citadels and coastal sunsets.',
+    duration: '3 Nights / 4 Days',
+    price: '',
+    locations: 'South Africa & Masai Mara',
+    highlights: ['Big Five Game Drive', 'Sunset Waterfront Cruise', 'National Museum', 'Historic Citadel'],
+    itinerary: [
+      { day: 1, title: 'Arrival & City Breeze', detail: 'Arrival and transfer to the hotel to check in and relax from the journey. Enjoy a scenic evening boat ride along the waterfront at sunset, then a night tour through the vibrant local markets with coffee at a traditional cafe.' },
+      { day: 2, title: 'Safari & Ancient Wildlife', detail: 'Morning safari game drive through the Masai Mara nature reserve in search of the "Big Five". Explore the National Museum and its treasures of ancient African tribes and peoples, then take in panoramic sunset views over the rolling hills.' },
+      { day: 3, title: 'Citadels & Historic Landmarks', detail: 'Tour the ancient fortresses and monuments that tell stories of resilience and heritage. Explore the old town\'s historic religious complexes, churches and mosques, and end with a relaxing evening stroll in the national park.' },
+      { day: 4, title: 'Shopping & Heading Home', detail: 'A quick visit to the Civilization Museum to learn about ancient royal mummies and cultural heritage, a walking tour downtown for souvenirs and handmade crafts, then transfer to the international airport for your flight home.' }
+    ]
+  },
 
   // --- UMRAH PACKAGES ---
   {
@@ -408,20 +518,18 @@ export const packagesData = [
     slug: 'malaysia-kuala-lumpur-delight',
     category: 'International',
     name: 'Malaysia',
-    title: 'Malaysia: Twin Towers to Tropical Highlands',
-    img: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800',
-    desc: 'Experience the metropolitan buzz of Kuala Lumpur and the cool climate of Genting.',
-    duration: '5 Nights / 6 Days',
+    title: 'Malaysia: Twin Towers, Batu Caves & Melaka Heritage',
+    img: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&q=80&w=800',
+    desc: 'Modern skyscrapers, rich cultural heritage, tropical nature and world-famous street food.',
+    duration: '3 Nights / 4 Days',
     price: '',
-    locations: 'Kuala Lumpur & Genting',
-    highlights: ['Petronas Towers', 'Batu Caves', 'Genting Highlands', 'Bukit Bintang'],
+    locations: 'Kuala Lumpur, Melaka & Putrajaya',
+    highlights: ['Petronas Twin Towers', 'Batu Caves', 'KL Tower Skydeck', 'Melaka & Putrajaya'],
     itinerary: [
-      { day: 1, title: 'Arrival in KL', detail: 'Welcome to Kuala Lumpur. Evening visit to Bukit Bintang.' },
-      { day: 2, title: 'KL City Tour', detail: 'Visit Petronas Twin Towers, KL Tower, and Merdeka Square.' },
-      { day: 3, title: 'Genting Highlands', detail: 'Cable car ride to Genting Highlands. Enjoy the indoor theme park.' },
-      { day: 4, title: 'Batu Caves', detail: 'Visit the iconic Batu Caves and its giant golden statue.' },
-      { day: 5, title: 'Shopping Day', detail: 'Free day for shopping at Pavilion KL or Sunway Pyramid.' },
-      { day: 6, title: 'Departure', detail: 'Transfer to KLIA for your onward journey.' }
+      { day: 1, title: 'Arrival & Metropolitan Breeze', detail: 'Arrival at Kuala Lumpur International Airport (KLIA) and transfer to the hotel. Evening stroll around KLCC Park for the Lake Symphony fountain light show beneath the Petronas Twin Towers, then a night tour of Jalan Alor food street and Bukit Bintang for Malaysian delicacies and traditional white coffee.' },
+      { day: 2, title: 'Cultural Treasures & Skyline Views', detail: 'Morning tour of the magnificent Batu Caves, climbing the colourful 272 steps to the Hindu temples inside the limestone caverns. Explore the National Museum and the colonial architecture of Merdeka Square, then take in panoramic sunset views from the KL Tower observation deck.' },
+      { day: 3, title: 'Historic Citadels & Lakeside Charm', detail: 'Tour the A Famosa fortress and Dutch heritage monuments of Melaka, explore historic religious complexes and the pink-domed Putrajaya Mosque, then unwind on an evening river cruise or lakeside promenade stroll at sunset.' },
+      { day: 4, title: 'Shopping & Heading Home', detail: 'A refreshing visit to the Perdana Botanical Garden and Orchid Park, a walking tour through Central Market and downtown for batik souvenirs and handmade crafts, then transfer to KLIA for your flight home.' }
     ]
   },
   {
@@ -444,6 +552,94 @@ export const packagesData = [
       { day: 5, title: 'Phi Phi Islands', detail: 'Full day speedboat tour to Phi Phi Islands.' },
       { day: 6, title: 'Phuket Leisure', detail: 'Free day to explore or enjoy a Thai massage.' },
       { day: 7, title: 'Departure', detail: 'Transfer to Phuket airport for departure.' }
+    ]
+  },
+  {
+    id: 'intl-egypt-cairo',
+    slug: 'cairo-pyramids-nile',
+    category: 'International',
+    name: 'Cairo',
+    title: 'Cairo: Pyramids, the Nile & Old Islamic Quarters',
+    img: 'https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&q=80&w=800',
+    desc: 'Four days across the Giza Pyramids, the Grand Egyptian Museum and the historic heart of old Cairo.',
+    duration: '3 Nights / 4 Days',
+    price: '',
+    locations: 'Cairo & Giza',
+    highlights: ['Giza Pyramids & The Sphinx', 'Grand Egyptian Museum', 'Nile Felucca Ride', 'Khan El-Khalili Bazaar'],
+    itinerary: [
+      { day: 1, title: 'Arrival & Nile Breeze', detail: 'Arrival and transfer to the hotel to check in and relax. Enjoy a scenic evening Felucca boat ride along the Nile Corniche, followed by a night tour of Khan El-Khalili through Al-Muizz Street with coffee at the historic El-Fishawy Cafe.' },
+      { day: 2, title: 'Pyramids & Ancient History', detail: 'Visit the Giza Pyramids and The Sphinx, then explore the magnificent ancient Egyptian treasures at the Grand Egyptian Museum. End the day with panoramic sunset views over the city from Cairo Tower.' },
+      { day: 3, title: 'Citadel & Old Cairo', detail: 'Tour Salah El-Din Citadel and the beautiful Muhammad Ali Mosque, then explore the historic Religious Complex and the Hanging Church in Old Cairo. Finish with a relaxing evening stroll through Al-Azhar Park.' },
+      { day: 4, title: 'Shopping & Heading Home', detail: 'A quick visit to the National Museum of Egyptian Civilization to see the famous Royal Mummies Hall, then a walking tour through the Khedivial streets of Downtown for shopping and souvenirs before your airport transfer.' }
+    ]
+  },
+  {
+    id: 'intl-turkey-trabzon',
+    slug: 'trabzon-uzungol-black-sea',
+    category: 'International',
+    name: 'Trabzon',
+    title: 'Trabzon: Uzungöl, Sumela & the Green Black Sea',
+    img: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=800',
+    desc: 'Five days through misty highlands, alpine lakes, cliffside monasteries and Black Sea coastline.',
+    duration: '4 Nights / 5 Days',
+    price: '',
+    locations: 'Trabzon, Uzungöl & Ayder',
+    highlights: ['Uzungöl Lake', 'Sumela Monastery', 'Ayder Plateau', 'Boztepe Hill Sunset'],
+    itinerary: [
+      { day: 1, title: 'Arrival & Coastal Vibe', detail: 'Arrival at Trabzon Airport and transfer to the hotel. Stroll around the lively Trabzon Meydan city centre over local tea, then watch the sunset from Boztepe Hill with its panoramic view of the Black Sea.' },
+      { day: 2, title: 'Magic of Uzungöl', detail: 'Drive to the famous Uzungöl lake hidden between lush green mountains. Capture iconic photos from the Gladiat viewpoint above the lake, then relax at Harekedi Cafe beside the rushing river streams and waterfalls.' },
+      { day: 3, title: 'History & Nature\'s Marvels', detail: 'Visit the historic Sumela Monastery carved into the Black Sea cliffs, walk through the dense foggy pine forests of Altindere Valley, and taste the world-famous traditional rice pudding (Sütlaç) in Hamsiköy Village.' },
+      { day: 4, title: 'High Altitude Clouds', detail: 'Day trip to the Ayder Plateau with its alpine meadows and wooden cabins. Optional zipline experience over the roaring Fırtına River, then relax by the beautiful Gelin Tülü bridal-veil waterfall.' },
+      { day: 5, title: 'Culture & Departure', detail: 'Tour the white Atatürk Pavilion and its rose gardens, take a quick morning boat ride on serene Sera Lake, then head to the airport for your flight home.' }
+    ]
+  },
+  {
+    id: 'intl-jordan-amman-petra',
+    slug: 'jordan-amman-heritage',
+    category: 'International',
+    name: 'Jordan',
+    title: 'Jordan: Amman, Ancient Citadels & Desert Reserves',
+    img: 'https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&q=80&w=800',
+    desc: 'Four days across Amman\'s modern boulevards, ancient fortresses and rare Arabian wildlife reserves.',
+    duration: '3 Nights / 4 Days',
+    price: '',
+    locations: 'Amman, Jerash & Dana',
+    highlights: ['Amman Citadel', 'Shaumari Wildlife Reserve', 'The Jordan Museum', 'Abdali Boulevard'],
+    itinerary: [
+      { day: 1, title: 'Arrival & City Breeze', detail: 'Arrival and transfer to the hotel in Amman to check in and relax. Enjoy a scenic evening stroll along Abdali Boulevard at sunset, then a night tour through the vibrant downtown markets with coffee at a traditional cafe.' },
+      { day: 2, title: 'Wildlife & Ancient Treasures', detail: 'Morning game drive through the Shaumari or Dana nature reserve to spot the rare Arabian Oryx. Explore the historical and cultural treasures of ancient tribes at The Jordan Museum, then enjoy panoramic sunset views over the rolling hills.' },
+      { day: 3, title: 'Citadels & Historic Landmarks', detail: 'Tour the ancient fortresses of the Amman Citadel or Ajloun Castle. Explore the historic religious complexes, churches and mosques of Jerash and the old downtown, then unwind with an evening stroll in the national park.' },
+      { day: 4, title: 'Shopping & Heading Home', detail: 'A quick visit to the Civilization Museum for ancient artefacts and royal heritage, a walking tour through the lively streets for souvenirs and handmade crafts, then transfer to the international airport.' }
+    ]
+  },
+  {
+    id: 'intl-grand-european-tour',
+    slug: 'grand-european-tour',
+    category: 'International',
+    name: 'Grand European Tour',
+    title: 'Grand European Tour: France, Switzerland, Italy & Spain',
+    img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800',
+    desc: 'A comprehensive 14-day journey across four European nations, from Paris to Barcelona.',
+    duration: '13 Nights / 14 Days',
+    price: '',
+    locations: 'Paris, Interlaken, Rome & Barcelona',
+    highlights: ['Eiffel Tower & Versailles', 'Jungfraujoch "Top of Europe"', 'Venice, Rome & Vatican City', 'Sagrada Família & Park Güell'],
+    included: ['A single Schengen visa covers all four countries', 'High-speed rail (TGV) between neighbouring countries', 'Rome to Barcelona flight (approx. 1.5 hours)', 'Arrival in Paris, departure from Barcelona'],
+    itinerary: [
+      { day: 1, title: 'Arrival in Paris & Seine River Sunset Cruise', detail: 'Arrive at Paris Charles de Gaulle Airport and transfer to the hotel. Walk the Champs-Élysées and capture photos at the Arc de Triomphe, then enjoy a sunset cruise along the Seine past illuminated landmarks including the Eiffel Tower.' },
+      { day: 2, title: 'Parisian Icons & Palace of Versailles', detail: 'Ascend the Eiffel Tower for sweeping panoramic views, explore the Louvre Museum and the Mona Lisa, then tour the grand Palace of Versailles and its opulent gardens with fountain displays.' },
+      { day: 3, title: 'Disneyland Paris or Montmartre & Shopping', detail: 'An optional full day at Disneyland Park and Walt Disney Studios, or visit the Sacré-Cœur Basilica and the Artists\' Square in Montmartre, followed by luxury shopping at Galeries Lafayette.' },
+      { day: 4, title: 'High-Speed Train to Switzerland & Lake Geneva', detail: 'Board the TGV from Paris to Geneva. Walk the Lake Geneva promenade to see the Jet d\'Eau and the Flower Clock, then settle into your hotel in Interlaken between Lake Thun and Lake Brienz.' },
+      { day: 5, title: 'Jungfraujoch "Top of Europe" & Grindelwald', detail: 'Ride the cogwheel railway to Europe\'s highest railway station at 3,454m amid permanent glaciers. Walk the Ice Palace tunnels and Sphinx Observatory deck, then visit the alpine village of Grindelwald.' },
+      { day: 6, title: 'Charming Lucerne & Lauterbrunnen Waterfalls', detail: 'Tour Lucerne\'s wooden Chapel Bridge, Water Tower and Lion Monument, relax on a steamboat cruise across Lake Thun or Lake Brienz, and marvel at the Lauterbrunnen valley of 72 waterfalls including Staubbach Falls.' },
+      { day: 7, title: 'Fashion Capital Milan & Scenic Lake Como', detail: 'Travel through the Swiss-Italian Alps into Milan. Tour Piazza del Duomo and shop at the Galleria Vittorio Emanuele II, then take an excursion to the lakeside town of Como.' },
+      { day: 8, title: 'Floating Beauty of Venice', detail: 'Arrive in the city of canals and bridges. Visit St. Mark\'s Basilica, the Doge\'s Palace and the Rialto Bridge, then experience a traditional gondola ride through the narrow waterways.' },
+      { day: 9, title: 'The Wonders of Ancient Rome', detail: 'Travel south to Italy\'s capital. Step inside the Colosseum and explore the Roman Forum, then toss a coin into the Trevi Fountain and enjoy the evening piazzas around the Spanish Steps.' },
+      { day: 10, title: 'Vatican City & Flight to Spain', detail: 'Visit St. Peter\'s Basilica and the Vatican Museums, then transfer to Rome airport for a short flight to Barcelona. Check in and enjoy an evening stroll along La Rambla.' },
+      { day: 11, title: 'Gaudí Masterpieces & Gothic Quarter', detail: 'Guided tour of Antoni Gaudí\'s Basílica de la Sagrada Família, a stroll through the colourful mosaic gardens of Park Güell, then wander the medieval streets and tapas bars of the Barri Gòtic.' },
+      { day: 12, title: 'Montjuïc Hill, Cable Car & Flamenco Night', detail: 'Ride the Telefèric de Montjuïc for harbour vistas and visit Montjuïc Castle, explore the open-air architectural museum of Poble Espanyol, and attend an authentic Flamenco performance with dinner.' },
+      { day: 13, title: 'Camp Nou Stadium & Maremagnum Marina', detail: 'Tour FC Barcelona\'s legendary stadium museum at Spotify Camp Nou, then enjoy seaside shopping and traditional Spanish paella at the Maremagnum waterfront before a final evening of souvenir shopping.' },
+      { day: 14, title: 'Plaça de Catalunya & Departure', detail: 'A relaxed morning walk around Plaça de Catalunya for last-minute shopping, then transfer to Barcelona El Prat Airport for your return flight home.' }
     ]
   }
 ];

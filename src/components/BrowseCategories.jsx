@@ -17,7 +17,7 @@ const BrowseCategories = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
 
                     <div className="relative h-[320px] md:h-[400px] rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-sm hover:shadow-2xl transition-all duration-700 cursor-pointer">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?auto=format&fit=crop&q=80&w=1200" alt="Honeymoon beach destination" className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[2s]" />
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&q=80&w=1200" alt="Overwater honeymoon villas on a tropical island at sunset" className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[2s]" />
                         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent p-8 md:p-12 flex flex-col justify-center">
                             <h3 className="text-3xl md:text-5xl font-display font-black text-white mb-4 leading-tight">Honeymoon <br /> Packages</h3>
                             <p className="text-white/80 text-sm md:text-base font-bold max-w-full md:max-w-[70%] mb-8 md:mb-10 leading-relaxed border-l-4 border-primary pl-4 md:pl-6">Take romantic walks around our beautiful honeymoon locations specially designed for couples.</p>
