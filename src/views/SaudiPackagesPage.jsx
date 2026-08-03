@@ -1,12 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
+import Breadcrumbs from '../components/Breadcrumbs';
 import { Search, MapPin, ChevronRight, Plus, Minus, Clock, Star, Landmark } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
 import Link from 'next/link';
 import PackageVisa from '../components/PackageVisa';
 
-const SaudiPackagesPage = () => {
+const SaudiPackagesPage = ({ breadcrumbs }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [openFaq, setOpenFaq] = useState(null);
 
@@ -30,13 +31,7 @@ const SaudiPackagesPage = () => {
             <section className="pt-32 pb-16 bg-secondary text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/10 skew-x-12 transform translate-x-20"></div>
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
-                    <nav className="flex items-center gap-2 text-sm font-bold text-white/50 mb-8 uppercase tracking-widest">
-                        <Link href="/" className="hover:text-primary transition-colors">Home</Link>
-                        <ChevronRight className="w-4 h-4" />
-                        <span className="text-white/70">Packages</span>
-                        <ChevronRight className="w-4 h-4" />
-                        <span className="text-primary">Saudi Arabia</span>
-                    </nav>
+                    <Breadcrumbs items={breadcrumbs} tone="dark" align="left" className="mb-8" />
 
                     <div className="inline-flex items-center gap-3 bg-[#1a7a4c]/20 border border-[#1a7a4c]/40 rounded-full pl-2 pr-5 py-2 mb-6">
                         <span className="bg-[#1a7a4c] text-white text-xs font-black px-3 py-1 rounded-full tracking-widest uppercase">أهلاً وسهلاً</span>

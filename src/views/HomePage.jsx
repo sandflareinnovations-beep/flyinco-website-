@@ -21,6 +21,8 @@ const PopularPackages = dynamic(() => import('../components/PopularPackages'));
 const ExploreDestinations = dynamic(() => import('../components/ExploreDestinations'));
 const PackagesGrid = dynamic(() => import('../components/PackagesGrid'));
 const RequestCallback = dynamic(() => import('../components/RequestCallback'));
+const OurOffices = dynamic(() => import('../components/OurOffices'));
+const WhatWeArrange = dynamic(() => import('../components/WhatWeArrange'));
 
 const HomePage = () => {
     return (
@@ -42,6 +44,11 @@ const HomePage = () => {
             <Gallery />
             <CorporateTravel />
             <WhyChooseUs />
+            {/* Saudi / Bahrain / India desks — the three-country network */}
+            <OurOffices />
+            {/* Answer-first service + destination summary, for search engines and
+                AI assistants as much as for readers */}
+            <WhatWeArrange />
             <RiyadhAgencySection />
             <RequestCallback />
         </main>

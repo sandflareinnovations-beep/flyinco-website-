@@ -2,8 +2,14 @@ import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
+import { headOffice, formatAddressLine } from '../data/offices';
 
 const Footer = () => {
+    // Rendered at build time (this is a static site), so the year is correct for
+    // the build rather than frozen at whatever was hardcoded.
+    const year = new Date().getFullYear();
+    const riyadhAddress = formatAddressLine(headOffice);
+
     return (
         <footer className="bg-secondary text-gray-400 py-16" id="contact">
             <div className="max-w-[1240px] mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-12">
@@ -37,7 +43,7 @@ const Footer = () => {
                         <li><Link href="/visa" className="hover:text-primary transition-colors">Visa Services</Link></li>
                         <li><Link href="/corporate-travel" className="hover:text-primary transition-colors">Corporate Travel</Link></li>
                         <li><a href="https://www.flyincochauffeur.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Chauffeur Service</a></li>
-                        <li><a href="#contact" className="hover:text-primary transition-colors">Contact Support</a></li>
+                        <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Support</Link></li>
                     </ul>
                 </div>
 
@@ -45,10 +51,20 @@ const Footer = () => {
                 <div>
                     <h4 className="font-display font-bold text-white text-sm uppercase tracking-wide mb-6 border-l-2 border-primary pl-3">Contact Us</h4>
                     <div className="flex flex-col gap-4 text-sm text-gray-300 font-medium">
-                        <div className="flex gap-3">
+                        {/* Full head-office postal address as visible text. Google
+                            cross-references this citation against /contact and the
+                            LocalBusiness markup, so all three read from
+                            src/data/offices.js and cannot drift apart. */}
+                        <address className="not-italic flex gap-3">
                             <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                            <p>Riyadh / Bahrain / Dubai / Mumbai</p>
-                        </div>
+                            <span>
+                                <span className="block text-white/90 font-bold">Flyinco Travel &amp; Tourism</span>
+                                {riyadhAddress}
+                                <span className="block text-gray-400 mt-1">
+                                    Branches: Manama · Dubai · Mumbai
+                                </span>
+                            </span>
+                        </address>
                         <div className="flex gap-3 mt-2 text-white/90">
                             <Phone className="w-4 h-4 text-primary shrink-0" />
                             <a href="tel:+966556182021" className="hover:text-primary transition-colors">+966 55 618 2021</a>
@@ -68,7 +84,7 @@ const Footer = () => {
 
             {/* Bottom Bar */}
             <div className="max-w-[1240px] mx-auto px-4 mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-gray-400">
-                <p>&copy; 2024 Flyinco Travel & Tourism. All rights reserved. KSA | BAHRAIN | UAE | INDIA</p>
+                <p>&copy; {year} Flyinco Travel &amp; Tourism. All rights reserved. KSA | BAHRAIN | UAE | INDIA</p>
 
                 <div className="flex items-center gap-4">
                     <a href={`https://wa.me/966556182021?text=${encodeURIComponent("Hi Flyinco! I'm visiting flyinco.com and would like to know more.")}`} target="_blank" rel="noopener noreferrer" aria-label="Chat with Flyinco on WhatsApp" className="bg-white/10 p-2 rounded-lg hover:bg-primary hover:text-white text-white transition-colors"><FaWhatsapp className="w-4 h-4" /></a>

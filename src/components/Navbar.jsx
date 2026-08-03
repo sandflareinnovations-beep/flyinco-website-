@@ -65,6 +65,7 @@ const Navbar = () => {
         { name: 'Visa', path: '/visa' },
         { name: 'About', path: '/about' },
         { name: 'Corporate Travel', path: '/corporate-travel' },
+        { name: 'Contact', path: '/contact' },
     ];
 
     const [activeDropdown, setActiveDropdown] = useState(null);
@@ -145,9 +146,9 @@ const Navbar = () => {
 
                     {/* Action */}
                     <div className="hidden lg:flex items-center">
-                        <a href="#contact" className="bg-primary text-white border-2 border-primary px-8 py-2.5 rounded-full font-bold hover:bg-white hover:text-primary transition-all transform hover:-translate-y-0.5 text-sm uppercase tracking-wider shadow-md">
+                        <Link href="/contact" className="bg-primary text-white border-2 border-primary px-8 py-2.5 rounded-full font-bold hover:bg-white hover:text-primary transition-all transform hover:-translate-y-0.5 text-sm uppercase tracking-wider shadow-md">
                             Contact Us
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Toggle */}

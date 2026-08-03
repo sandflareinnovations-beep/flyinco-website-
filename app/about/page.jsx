@@ -1,6 +1,6 @@
 import AboutPage from '../../src/views/AboutPage';
-import JsonLd from '../../src/components/JsonLd';
-import { pageMetadata, breadcrumbJsonLd, SITE_URL } from '../../src/lib/seo';
+import JsonLd from '../../src/components/seo/JsonLd';
+import { pageMetadata, breadcrumbJsonLd, ORG_ID, SITE_URL } from '../../src/lib/seo';
 
 export const metadata = pageMetadata({
   title: 'About Flyinco — Travel Agency in Riyadh Since 2015',
@@ -22,15 +22,11 @@ const aboutJsonLd = {
   name: 'About Flyinco Travel & Tourism',
   description:
     'The history, office network and services of Flyinco Travel & Tourism, a travel agency founded in Riyadh, Saudi Arabia in 2015.',
+  // Identity, contact details and areaServed all live on the organisation node
+  // in the root layout's @graph. This page only adds the founding facts it
+  // actually narrates, and references the business by @id.
   mainEntity: {
-    '@type': 'TravelAgency',
-    '@id': `${SITE_URL}/#travelagency`,
-    name: 'Flyinco Travel & Tourism',
-    alternateName: 'Flyinco',
-    url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
-    email: 'info@flyinco.com',
-    telephone: '+966556182021',
+    '@id': ORG_ID,
     foundingDate: '2015',
     foundingLocation: {
       '@type': 'Place',
@@ -40,26 +36,23 @@ const aboutJsonLd = {
         addressCountry: 'SA',
       },
     },
-    areaServed: [
-      { '@type': 'Country', name: 'Saudi Arabia' },
-      { '@type': 'Country', name: 'Bahrain' },
-      { '@type': 'Country', name: 'United Arab Emirates' },
-      { '@type': 'Country', name: 'India' },
-    ],
   },
 };
 
-const breadcrumb = breadcrumbJsonLd([
+// One trail, two consumers: the visible <Breadcrumbs> in the view and the
+// BreadcrumbList markup below. They cannot disagree because they are the same
+// array.
+const breadcrumbs = [
   { name: 'Home', path: '/' },
   { name: 'About' },
-]);
+];
 
 export default function Page() {
   return (
     <>
       <JsonLd data={aboutJsonLd} />
-      <JsonLd data={breadcrumb} />
-      <AboutPage />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
+      <AboutPage breadcrumbs={breadcrumbs} />
     </>
   );
 }

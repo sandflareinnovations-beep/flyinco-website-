@@ -1,5 +1,5 @@
 import CorporateTravelPage from '../../src/views/CorporateTravelPage';
-import JsonLd from '../../src/components/JsonLd';
+import JsonLd from '../../src/components/seo/JsonLd';
 import { pageMetadata, breadcrumbJsonLd } from '../../src/lib/seo';
 
 export const metadata = pageMetadata({

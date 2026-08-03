@@ -1,10 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import JsonLd from './JsonLd';
+import JsonLd from './seo/JsonLd';
+import { faqPageJsonLd } from '../lib/seo';
 
 const quickLinks = [
     { name: 'Saudi Arabia Packages', path: '/saudi-packages' },
     { name: 'Riyadh City Tour', path: '/package/riyadh-heritage-tour' },
+    { name: 'Jeddah City Tour', path: '/package/jeddah-city-tour-full-day' },
+    { name: 'Al-Balad Heritage Walk', path: '/package/jeddah-al-balad-heritage-walk' },
     { name: 'Visa Services', path: '/visa' },
     { name: 'Corporate Travel', path: '/corporate-travel' },
     { name: 'Honeymoon Packages', path: '/honeymoon-packages' },
@@ -28,17 +31,31 @@ const faqs = [
         q: 'Does Flyinco handle visas for travel to and from Saudi Arabia?',
         a: 'Yes. Our visa team in Riyadh assists with tourist, visit and business visa applications for Saudi Arabia and popular international destinations, including document guidance and eligibility checks.',
     },
+    {
+        q: 'What tours does Flyinco run in Jeddah?',
+        a: 'Flyinco runs guided Jeddah tours including a walking tour of Historic Jeddah (Al-Balad), a UNESCO World Heritage site; an evening tour of the Jeddah Corniche, Al-Rahmah Floating Mosque and King Fahd Fountain; a full-day Jeddah city tour with hotel pickup; and Red Sea yacht, snorkelling and diving days from Obhur Marina. Tours range from 4 hours to a 4-day Red Sea escape.',
+    },
+    {
+        q: 'Does Flyinco have an office in Bahrain?',
+        a: 'Yes. Flyinco has a branch office in Manama, Bahrain, reachable on +973 3337 2021. The Bahrain team arranges GCC holidays, onward flights, Bahrain–Saudi travel and visa assistance, and shares one booking file with the Riyadh head office.',
+    },
+    {
+        q: 'Can Flyinco book holidays to India from Saudi Arabia or Bahrain?',
+        a: 'Yes. Flyinco has a dedicated India desk covering Kerala backwaters, Kashmir, Goa, Rajasthan and the Andaman Islands, with group departures and family holidays for expatriates travelling home from Saudi Arabia and Bahrain. Enquire at visa@flyinco.com.',
+    },
+    {
+        q: 'Does Flyinco arrange Umrah packages?',
+        a: 'Yes. Flyinco arranges Umrah travel including visa processing, private transfers between Jeddah, Makkah and Madinah, and hotel bookings near the Haram. Umrah bookings are handled by the Riyadh visa team on +966 55 618 2021.',
+    },
+    {
+        q: 'How much do Flyinco tour packages cost?',
+        a: 'Prices depend on your travel dates, group size, hotel category and whether flights are included, so every itinerary is quoted individually rather than sold at a fixed rate. Send your dates by WhatsApp on +966 55 618 2021 or email visa@flyinco.com and you will receive a written quote.',
+    },
 ];
 
-const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(({ q, a }) => ({
-        '@type': 'Question',
-        name: q,
-        acceptedAnswer: { '@type': 'Answer', text: a },
-    })),
-};
+// Built from the `faqs` array this component renders below, so the schema can
+// never describe a question the visitor cannot see.
+const faqJsonLd = faqPageJsonLd(faqs, { path: '/' });
 
 const RiyadhAgencySection = () => {
     return (

@@ -3,10 +3,11 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Clock, MapPin, CheckCircle, ChevronRight, Plane, Building, Car, Map as MapIcon, Share2, Heart, Calendar, User, Mail, Phone, Users, Send } from 'lucide-react';
+import Breadcrumbs from '../components/Breadcrumbs';
 import { packagesData } from '../data/packagesData';
 import { trackEvent, whatsappLink } from '../lib/analytics';
 
-const ItineraryPage = ({ slug }) => {
+const ItineraryPage = ({ slug, breadcrumbs }) => {
     const pkg = packagesData.find(p => p.slug === slug);
 
     const [form, setForm] = useState({
@@ -74,13 +75,7 @@ const ItineraryPage = ({ slug }) => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end pb-16 px-6 md:px-12">
                     <div className="max-w-[1240px] mx-auto w-full">
-                        <nav className="flex items-center gap-2 text-sm font-bold text-white/70 mb-6 uppercase tracking-widest">
-                            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-                            <ChevronRight className="w-4 h-4 text-white/40" />
-                            <span>{pkg.category} Packages</span>
-                            <ChevronRight className="w-4 h-4 text-white/40" />
-                            <span className="text-white">{pkg.name}</span>
-                        </nav>
+                        <Breadcrumbs items={breadcrumbs} tone="overlay" align="left" className="mb-6" />
                         
                         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
                             <div>

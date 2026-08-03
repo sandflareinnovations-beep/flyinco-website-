@@ -1,8 +1,13 @@
 import { notFound } from 'next/navigation';
 import ItineraryPage from '../../../src/views/ItineraryPage';
-import JsonLd from '../../../src/components/JsonLd';
+import JsonLd from '../../../src/components/seo/JsonLd';
 import { packagesData } from '../../../src/data/packagesData';
-import { pageMetadata, breadcrumbJsonLd, truncate, SITE_URL } from '../../../src/lib/seo';
+import {
+  pageMetadata,
+  breadcrumbJsonLd,
+  touristTripJsonLd,
+  truncate,
+} from '../../../src/lib/seo';
 
 const categoryPaths = {
   Saudi: { name: 'Saudi Arabia Packages', path: '/saudi-packages' },
@@ -37,40 +42,25 @@ export default async function Page({ params }) {
 
   const category = categoryPaths[pkg.category];
 
-  const tripJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'TouristTrip',
-    name: pkg.title,
-    description: pkg.desc,
-    url: `${SITE_URL}/package/${pkg.slug}`,
-    image: pkg.img,
-    touristType: pkg.category,
-    itinerary: {
-      '@type': 'ItemList',
-      itemListElement: pkg.itinerary.map((item, idx) => ({
-        '@type': 'ListItem',
-        position: idx + 1,
-        name: item.title,
-      })),
-    },
-    provider: {
-      '@type': 'TravelAgency',
-      name: 'Flyinco Travel & Tourism',
-      url: SITE_URL,
-    },
-  };
+  const tripJsonLd = touristTripJsonLd(pkg);
 
-  const breadcrumbs = breadcrumbJsonLd([
+  // One trail, two consumers: the visible <Breadcrumbs> in ItineraryPage and
+  // the BreadcrumbList markup below. Previously the view rendered its own
+  // `{pkg.category} Packages` label while the markup used the categoryPaths
+  // display name, so the two disagreed on every Saudi and Adventure package
+  // ("Saudi Packages" vs "Saudi Arabia Packages"). Sharing the array removes
+  // the possibility.
+  const breadcrumbs = [
     { name: 'Home', path: '/' },
     ...(category ? [{ name: category.name, path: category.path }] : []),
     { name: pkg.name },
-  ]);
+  ];
 
   return (
     <>
       <JsonLd data={tripJsonLd} />
-      <JsonLd data={breadcrumbs} />
-      <ItineraryPage slug={slug} />
+      <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
+      <ItineraryPage slug={slug} breadcrumbs={breadcrumbs} />
     </>
   );
 }
