@@ -1,12 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, MapPin, ChevronRight, Plus, Minus, Star } from 'lucide-react';
+import Breadcrumbs from '../components/Breadcrumbs';
+import { Search, MapPin, Plus, Minus, Star } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
 import VisaLinks from '../components/visa/VisaLinks';
 import Link from 'next/link';
 
-const HoneymoonPackagesPage = () => {
+const HoneymoonPackagesPage = ({ breadcrumbs }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [openFaq, setOpenFaq] = useState(null);
 
@@ -29,13 +30,7 @@ const HoneymoonPackagesPage = () => {
             {/* Hero Section */}
             <section className="pt-32 pb-16 bg-[#FFF5F7]">
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
-                    <nav className="flex items-center justify-center gap-2 text-sm font-bold text-gray-400 mb-8 uppercase tracking-widest">
-                        <Link href="/" className="hover:text-primary transition-colors">Home</Link>
-                        <ChevronRight className="w-4 h-4" />
-                        <span className="text-secondary">Speciality</span>
-                        <ChevronRight className="w-4 h-4" />
-                        <span className="text-primary">Honeymoon</span>
-                    </nav>
+                    <Breadcrumbs items={breadcrumbs} tone="light" align="center" className="mb-8" />
 
                     <h1 className="text-4xl md:text-6xl font-display font-black text-secondary mb-4 leading-tight">
                         Romantic Honeymoon Getaways

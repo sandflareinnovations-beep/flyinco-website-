@@ -29,6 +29,28 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
   }
 
+  /* Slow push-in on the hero photograph. Long enough that it reads as
+     atmosphere rather than movement, and it never resets between slides. */
+  .ken-burns {
+    animation: ken-burns 18s ease-out both;
+  }
+
+  @keyframes ken-burns {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(1.09);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ken-burns {
+      animation: none;
+    }
+  }
+
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }

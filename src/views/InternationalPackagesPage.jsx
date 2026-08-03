@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, MapPin, ChevronRight, Plus, Minus } from 'lucide-react';
+import Breadcrumbs from '../components/Breadcrumbs';
+import { Search, MapPin, Plus, Minus } from 'lucide-react';
 import Link from 'next/link';
 import VisaLinks from '../components/visa/VisaLinks';
 
@@ -10,12 +11,15 @@ const destinations = [
     { name: 'India', img: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80&w=800', desc: 'A land of diversity, culture, and ancient heritage.', path: '/india-packages' },
     { name: 'United Arab Emirates', img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800', desc: 'Modern marvels and desert adventures.', path: '/package/dubai-city-desert' },
     { name: 'Maldives', img: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&q=80&w=800', desc: 'Escape to private island paradise.', path: '/package/maldives-overwater-luxury' },
-    { name: 'Thailand', img: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&q=80&w=800', desc: 'Discover the land of smiles and beaches.', path: '/package/thailand-explorer' },
-    { name: 'Singapore', img: 'https://images.unsplash.com/photo-1702085241418-e87b3b60a497?auto=format&fit=crop&q=80&w=800', desc: 'A futuristic city-state with vibrant culture.', path: '/package/singapore-city' },
-    { name: 'Turkey', img: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&q=80&w=800', desc: 'Where East meets West in stunning harmony.' },
+    { name: 'Thailand', img: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&q=80&w=800', desc: 'Discover the land of smiles and beaches.', path: '/package/thailand-bangkok-phuket' },
+    { name: 'Singapore', img: 'https://images.unsplash.com/photo-1702085241418-e87b3b60a497?auto=format&fit=crop&q=80&w=800', desc: 'A futuristic city-state with vibrant culture.' },
+    { name: 'Malaysia', img: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&q=80&w=800', desc: 'Twin Towers, Batu Caves and Melaka heritage.', path: '/package/malaysia-kuala-lumpur-delight' },
+    { name: 'Turkey', img: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&q=80&w=800', desc: 'Where East meets West in stunning harmony.', path: '/package/trabzon-uzungol-black-sea' },
+    { name: 'Jordan', img: 'https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&q=80&w=800', desc: 'Ancient citadels, desert reserves and Amman.', path: '/package/jordan-amman-heritage' },
+    { name: 'Europe', img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800', desc: 'France, Switzerland, Italy and Spain in 14 days.', path: '/package/grand-european-tour' },
     { name: 'Japan', img: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=800', desc: 'A perfect blend of tradition and technology.' },
     { name: 'Switzerland', img: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&q=80&w=800', desc: 'Breathtaking Alpines and serene lakes.' },
-    { name: 'Egypt', img: 'https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&q=80&w=800', desc: 'Uncover the secrets of ancient civilizations.' },
+    { name: 'Egypt', img: 'https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&q=80&w=800', desc: 'Uncover the secrets of ancient civilizations.', path: '/package/cairo-pyramids-nile' },
 ];
 
 const faqs = [
@@ -24,7 +28,7 @@ const faqs = [
     { q: 'How early should I book my international trip?', a: 'We recommend booking 3-6 months in advance for the best deals and flight availability.' },
 ];
 
-const InternationalPackagesPage = () => {
+const InternationalPackagesPage = ({ breadcrumbs }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [openFaq, setOpenFaq] = useState(null);
 
@@ -38,13 +42,7 @@ const InternationalPackagesPage = () => {
             {/* Hero Section */}
             <section className="pt-32 pb-16 bg-gray-50">
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-                    <nav className="flex items-center gap-2 text-sm font-bold text-gray-400 mb-8 uppercase tracking-widest">
-                        <a href="/" className="hover:text-primary transition-colors">Home</a>
-                        <ChevronRight className="w-4 h-4" />
-                        <span className="text-secondary">Packages</span>
-                        <ChevronRight className="w-4 h-4" />
-                        <span className="text-primary">International</span>
-                    </nav>
+                    <Breadcrumbs items={breadcrumbs} tone="light" align="left" className="mb-8" />
 
                     <h1 className="text-4xl md:text-6xl font-display font-black text-secondary mb-4 leading-tight">
                         Explore Popular International Destinations

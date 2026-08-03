@@ -12,6 +12,11 @@ export default {
                 dark: "#1A0933",
                 accent: "#ffffff",
                 grayLight: "#F8F9FA",
+                // Neutral surface tints derived from the brand purple — used for
+                // section backgrounds and hairlines so nothing introduces a
+                // second hue.
+                surface: "#F7F5FA",
+                surfaceDeep: "#EBE5F2",
             },
             fontFamily: {
                 display: ["var(--font-poppins)", '"Poppins"', "sans-serif"],

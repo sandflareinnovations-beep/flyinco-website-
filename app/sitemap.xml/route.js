@@ -21,6 +21,7 @@ const staticRoutes = [
     '/honeymoon-packages',
     '/adventure-tours',
     '/corporate-travel',
+    '/contact',
 ];
 
 // Slugs are URL-safe today, but a sitemap that silently emits malformed XML the

@@ -1,5 +1,6 @@
 import React from 'react';
-import JsonLd from '../JsonLd';
+import JsonLd from '../seo/JsonLd';
+import { faqPageJsonLd } from '../../lib/seo';
 
 // One source of truth: the visible <dl> and the FAQPage schema are built from
 // the same array. Google penalises FAQ markup whose answers do not appear on
@@ -44,15 +45,7 @@ const faqs = [
     },
 ];
 
-const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((item) => ({
-        '@type': 'Question',
-        name: item.q,
-        acceptedAnswer: { '@type': 'Answer', text: item.a },
-    })),
-};
+const faqJsonLd = faqPageJsonLd(faqs, { path: '/about' });
 
 const AboutFaq = () => {
     return (

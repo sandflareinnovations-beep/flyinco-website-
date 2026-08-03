@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import Breadcrumbs from '../components/Breadcrumbs';
 import StoryTimeline from '../components/about/StoryTimeline';
 import NetworkGrid from '../components/about/NetworkGrid';
 import WhatWeDo from '../components/about/WhatWeDo';
@@ -11,7 +12,7 @@ import { whatsappLink } from '../lib/analytics';
 // word on this page ships in the initial HTML, which is what Googlebot and the
 // assistant crawlers (GPTBot, ClaudeBot, PerplexityBot) actually read.
 
-const AboutPage = () => {
+const AboutPage = ({ breadcrumbs }) => {
     return (
         <main>
             {/* Answer-first intro. The opening paragraph is written as one
@@ -20,6 +21,7 @@ const AboutPage = () => {
                 someone asks it about this company. Nothing above it but the h1. */}
             <section className="bg-secondary pt-36 md:pt-44 pb-20 md:pb-24" aria-labelledby="about-intro">
                 <div className="max-w-[1240px] mx-auto px-6 md:px-12">
+                    <Breadcrumbs items={breadcrumbs} tone="dark" align="left" className="mb-8" />
                     <p className="flex items-center gap-3 text-white/70 font-display font-bold uppercase tracking-[0.28em] text-[10px] sm:text-xs mb-6">
                         <span className="h-px w-8 bg-white/40" aria-hidden="true" />
                         About Flyinco

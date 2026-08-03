@@ -6,6 +6,8 @@ import Footer from '../src/components/Footer';
 import WhatsAppButton from '../src/components/WhatsAppButton';
 import Analytics from '../src/components/Analytics';
 import ClarityLoader from '../src/components/ClarityLoader';
+import JsonLd from '../src/components/seo/JsonLd';
+import { siteGraphJsonLd } from '../src/lib/seo';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -39,6 +41,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <body>
+        {/* Organisation + WebSite graph, rendered on every route so page-level
+            schema can reference the business by @id instead of restating it. */}
+        <JsonLd data={siteGraphJsonLd} />
         <Analytics />
         <div className="bg-[#FAFAFA] w-screen overflow-x-hidden min-h-screen relative font-body text-secondary">
           <Navbar />
