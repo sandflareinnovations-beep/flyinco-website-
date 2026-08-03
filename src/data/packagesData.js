@@ -7,6 +7,10 @@ import riyadhSouqAlZal from '../assets/images/Souq al zal Museum/WhatsApp Image 
 import riyadhCamelRide from '../assets/images/camel ride/WhatsApp Image 2026-06-23 at 5.30.29 PM (3).jpeg';
 import riyadhEdgeOfTheWorld from '../assets/images/edge of the world/WhatsApp Image 2026-06-23 at 5.30.30 PM.jpeg';
 import hariqahDam from '../assets/images/Hariqah Dam /WhatsApp Image 2026-06-24 at 2.11.18 PM.jpeg';
+// Hosted locally rather than hotlinked: Wikimedia asks that upload.wikimedia.org
+// not be used as a CDN for production traffic. The licence requires credit, so
+// this package carries an `imageCredit` that the itinerary hero renders.
+import trabzonUzungol from '../assets/images/trabzon/uzungol-lake-and-town.jpg';
 
 export const packagesData = [
   // --- SAUDI ARABIA PACKAGES ---
@@ -579,7 +583,11 @@ export const packagesData = [
     category: 'International',
     name: 'Trabzon',
     title: 'Trabzon: Uzungöl, Sumela & the Green Black Sea',
-    img: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=800',
+    img: trabzonUzungol,
+    imageCredit: {
+        text: 'Uzungöl by İhsan Deniz Kılıçoğlu, CC BY-SA 3.0',
+        href: 'https://commons.wikimedia.org/wiki/File:Uzung%C3%B6l_lake_and_town.jpg',
+    },
     desc: 'Five days through misty highlands, alpine lakes, cliffside monasteries and Black Sea coastline.',
     duration: '4 Nights / 5 Days',
     price: '',

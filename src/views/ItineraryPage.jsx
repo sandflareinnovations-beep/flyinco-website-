@@ -73,6 +73,19 @@ const ItineraryPage = ({ slug, breadcrumbs }) => {
                     alt={`${pkg.name} — ${pkg.locations}`}
                     className="w-full h-full object-cover scale-105"
                 />
+                {/* Licence credit for hero images that require attribution. Sits
+                    above the gradient so it stays legible, and is kept small and
+                    low-contrast so it reads as a photo credit rather than copy. */}
+                {pkg.imageCredit && (
+                    <a
+                        href={pkg.imageCredit.href}
+                        target="_blank"
+                        rel="noopener noreferrer license"
+                        className="absolute bottom-2 right-3 z-10 text-[10px] leading-none text-white/50 hover:text-white/80 transition-colors"
+                    >
+                        {pkg.imageCredit.text}
+                    </a>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end pb-16 px-6 md:px-12">
                     <div className="max-w-[1240px] mx-auto w-full">
                         <Breadcrumbs items={breadcrumbs} tone="overlay" align="left" className="mb-6" />
